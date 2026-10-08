@@ -11,6 +11,7 @@
     "catalog:worldwide:sync": "node scripts/sync-worldwide-catalog.mjs",
     "catalog:worldwide:verify": "node scripts/verify-worldwide-catalog.mjs",
     "test": "node --test",
-    "catalog": "node scripts/catalog-cli.mjs"
+    "catalog": "node scripts/catalog-cli.mjs",
+    "worldwide": "node scripts/worldwide-cli.mjs"
   }
 }
