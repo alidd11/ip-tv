@@ -36,6 +36,8 @@ struct WorldwideChannel: Codable, Identifiable {
 struct WorldwideExploreView: View {
     @State private var countries: [WorldwideCountry] = []
     @State private var records: [WorldwideChannel] = []
+    @State private var saved: [WorldwideChannel] = []
+    @State private var savedOnly = false
     @State private var selectedCountry = "GB"
     @State private var query = ""
     @State private var category = ""
@@ -50,11 +52,11 @@ struct WorldwideExploreView: View {
     }
 
     private var categories: [String] {
-        Array(Set(records.flatMap(\.categories))).sorted()
+        Array(Set((savedOnly ? saved : records).flatMap(\.categories))).sorted()
     }
 
     private var matches: [WorldwideChannel] {
-        records.filter { channel in
+        (savedOnly ? saved : records).filter { channel in
             (category.isEmpty || channel.categories.contains(category)) &&
             (query.isEmpty || channel.name.localizedCaseInsensitiveContains(query) ||
              channel.aliases.contains(where: { $0.localizedCaseInsensitiveContains(query) }) ||
@@ -75,11 +77,20 @@ struct WorldwideExploreView: View {
                     .font(.caption.weight(.bold))
                     .tracking(1.4)
                     .foregroundStyle(Color(red: 0.54, green: 0.49, blue: 1.0))
-                Text("Explore every channel")
+                Text(savedOnly ? "Your saved channels" : "Explore every channel")
                     .font(.largeTitle.bold())
                     .foregroundStyle(.white)
+                Picker("Library", selection: $savedOnly) {
+                    Text("Explore").tag(false)
+                    Text("Saved (\(saved.count))").tag(true)
+                }
+                .pickerStyle(.segmented)
+                .onChange(of: savedOnly) { _, _ in
+                    query = ""; category = ""; limit = 60
+                }
 
-                Button { choosingCountry = true } label: {
+                if !savedOnly {
+                    Button { choosingCountry = true } label: {
                     HStack {
                         Text(countryName)
                         Spacer()
@@ -88,8 +99,8 @@ struct WorldwideExploreView: View {
                     .padding(16)
                     .background(.white.opacity(0.08), in: RoundedRectangle(cornerRadius: 16))
                 }
-                .foregroundStyle(.white)
-
+                    .foregroundStyle(.white)
+                }
                 TextField("Search channels or broadcasters", text: $query)
                     .textInputAutocapitalization(.never)
                     .autocorrectionDisabled()
@@ -105,7 +116,7 @@ struct WorldwideExploreView: View {
                     }
                 }
 
-                Text(String(matches.count) + " channels found")
+                Text(String(matches.count) + (savedOnly ? " saved channels on this device" : " channels found"))
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
 
@@ -114,7 +125,8 @@ struct WorldwideExploreView: View {
                         selectedChannel = channel
                     } label: {
                         VStack(alignment: .leading, spacing: 7) {
-                            Text(channel.name).font(.headline).foregroundStyle(.white)
+                            Text((saved.contains(where: { $0.id == channel.id }) ? "★  " : "") + channel.name)
+                                .font(.headline).foregroundStyle(.white)
                             Text([channel.network, channel.categories.first, String(channel.feeds.count) + " feeds"]
                                 .compactMap { $0 }.joined(separator: " · "))
                                 .font(.caption)
@@ -138,6 +150,7 @@ struct WorldwideExploreView: View {
         .navigationBarTitleDisplayMode(.inline)
         .onAppear {
             if countries.isEmpty { loadManifest(); loadCountry() }
+            loadSaved()
         }
         .onChange(of: selectedCountry) { _, _ in
             category = ""; query = ""; limit = 60; loadCountry()
@@ -178,6 +191,17 @@ struct WorldwideExploreView: View {
                         .foregroundStyle(.secondary)
                     Text("Directory listing only. Playback not yet verified.")
                         .foregroundStyle(.secondary)
+                    Button {
+                        toggleSaved(channel)
+                    } label: {
+                        Label(
+                            saved.contains(where: { $0.id == channel.id }) ?
+                                "Remove from saved" : "Save channel",
+                            systemImage: saved.contains(where: { $0.id == channel.id }) ?
+                                "star.fill" : "star"
+                        )
+                    }
+                    .buttonStyle(.borderedProminent)
                     if let value = channel.website, let url = URL(string: value), url.scheme == "https" {
                         Link("Visit broadcaster website", destination: url)
                             .buttonStyle(.borderedProminent)
@@ -208,6 +232,27 @@ struct WorldwideExploreView: View {
                 .foregroundStyle(category == value ? .black : .white)
         }
         .buttonStyle(.plain)
+    }
+
+    private func loadSaved() {
+        guard let data = UserDefaults.standard.data(forKey: "iptv.savedChannels.v1"),
+              let list = try? JSONDecoder().decode([WorldwideChannel].self, from: data)
+        else { saved = []; return }
+        var seen = Set<String>()
+        saved = list.filter { !$0.isAdult && !$0.isClosed && seen.insert($0.id).inserted }
+            .prefix(500).map { $0 }
+    }
+
+    private func toggleSaved(_ channel: WorldwideChannel) {
+        if saved.contains(where: { $0.id == channel.id }) {
+            saved.removeAll(where: { $0.id == channel.id })
+        } else {
+            saved.insert(channel, at: 0)
+            saved = Array(saved.prefix(500))
+        }
+        if let data = try? JSONEncoder().encode(saved) {
+            UserDefaults.standard.set(data, forKey: "iptv.savedChannels.v1")
+        }
     }
 
     private func loadManifest() {

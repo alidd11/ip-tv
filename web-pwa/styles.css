@@ -33,3 +33,11 @@ html, body, #app, main { width:100%; max-width:100%; overflow-x:clip; }
 #directory{position:relative}
 .sheet-card button:disabled{opacity:.45;cursor:not-allowed}
 @media(hover:hover){.tab:hover{background:#ffffff14}.channel-card:hover{border-color:#8a7cff9c}}
+
+/* Saved collections — shared premium card styling without false playback badges. */
+.saved-section { max-width:1180px; margin:0 auto; padding:26px 20px 155px; scroll-margin-top:calc(95px + env(safe-area-inset-top,0px)); }
+.saved-card {border-color:#8a7cff42;background:linear-gradient(130deg,#211d38,#11131e);}
+.saved-indicator {color:#ffd16a;font-size:15px}
+.saved-empty {color:var(--muted);font-size:14px;line-height:1.7;max-width:480px;padding:16px 0}
+.tabbar {grid-template-columns:repeat(4,minmax(0,1fr))}
+.secondary-button.full {width:100%;margin-top:14px}

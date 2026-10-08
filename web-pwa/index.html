@@ -56,11 +56,21 @@
         <div class="directory-grid" id="directoryResults"></div>
         <button type="button" class="secondary-button directory-more hidden" id="directoryMore">Load more channels</button>
       </section>
+      <section class="saved-section" id="saved" aria-labelledby="savedTitle">
+        <div class="directory-heading">
+          <div><div class="eyebrow">YOUR COLLECTION</div><h2 id="savedTitle">Saved channels</h2>
+            <p>Keep a shortlist on this device. Sign-in syncing isn't available yet.</p></div>
+          <span class="directory-total" id="savedCount">0 saved</span>
+        </div>
+        <div class="directory-grid" id="savedResults"></div>
+        <p class="saved-empty" id="savedEmpty">No saved channels yet. Browse the directory and save a channel to find it here.</p>
+      </section>
     </main>
     <nav class="tabbar" aria-label="Primary">
       <button class="tab active" data-section="home" aria-current="page"><span>⌂</span><small>Home</small></button>
       <button class="tab" data-section="live"><span>◉</span><small>Live</small></button>
       <button class="tab" data-section="explore"><span>⌕</span><small>Explore</small></button>
+      <button class="tab" data-section="saved"><span>☆</span><small>Saved</small></button>
     </nav>
     <div class="sheet hidden" id="sheet" role="dialog" aria-modal="true">
       <div class="sheet-backdrop" data-close-sheet></div>
@@ -70,6 +80,7 @@
         <div class="eyebrow" id="sheetEyebrow">CHANNEL</div>
         <h2 id="sheetTitle"></h2>
         <p id="sheetMeta"></p>
+        <button class="secondary-button full" id="sheetSave" type="button" hidden>☆ Save channel</button>
         <button class="primary-button full" id="sheetAction"></button>
       </div>
     </div>
