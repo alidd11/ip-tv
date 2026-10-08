@@ -44,3 +44,10 @@ A feature that changes the product model must not be marked complete until:
 6. platform-specific accessibility/input behaviour is tested.
 
 If a capability genuinely does not apply to a surface, the matrix must say why instead of silently omitting it.
+
+## CI enforcement
+
+`config/parity.json` is the machine-readable parity contract. `npm run validate:parity` fails when a parity-required capability is marked at different lifecycle states across PWA, iOS, Android mobile and Android TV. This prevents a feature from being treated as complete on one first-class client while silently remaining planned on another.
+
+Platform-specific capabilities such as touch, TV remote input and Picture in Picture may use `not-applicable`, but every exception requires an explicit reason in the manifest.
+
