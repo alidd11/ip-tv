@@ -23,7 +23,9 @@ try {
   const gbResults=await page.locator("#directoryResults .directory-card").count();
   assert.ok(gbResults>0,"UK results expected");
 
-  await page.screenshot({path:"artifacts/pwa/iphone-home.png",fullPage:true});
+  const metrics=await page.evaluate(()=>({viewport:innerWidth,scroll:document.documentElement.scrollWidth}));
+  assert.ok(metrics.scroll<=metrics.viewport+1,"Mobile page overflow: "+JSON.stringify(metrics));
+  await page.screenshot({path:"artifacts/pwa/iphone-home.png",fullPage:false});
   await page.locator("#directoryCountry").selectOption("TR");
   await page.waitForFunction(()=>{
     const selector=document.querySelector("#directoryCountry");
@@ -40,12 +42,13 @@ try {
   await cards.first().click();
   assert.equal(await page.locator("#sheet").evaluate(e=>e.classList.contains("hidden")),false);
   await page.locator("[data-close-sheet]").last().click();
-  await page.screenshot({path:"artifacts/pwa/iphone-turkey-search.png",fullPage:true});
+  await page.locator("#directory").scrollIntoViewIfNeeded();
+  await page.screenshot({path:"artifacts/pwa/iphone-turkey-search.png",fullPage:false});
 
   const desktop=await browser.newPage({viewport:{width:1440,height:900}});
   await desktop.goto(base,{waitUntil:"networkidle"});
   await desktop.waitForFunction(()=>document.querySelector("#directoryStatus")?.textContent?.includes("channel"));
-  await desktop.screenshot({path:"artifacts/pwa/desktop-home.png",fullPage:true});
+  await desktop.screenshot({path:"artifacts/pwa/desktop-home.png",fullPage:false});
   assert.deepEqual(errors,[],"Browser must have no uncaught JS errors");
   console.log(JSON.stringify({passed:true,countries,gbResults,screenshots:3}));
 } finally {
