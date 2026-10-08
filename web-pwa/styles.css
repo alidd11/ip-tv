@@ -19,3 +19,10 @@
 .directory-more {display:block;margin:20px auto 0}
 .hidden {display:none!important}
 @media(max-width:650px){.discovery-controls{grid-template-columns:1fr 1fr}.control-label:nth-child(2){grid-column:1/-1;grid-row:2}.directory-heading{align-items:start}.directory-total{font-size:10px}.directory-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.directory-card{min-height:138px;padding:13px}.directory-card-name{font-size:15px}}
+
+/* Prevent long horizontal rails from expanding the mobile document grid. */
+html, body, #app, main { width:100%; max-width:100%; overflow-x:clip; }
+.content { grid-template-columns:minmax(0,1fr); width:100%; max-width:100%; min-width:0; }
+.content > section { width:100%; max-width:100%; min-width:0; }
+.rail, .chip-row { min-width:0; max-width:100%; }
+.directory-section { min-width:0; }
