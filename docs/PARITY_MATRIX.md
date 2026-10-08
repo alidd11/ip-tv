@@ -18,7 +18,7 @@ The product is maintained as **one service across four client surfaces**:
 | Free/premium labels | ✅ | ✅ | ✅ | ✅ | Same access model |
 | Official source/provider decision | ✅ | ✅ | ✅ | ✅ | Same source registry |
 | Live channel browsing | ✅ | ✅ scaffold | ✅ scaffold | ✅ scaffold | Same ordering and categories |
-| Native HLS playback | Browser HLS where supported | AVPlayer scaffold | Media3 dependency | Media3 dependency | Same approved source |
+| Approved native HLS playback | Browser HLS where supported (e.g. iOS Safari) | AVPlayer / AVKit | Shared Media3 PlayerView | Shared Media3 PlayerView | Same approved source, platform-appropriate player |
 | Provider handoff | ✅ | ✅ | ✅ | ✅ | Same provider URL |
 | Search | ⏳ | ⏳ | ⏳ | ⏳ | Must ship together |
 | EPG / guide | ⏳ | ⏳ | ⏳ | ⏳ | Same programme IDs/data |

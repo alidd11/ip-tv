@@ -36,6 +36,7 @@ import androidx.compose.ui.unit.sp
 import com.alidd11.iptv.core.TvCatalog
 import com.alidd11.iptv.core.TvCatalogRepository
 import com.alidd11.iptv.core.TvChannel
+import com.alidd11.iptv.core.ChannelPlayback
 
 private val Canvas = Color(0xFF07080D)
 private val Panel = Color(0xFF12151F)
@@ -103,7 +104,7 @@ fun MobileHome() {
                     shape = RoundedCornerShape(18.dp),
                     modifier = Modifier.clickable {
                         if (heroSource == null) explore = true
-                        else context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(heroSource.url)))
+                        else hero?.let { ChannelPlayback.open(context, catalog, it.id) }
                     },
                 ) {
                     Text(
@@ -204,9 +205,7 @@ private fun Section(
                             ),
                         )
                         .clickable {
-                            catalog.sourceFor(channel.id)?.let { source ->
-                                context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(source.url)))
-                            }
+                            ChannelPlayback.open(context, catalog, channel.id)
                         }
                         .padding(16.dp),
                 ) {
