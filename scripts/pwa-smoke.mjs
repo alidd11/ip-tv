@@ -20,11 +20,16 @@ try {
   await page.waitForFunction(()=>document.querySelector("#directoryStatus")?.textContent?.includes("channel"));
   const countries=await page.locator("#directoryCountry option").count();
   assert.ok(countries>=200,"global country selection needs 200+ countries");
+  assert.equal(await page.locator(".tab[data-section]").count(),3);
+  await page.locator('.tab[data-section="explore"]').click();
+  assert.equal(await page.locator('.tab[data-section="explore"]').getAttribute("aria-current"),"page");
   const gbResults=await page.locator("#directoryResults .directory-card").count();
   assert.ok(gbResults>0,"UK results expected");
 
   const metrics=await page.evaluate(()=>({viewport:innerWidth,scroll:document.documentElement.scrollWidth}));
   assert.ok(metrics.scroll<=metrics.viewport+1,"Mobile page overflow: "+JSON.stringify(metrics));
+  await page.locator('.tab[data-section="home"]').click();
+  await page.waitForTimeout(250);
   await page.screenshot({path:"artifacts/pwa/iphone-home.png",fullPage:false});
   await page.locator("#directoryCountry").selectOption("TR");
   await page.waitForFunction(()=>{
@@ -49,6 +54,11 @@ try {
   await desktop.goto(base,{waitUntil:"networkidle"});
   await desktop.waitForFunction(()=>document.querySelector("#directoryStatus")?.textContent?.includes("channel"));
   await desktop.screenshot({path:"artifacts/pwa/desktop-home.png",fullPage:false});
+  const sourceUrl=await page.evaluate(()=>{
+    const url=new URL("./player.html?channel=gb-sky-news&name=Sky",location.href);
+    return url.href;
+  });
+  assert.ok(!new URL(sourceUrl).searchParams.has("source"),"Public player URL must never include a stream URL");
   assert.deepEqual(errors,[],"Browser must have no uncaught JS errors");
   console.log(JSON.stringify({passed:true,countries,gbResults,screenshots:3}));
 } finally {

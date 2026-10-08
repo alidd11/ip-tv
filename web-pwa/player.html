@@ -1,1 +1,48 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/><meta name="theme-color" content="#000000"/><title>Player · IP TV</title><style>html,body{margin:0;background:#000;color:#fff;font-family:-apple-system,BlinkMacSystemFont,sans-serif;height:100%}body{display:grid;grid-template-rows:auto 1fr;padding-top:env(safe-area-inset-top,0)}header{display:flex;align-items:center;gap:12px;padding:12px 16px;background:#07080d}button{border:0;background:#ffffff12;color:white;border-radius:12px;padding:10px 14px;font:inherit}h1{font-size:16px;margin:0}video{width:100%;height:100%;object-fit:contain;background:#000}.message{display:grid;place-items:center;padding:30px;color:#aaa;text-align:center}</style></head><body><header><button onclick="history.back()">‹ Back</button><h1 id="name">Live TV</h1></header><div id="stage"><video id="video" controls playsinline autoplay></video></div><script>const params=new URLSearchParams(location.search);const source=params.get("source");const video=document.getElementById("video");document.getElementById("name").textContent=params.get("name")||"Live TV";if(source&&video.canPlayType("application/vnd.apple.mpegurl")){video.src=source}else{document.getElementById("stage").innerHTML='<div class="message">This browser cannot play this source natively.</div>'}</script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#000000" />
+  <title>IP TV · Live player</title>
+  <style>
+    html,body{margin:0;height:100%;background:#000;color:#fff;font-family:-apple-system,BlinkMacSystemFont,sans-serif}
+    body{display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0)}
+    header{display:flex;gap:12px;align-items:center;padding:12px 16px;background:#07080d}
+    h1{font-size:16px;margin:0}button{border:0;background:#ffffff19;color:#fff;border-radius:12px;padding:10px 14px;font:inherit}
+    #stage{flex:1;display:flex;align-items:center;justify-content:center}
+    video{width:100%;max-height:100%;object-fit:contain}
+    #message{padding:24px;color:#a3a9b6;text-align:center}
+  </style>
+</head>
+<body>
+  <header><button type="button" onclick="history.back()">‹ Back</button><h1 id="title">Live TV</h1></header>
+  <main id="stage"><video id="video" controls playsinline autoplay></video><p id="message" hidden></p></main>
+  <script type="module">
+    const params=new URLSearchParams(location.search);
+    const id=params.get("channel")||"";
+    document.querySelector("#title").textContent=params.get("name")||"Live TV";
+    const video=document.querySelector("#video"), message=document.querySelector("#message");
+    function unavailable(text){video.hidden=true;message.hidden=false;message.textContent=text;}
+    if(!/^[a-z0-9-]{2,120}$/.test(id)){
+      unavailable("Invalid channel.");
+    }else{
+      try{
+        const response=await fetch("../config/playback-sources.verified.json");
+        if(!response.ok)throw Error("Source registry unavailable");
+        const sources=await response.json();
+        const source=sources
+          .filter(s=>s.enabled && s.feedId===id+"-main" &&
+            ["verified-official","verified-public-authorized"].includes(s.authorization) &&
+            s.playbackMode==="native" && s.type==="hls" &&
+            typeof s.url==="string" && s.url.startsWith("https://"))
+          .sort((a,b)=>a.priority-b.priority)[0];
+        if(!source) unavailable("No verified browser-playable source is available for this channel.");
+        else if(!video.canPlayType("application/vnd.apple.mpegurl"))
+          unavailable("This browser does not support native HLS playback.");
+        else video.src=source.url;
+      }catch(error){unavailable("Unable to load approved playback sources.");console.error(error);}
+    }
+  </script>
+</body>
+</html>

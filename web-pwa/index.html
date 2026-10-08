@@ -29,7 +29,7 @@
           <p id="heroMeta">One catalogue across mobile and TV.</p>
           <div class="hero-actions">
             <button class="primary-button" id="heroPrimary">Watch live</button>
-            <button class="secondary-button" id="guideButton">Guide</button>
+            <button class="secondary-button" id="guideButton">Explore channels</button>
           </div>
         </div>
       </section>
@@ -58,10 +58,9 @@
       </section>
     </main>
     <nav class="tabbar" aria-label="Primary">
-      <button class="tab active"><span>⌂</span><small>Home</small></button>
-      <button class="tab"><span>◉</span><small>Live</small></button>
-      <button class="tab"><span>▦</span><small>Guide</small></button>
-      <button class="tab"><span>★</span><small>Saved</small></button>
+      <button class="tab active" data-section="home" aria-current="page"><span>⌂</span><small>Home</small></button>
+      <button class="tab" data-section="live"><span>◉</span><small>Live</small></button>
+      <button class="tab" data-section="explore"><span>⌕</span><small>Explore</small></button>
     </nav>
     <div class="sheet hidden" id="sheet" role="dialog" aria-modal="true">
       <div class="sheet-backdrop" data-close-sheet></div>
