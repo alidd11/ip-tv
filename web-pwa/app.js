@@ -1,3 +1,4 @@
+import {approvedSource,chooseFeatured,sourceAction} from "./featured.mjs";
 import {readSaved,writeSaved,toggleSaved} from "./saved.mjs";
 import {filterDiscovery,visibleCount,directoryCountryOptions} from "./discovery.mjs";
 const state = {
@@ -45,11 +46,7 @@ async function load() {
   }
 }
 
-function sourceFor(channel) {
-  return state.sources
-    .filter((source) => source.enabled && source.feedId === channel.id + "-main")
-    .sort((a, b) => a.priority - b.priority)[0] || null;
-}
+function sourceFor(channel) { return approvedSource(state.sources, channel.id); }
 
 function channels() {
   return (state.channels.get(state.country) || []).filter((channel) => channel.enabled);
@@ -79,7 +76,7 @@ function renderCountries() {
 
 function heroChannel() {
   const list = channels();
-  return list.find((channel) => channel.id === "gb-sky-sports-main-event") || list[0] || null;
+  return chooseFeatured(list,state.sources);
 }
 
 function renderHero() {
@@ -87,19 +84,26 @@ function renderHero() {
   if (!channel) return;
 
   const premium = ["subscription", "ppv"].includes(channel.access.model);
+  $("heroEyebrow").textContent = sourceRankLabel(sourceFor(channel));
   $("heroTitle").textContent = channel.name;
   $("heroMeta").textContent = [channel.network, ...channel.categories].filter(Boolean).join("  •  ");
-  $("heroBadges").innerHTML = '<span class="badge live">LIVE</span>' + (premium ? '<span class="badge premium">PREMIUM</span>' : "");
-  $("heroPrimary").textContent = premium ? "Open provider" : "Watch live";
-  $("heroPrimary").onclick = () => openChannel(channel);
+  const source=sourceFor(channel);
+  $("heroBadges").innerHTML = (source && source.authorization!=="subscription-provider" ?
+    '<span class="badge live">WATCH OPTION</span>' : "")+
+    (premium ? '<span class="badge premium">SUBSCRIPTION</span>' : "");
+  $("heroPrimary").textContent = sourceAction(source);
+  $("heroPrimary").onclick = () => source ? openChannel(channel) : openSection("explore");
 }
 
 function renderSections() {
   const list = channels();
   const sections = [
-    ["LIVE", "Live now", list.filter((channel) => channel.access.model !== "subscription").slice(0, 12)],
-    ["SPORT", "Premium sport", list.filter((channel) => channel.categories.includes("sports"))],
-    ["CINEMA", "Movie channels", list.filter((channel) => channel.categories.includes("movies"))],
+    ["WATCH", "Official viewing options", list.filter(channel=>{
+      const s=sourceFor(channel);
+      return s && s.authorization!=="subscription-provider";
+    })],
+    ["SPORT", "Premium sports providers", list.filter((channel) => channel.categories.includes("sports") && channel.access.model==="subscription")],
+    ["EXPLORE", "More channels to discover", list.filter(channel=>!sourceFor(channel)).slice(0,12)]
   ];
 
   $("content").replaceChildren(...sections.filter((section) => section[2].length).map((section) => {
@@ -127,7 +131,8 @@ function card(channel) {
   button.innerHTML =
     '<div class="card-top">' +
       '<span class="network">' + (channel.network || channel.country).toUpperCase() + '</span>' +
-      '<span class="badge ' + (premium ? "premium" : "live") + '">' + (premium ? "PREMIUM" : "LIVE") + '</span>' +
+      '<span class="badge ' + (premium ? "premium" : "live") + '">' +
+        (premium ? "SUBSCRIPTION" : sourceFor(channel) ? "OFFICIAL" : "LISTED") + '</span>' +
     '</div>' +
     '<div><div class="card-title">' + channel.shortName + '</div>' +
     '<div class="card-category">' + (channel.categories[0] || "Live TV") + '</div></div>';
@@ -366,4 +371,11 @@ function renderSaved() {
     });
     return button;
   }));
+}
+
+function sourceRankLabel(source) {
+  if(!source)return "CHANNEL DIRECTORY";
+  if(source.authorization==="subscription-provider")return "PREMIUM NETWORK";
+  if(source.playbackMode==="external")return "WATCH ON THE OFFICIAL SITE";
+  return "LIVE TV · OFFICIAL STREAM";
 }

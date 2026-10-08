@@ -18,6 +18,8 @@ try {
   assert.equal(res.status(),200,"PWA must load");
   await page.locator("#directoryStatus").waitFor({state:"visible"});
   await page.waitForFunction(()=>document.querySelector("#directoryStatus")?.textContent?.includes("channel"));
+  assert.equal(await page.locator("#heroTitle").textContent(),"Sky News");
+  assert.equal(await page.locator("#heroPrimary").textContent(),"Watch on official site");
   const countries=await page.locator("#directoryCountry option").count();
   assert.ok(countries>=200,"global country selection needs 200+ countries");
   assert.equal(await page.locator(".tab[data-section]").count(),4);
