@@ -14,6 +14,7 @@
     "catalog": "node scripts/catalog-cli.mjs",
     "validate:parity": "node scripts/validate-parity.mjs",
     "worldwide": "node scripts/worldwide-cli.mjs",
-    "check:pwa": "node --check web-pwa/app.js && node --check web-pwa/discovery.mjs"
+    "check:pwa": "node --check web-pwa/app.js && node --check web-pwa/discovery.mjs",
+    "build:web": "node scripts/build-web.mjs"
   }
 }
