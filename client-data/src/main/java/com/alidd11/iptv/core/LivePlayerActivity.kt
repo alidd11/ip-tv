@@ -7,7 +7,9 @@ import android.view.KeyEvent
 import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
+import android.widget.Button
 import android.widget.FrameLayout
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.activity.ComponentActivity
 import androidx.media3.common.MediaItem
@@ -16,37 +18,79 @@ import androidx.media3.common.Player
 import androidx.media3.exoplayer.ExoPlayer
 import androidx.media3.ui.PlayerView
 
-/**
- * Shared Android mobile + Android TV/Fire TV playback surface.
- * Only opens enabled, approved native HLS sources re-resolved from the catalogue.
- */
+/** Full-screen player shared by Android touch and TV remote clients. */
 class LivePlayerActivity : ComponentActivity() {
     companion object {
         const val EXTRA_CHANNEL_ID = "com.alidd11.iptv.CHANNEL_ID"
     }
 
-    private lateinit var videoView: PlayerView
-    private lateinit var errorView: TextView
-    private var player: ExoPlayer? = null
+    private lateinit var catalogue: TvCatalog
+    private lateinit var queue: List<TvChannel>
+    private lateinit var video: PlayerView
+    private lateinit var errorText: TextView
+    private lateinit var channelTitle: TextView
+    private lateinit var channelCount: TextView
+    private lateinit var previous: Button
+    private lateinit var next: Button
+    private var selected = -1
+    private var playback: ExoPlayer? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
-        val frame = FrameLayout(this).apply {
-            setBackgroundColor(Color.BLACK)
-        }
-        videoView = PlayerView(this).apply {
+        window.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN)
+        catalogue = TvCatalogRepository(this).load()
+        val channelId = intent?.getStringExtra(EXTRA_CHANNEL_ID).orEmpty()
+        queue = catalogue.nativeChannelQueue(channelId)
+        selected = queue.indexOfFirst { it.id == channelId }
+
+        val frame = FrameLayout(this).apply { setBackgroundColor(Color.BLACK) }
+        video = PlayerView(this).apply {
             useController = true
             controllerAutoShow = true
-            controllerShowTimeoutMs = 5000
+            controllerShowTimeoutMs = 4500
             isFocusable = true
             isFocusableInTouchMode = true
+            contentDescription = "IP TV live player"
         }
-        frame.addView(videoView, FrameLayout.LayoutParams(
-            ViewGroup.LayoutParams.MATCH_PARENT,
-            ViewGroup.LayoutParams.MATCH_PARENT
-        ))
-        errorView = TextView(this).apply {
+        frame.addView(video, FrameLayout.LayoutParams(-1, -1))
+        val header = LinearLayout(this).apply {
+            orientation = LinearLayout.VERTICAL
+            setPadding(24, 18, 24, 18)
+            setBackgroundColor(Color.argb(205, 13, 16, 26))
+        }
+        channelTitle = TextView(this).apply {
+            setTextColor(Color.WHITE)
+            textSize = 20f
+            setSingleLine(true)
+            ellipsize = android.text.TextUtils.TruncateAt.END
+        }
+        channelCount = TextView(this).apply {
+            setTextColor(Color.rgb(184, 181, 230))
+            textSize = 13f
+        }
+        header.addView(channelTitle)
+        header.addView(channelCount)
+        frame.addView(header, FrameLayout.LayoutParams(-1, -2, Gravity.TOP))
+        val footer = LinearLayout(this).apply {
+            gravity = Gravity.CENTER
+            orientation = LinearLayout.HORIZONTAL
+            setPadding(16, 12, 16, 12)
+            setBackgroundColor(Color.argb(205, 13, 16, 26))
+        }
+        previous = Button(this).apply {
+            text = "◀ Previous"
+            contentDescription = "Previous playable channel"
+            setOnClickListener { changeChannel(-1) }
+        }
+        next = Button(this).apply {
+            text = "Next ▶"
+            contentDescription = "Next playable channel"
+            setOnClickListener { changeChannel(1) }
+        }
+        footer.addView(previous)
+        footer.addView(next)
+        frame.addView(footer, FrameLayout.LayoutParams(-1, -2, Gravity.BOTTOM))
+        errorText = TextView(this).apply {
             setTextColor(Color.WHITE)
             textSize = 18f
             gravity = Gravity.CENTER
@@ -54,88 +98,109 @@ class LivePlayerActivity : ComponentActivity() {
             setBackgroundColor(Color.rgb(18, 20, 28))
             visibility = View.GONE
         }
-        frame.addView(errorView, FrameLayout.LayoutParams(
-            ViewGroup.LayoutParams.MATCH_PARENT,
-            ViewGroup.LayoutParams.WRAP_CONTENT,
-            Gravity.CENTER
-        ))
+        frame.addView(errorText, FrameLayout.LayoutParams(-1, -2, Gravity.CENTER))
         setContentView(frame)
+        updateHeader()
     }
 
     override fun onStart() {
         super.onStart()
-        val id = intent?.getStringExtra(EXTRA_CHANNEL_ID).orEmpty()
-        val source = TvCatalogRepository(this).load().sourceFor(id)
-        if (source == null || source.playbackMode != "native" || source.type != "hls" ||
-            source.authorization !in setOf("verified-official", "verified-public-authorized")) {
-            displayError("No approved in-app stream is available for this channel.")
+        if (selected < 0) {
+            showError("No approved in-app stream is available for this channel.")
             return
         }
-        errorView.visibility = View.GONE
-        val exo = ExoPlayer.Builder(this).build()
-        player = exo
-        videoView.player = exo
-        exo.addListener(object : Player.Listener {
-            override fun onPlayerError(error: PlaybackException) {
-                displayError("Playback is unavailable. Check your connection or try again later.")
-            }
-        })
-        exo.setMediaItem(MediaItem.fromUri(source.url))
-        exo.prepare()
-        exo.playWhenReady = true
-        videoView.requestFocus()
+        window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+        playback = ExoPlayer.Builder(this).build().also { exo ->
+            video.player = exo
+            exo.addListener(object : Player.Listener {
+                override fun onPlayerError(error: PlaybackException) {
+                    showError("Unable to play this channel. Try another one.")
+                }
+            })
+        }
+        playSelected()
+        video.requestFocus()
     }
 
-    private fun displayError(message: String) {
-        errorView.text = message
-        errorView.visibility = View.VISIBLE
+    private fun updateHeader() {
+        channelTitle.text = if (selected >= 0) queue[selected].name else "IP TV"
+        channelCount.text = if (selected >= 0) {
+            (selected + 1).toString() + " / " + queue.size + " · Live"
+        } else "No approved live stream"
+        previous.isEnabled = queue.size > 1
+        next.isEnabled = queue.size > 1
+    }
+
+    private fun changeChannel(direction: Int) {
+        if (queue.size <= 1 || selected < 0) return
+        selected = (selected + direction + queue.size) % queue.size
+        playSelected()
+    }
+
+    private fun playSelected() {
+        if (selected !in queue.indices) return
+        updateHeader()
+        val source = catalogue.nativeHlsSourceFor(queue[selected].id)
+        if (source == null) {
+            showError("No approved stream for this channel.")
+            return
+        }
+        errorText.visibility = View.GONE
+        playback?.apply {
+            stop()
+            clearMediaItems()
+            setMediaItem(MediaItem.fromUri(source.url))
+            prepare()
+            playWhenReady = true
+        }
+    }
+
+    private fun showError(message: String) {
+        errorText.text = message
+        errorText.visibility = View.VISIBLE
     }
 
     override fun dispatchKeyEvent(event: KeyEvent): Boolean {
-        if (event.action == KeyEvent.ACTION_DOWN) {
-            val playback = player
-            if (playback != null) {
+        if (event.action == KeyEvent.ACTION_DOWN && event.repeatCount == 0) {
+            when (event.keyCode) {
+                KeyEvent.KEYCODE_CHANNEL_UP -> { changeChannel(1); return true }
+                KeyEvent.KEYCODE_CHANNEL_DOWN -> { changeChannel(-1); return true }
+            }
+            val current = playback
+            if (current != null) {
                 when (event.keyCode) {
                     KeyEvent.KEYCODE_MEDIA_PLAY_PAUSE -> {
-                        if (playback.isPlaying) playback.pause() else playback.play()
+                        if (current.isPlaying) current.pause() else current.play()
                         return true
                     }
-                    KeyEvent.KEYCODE_MEDIA_PLAY -> {
-                        playback.play()
-                        return true
-                    }
-                    KeyEvent.KEYCODE_MEDIA_PAUSE -> {
-                        playback.pause()
-                        return true
-                    }
+                    KeyEvent.KEYCODE_MEDIA_PLAY -> { current.play(); return true }
+                    KeyEvent.KEYCODE_MEDIA_PAUSE -> { current.pause(); return true }
                     KeyEvent.KEYCODE_MEDIA_REWIND -> {
-                        if (playback.isCurrentMediaItemSeekable) {
-                            playback.seekTo((playback.currentPosition - 10000L).coerceAtLeast(0))
-                        }
+                        if (current.isCurrentMediaItemSeekable)
+                            current.seekTo((current.currentPosition - 10000L).coerceAtLeast(0))
                         return true
                     }
                     KeyEvent.KEYCODE_MEDIA_FAST_FORWARD -> {
-                        if (playback.isCurrentMediaItemSeekable) {
-                            playback.seekTo(playback.currentPosition + 10000L)
-                        }
+                        if (current.isCurrentMediaItemSeekable)
+                            current.seekTo(current.currentPosition + 10000L)
                         return true
                     }
                 }
             }
         }
-        // D-pad and Back remain owned by PlayerView/system, including HDMI-CEC passthrough.
         return super.dispatchKeyEvent(event)
     }
 
     override fun onStop() {
-        videoView.player = null
-        player?.release()
-        player = null
+        video.player = null
+        playback?.release()
+        playback = null
+        window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
         super.onStop()
     }
 
     override fun onDestroy() {
-        window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+        window.clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN)
         super.onDestroy()
     }
 }
