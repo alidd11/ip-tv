@@ -1,0 +1,2336 @@
+{
+  "schema": 1,
+  "source": "iptv-org/database",
+  "license": "Unlicense",
+  "generatedAt": "2026-10-08T09:06:31.598Z",
+  "containsStreams": false,
+  "streamAuthorisation": "none",
+  "totals": {
+    "channels": 31522,
+    "visible": 29728,
+    "closed": 1433,
+    "adult": 375,
+    "feeds": 45075,
+    "guides": 27117,
+    "logoCandidates": 30333
+  },
+  "omitted": {
+    "duplicates": 0,
+    "invalid": 0,
+    "orphanFeeds": 0,
+    "orphanGuides": 153547,
+    "orphanLogos": 0
+  },
+  "countries": [
+    {
+      "code": "AD",
+      "name": "Andorra",
+      "total": 2,
+      "visible": 2,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 2,
+      "guides": 1
+    },
+    {
+      "code": "AE",
+      "name": "United Arab Emirates",
+      "total": 140,
+      "visible": 134,
+      "closed": 5,
+      "adult": 1,
+      "feeds": 151,
+      "guides": 196
+    },
+    {
+      "code": "AF",
+      "name": "Afghanistan",
+      "total": 47,
+      "visible": 43,
+      "closed": 4,
+      "adult": 0,
+      "feeds": 47,
+      "guides": 1
+    },
+    {
+      "code": "AG",
+      "name": "Antigua and Barbuda",
+      "total": 4,
+      "visible": 4,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 4,
+      "guides": 0
+    },
+    {
+      "code": "AI",
+      "name": "Anguilla",
+      "total": 3,
+      "visible": 3,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 3,
+      "guides": 0
+    },
+    {
+      "code": "AL",
+      "name": "Albania",
+      "total": 139,
+      "visible": 134,
+      "closed": 1,
+      "adult": 4,
+      "feeds": 145,
+      "guides": 122
+    },
+    {
+      "code": "AM",
+      "name": "Armenia",
+      "total": 59,
+      "visible": 59,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 62,
+      "guides": 13
+    },
+    {
+      "code": "AO",
+      "name": "Angola",
+      "total": 55,
+      "visible": 52,
+      "closed": 3,
+      "adult": 0,
+      "feeds": 55,
+      "guides": 19
+    },
+    {
+      "code": "AR",
+      "name": "Argentina",
+      "total": 497,
+      "visible": 480,
+      "closed": 15,
+      "adult": 2,
+      "feeds": 522,
+      "guides": 151
+    },
+    {
+      "code": "AS",
+      "name": "American Samoa",
+      "total": 7,
+      "visible": 7,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 7,
+      "guides": 0
+    },
+    {
+      "code": "AT",
+      "name": "Austria",
+      "total": 124,
+      "visible": 120,
+      "closed": 4,
+      "adult": 0,
+      "feeds": 174,
+      "guides": 193
+    },
+    {
+      "code": "AU",
+      "name": "Australia",
+      "total": 198,
+      "visible": 180,
+      "closed": 18,
+      "adult": 0,
+      "feeds": 373,
+      "guides": 319
+    },
+    {
+      "code": "AW",
+      "name": "Aruba",
+      "total": 17,
+      "visible": 17,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 17,
+      "guides": 0
+    },
+    {
+      "code": "AX",
+      "name": "Aland",
+      "total": 1,
+      "visible": 1,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 1,
+      "guides": 0
+    },
+    {
+      "code": "AZ",
+      "name": "Azerbaijan",
+      "total": 43,
+      "visible": 43,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 47,
+      "guides": 4
+    },
+    {
+      "code": "BA",
+      "name": "Bosnia and Herzegovina",
+      "total": 107,
+      "visible": 105,
+      "closed": 1,
+      "adult": 1,
+      "feeds": 108,
+      "guides": 67
+    },
+    {
+      "code": "BB",
+      "name": "Barbados",
+      "total": 13,
+      "visible": 13,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 13,
+      "guides": 1
+    },
+    {
+      "code": "BD",
+      "name": "Bangladesh",
+      "total": 78,
+      "visible": 78,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 80,
+      "guides": 3
+    },
+    {
+      "code": "BE",
+      "name": "Belgium",
+      "total": 135,
+      "visible": 133,
+      "closed": 1,
+      "adult": 1,
+      "feeds": 223,
+      "guides": 319
+    },
+    {
+      "code": "BF",
+      "name": "Burkina Faso",
+      "total": 38,
+      "visible": 38,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 38,
+      "guides": 0
+    },
+    {
+      "code": "BG",
+      "name": "Bulgaria",
+      "total": 155,
+      "visible": 146,
+      "closed": 9,
+      "adult": 0,
+      "feeds": 159,
+      "guides": 112
+    },
+    {
+      "code": "BH",
+      "name": "Bahrain",
+      "total": 6,
+      "visible": 6,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 6,
+      "guides": 5
+    },
+    {
+      "code": "BI",
+      "name": "Burundi",
+      "total": 16,
+      "visible": 16,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 16,
+      "guides": 0
+    },
+    {
+      "code": "BJ",
+      "name": "Benin",
+      "total": 70,
+      "visible": 66,
+      "closed": 4,
+      "adult": 0,
+      "feeds": 70,
+      "guides": 3
+    },
+    {
+      "code": "BM",
+      "name": "Bermuda",
+      "total": 7,
+      "visible": 7,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 7,
+      "guides": 0
+    },
+    {
+      "code": "BN",
+      "name": "Brunei",
+      "total": 4,
+      "visible": 4,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 4,
+      "guides": 0
+    },
+    {
+      "code": "BO",
+      "name": "Bolivia",
+      "total": 244,
+      "visible": 237,
+      "closed": 7,
+      "adult": 0,
+      "feeds": 258,
+      "guides": 2
+    },
+    {
+      "code": "BQ",
+      "name": "Bonaire",
+      "total": 9,
+      "visible": 8,
+      "closed": 1,
+      "adult": 0,
+      "feeds": 9,
+      "guides": 0
+    },
+    {
+      "code": "BR",
+      "name": "Brazil",
+      "total": 823,
+      "visible": 793,
+      "closed": 25,
+      "adult": 5,
+      "feeds": 834,
+      "guides": 284
+    },
+    {
+      "code": "BS",
+      "name": "Bahamas",
+      "total": 15,
+      "visible": 15,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 15,
+      "guides": 0
+    },
+    {
+      "code": "BT",
+      "name": "Bhutan",
+      "total": 3,
+      "visible": 3,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 3,
+      "guides": 0
+    },
+    {
+      "code": "BW",
+      "name": "Botswana",
+      "total": 10,
+      "visible": 9,
+      "closed": 1,
+      "adult": 0,
+      "feeds": 10,
+      "guides": 0
+    },
+    {
+      "code": "BY",
+      "name": "Belarus",
+      "total": 43,
+      "visible": 43,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 61,
+      "guides": 12
+    },
+    {
+      "code": "BZ",
+      "name": "Belize",
+      "total": 22,
+      "visible": 21,
+      "closed": 1,
+      "adult": 0,
+      "feeds": 22,
+      "guides": 0
+    },
+    {
+      "code": "CA",
+      "name": "Canada",
+      "total": 652,
+      "visible": 607,
+      "closed": 27,
+      "adult": 18,
+      "feeds": 873,
+      "guides": 789
+    },
+    {
+      "code": "CD",
+      "name": "Democratic Republic of the Congo",
+      "total": 184,
+      "visible": 184,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 184,
+      "guides": 5
+    },
+    {
+      "code": "CF",
+      "name": "Central African Republic",
+      "total": 3,
+      "visible": 3,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 3,
+      "guides": 0
+    },
+    {
+      "code": "CG",
+      "name": "Republic of the Congo",
+      "total": 25,
+      "visible": 25,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 25,
+      "guides": 4
+    },
+    {
+      "code": "CH",
+      "name": "Switzerland",
+      "total": 164,
+      "visible": 157,
+      "closed": 6,
+      "adult": 1,
+      "feeds": 168,
+      "guides": 213
+    },
+    {
+      "code": "CI",
+      "name": "Ivory Coast",
+      "total": 68,
+      "visible": 68,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 68,
+      "guides": 4
+    },
+    {
+      "code": "CK",
+      "name": "Cook Islands",
+      "total": 5,
+      "visible": 5,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 5,
+      "guides": 0
+    },
+    {
+      "code": "CL",
+      "name": "Chile",
+      "total": 497,
+      "visible": 486,
+      "closed": 11,
+      "adult": 0,
+      "feeds": 497,
+      "guides": 55
+    },
+    {
+      "code": "CM",
+      "name": "Cameroon",
+      "total": 120,
+      "visible": 120,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 120,
+      "guides": 7
+    },
+    {
+      "code": "CN",
+      "name": "China",
+      "total": 749,
+      "visible": 747,
+      "closed": 2,
+      "adult": 0,
+      "feeds": 787,
+      "guides": 258
+    },
+    {
+      "code": "CO",
+      "name": "Colombia",
+      "total": 495,
+      "visible": 489,
+      "closed": 6,
+      "adult": 1,
+      "feeds": 497,
+      "guides": 92
+    },
+    {
+      "code": "CR",
+      "name": "Costa Rica",
+      "total": 127,
+      "visible": 126,
+      "closed": 1,
+      "adult": 0,
+      "feeds": 127,
+      "guides": 16
+    },
+    {
+      "code": "CU",
+      "name": "Cuba",
+      "total": 43,
+      "visible": 43,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 43,
+      "guides": 16
+    },
+    {
+      "code": "CV",
+      "name": "Cape Verde",
+      "total": 11,
+      "visible": 11,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 11,
+      "guides": 4
+    },
+    {
+      "code": "CW",
+      "name": "Curacao",
+      "total": 7,
+      "visible": 7,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 7,
+      "guides": 0
+    },
+    {
+      "code": "CY",
+      "name": "Cyprus",
+      "total": 80,
+      "visible": 58,
+      "closed": 2,
+      "adult": 20,
+      "feeds": 80,
+      "guides": 11
+    },
+    {
+      "code": "CZ",
+      "name": "Czech Republic",
+      "total": 157,
+      "visible": 147,
+      "closed": 4,
+      "adult": 6,
+      "feeds": 168,
+      "guides": 217
+    },
+    {
+      "code": "DE",
+      "name": "Germany",
+      "total": 728,
+      "visible": 704,
+      "closed": 13,
+      "adult": 11,
+      "feeds": 970,
+      "guides": 1765
+    },
+    {
+      "code": "DJ",
+      "name": "Djibouti",
+      "total": 8,
+      "visible": 8,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 8,
+      "guides": 0
+    },
+    {
+      "code": "DK",
+      "name": "Denmark",
+      "total": 83,
+      "visible": 77,
+      "closed": 6,
+      "adult": 0,
+      "feeds": 84,
+      "guides": 23
+    },
+    {
+      "code": "DM",
+      "name": "Dominica",
+      "total": 4,
+      "visible": 4,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 4,
+      "guides": 0
+    },
+    {
+      "code": "DO",
+      "name": "Dominican Republic",
+      "total": 341,
+      "visible": 340,
+      "closed": 1,
+      "adult": 0,
+      "feeds": 342,
+      "guides": 13
+    },
+    {
+      "code": "DZ",
+      "name": "Algeria",
+      "total": 47,
+      "visible": 44,
+      "closed": 3,
+      "adult": 0,
+      "feeds": 47,
+      "guides": 32
+    },
+    {
+      "code": "EC",
+      "name": "Ecuador",
+      "total": 219,
+      "visible": 216,
+      "closed": 3,
+      "adult": 0,
+      "feeds": 221,
+      "guides": 15
+    },
+    {
+      "code": "EE",
+      "name": "Estonia",
+      "total": 72,
+      "visible": 61,
+      "closed": 11,
+      "adult": 0,
+      "feeds": 73,
+      "guides": 86
+    },
+    {
+      "code": "EG",
+      "name": "Egypt",
+      "total": 117,
+      "visible": 116,
+      "closed": 1,
+      "adult": 0,
+      "feeds": 117,
+      "guides": 141
+    },
+    {
+      "code": "EH",
+      "name": "Western Sahara",
+      "total": 1,
+      "visible": 1,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 1,
+      "guides": 0
+    },
+    {
+      "code": "ER",
+      "name": "Eritrea",
+      "total": 2,
+      "visible": 2,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 2,
+      "guides": 0
+    },
+    {
+      "code": "ES",
+      "name": "Spain",
+      "total": 673,
+      "visible": 643,
+      "closed": 29,
+      "adult": 1,
+      "feeds": 801,
+      "guides": 366
+    },
+    {
+      "code": "ET",
+      "name": "Ethiopia",
+      "total": 117,
+      "visible": 107,
+      "closed": 10,
+      "adult": 0,
+      "feeds": 117,
+      "guides": 1
+    },
+    {
+      "code": "FI",
+      "name": "Finland",
+      "total": 103,
+      "visible": 63,
+      "closed": 40,
+      "adult": 0,
+      "feeds": 119,
+      "guides": 50
+    },
+    {
+      "code": "FJ",
+      "name": "Fiji",
+      "total": 9,
+      "visible": 9,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 9,
+      "guides": 8
+    },
+    {
+      "code": "FK",
+      "name": "Falkland Islands",
+      "total": 1,
+      "visible": 1,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 1,
+      "guides": 0
+    },
+    {
+      "code": "FM",
+      "name": "Micronesia",
+      "total": 2,
+      "visible": 2,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 2,
+      "guides": 0
+    },
+    {
+      "code": "FO",
+      "name": "Faroe Islands",
+      "total": 5,
+      "visible": 4,
+      "closed": 1,
+      "adult": 0,
+      "feeds": 5,
+      "guides": 0
+    },
+    {
+      "code": "FR",
+      "name": "France",
+      "total": 595,
+      "visible": 542,
+      "closed": 47,
+      "adult": 8,
+      "feeds": 736,
+      "guides": 2048
+    },
+    {
+      "code": "GA",
+      "name": "Gabon",
+      "total": 19,
+      "visible": 19,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 19,
+      "guides": 1
+    },
+    {
+      "code": "GB",
+      "name": "United Kingdom",
+      "total": 688,
+      "visible": 592,
+      "closed": 69,
+      "adult": 28,
+      "feeds": 1210,
+      "guides": 2702
+    },
+    {
+      "code": "GD",
+      "name": "Grenada",
+      "total": 10,
+      "visible": 10,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 10,
+      "guides": 0
+    },
+    {
+      "code": "GE",
+      "name": "Georgia",
+      "total": 94,
+      "visible": 93,
+      "closed": 1,
+      "adult": 0,
+      "feeds": 94,
+      "guides": 34
+    },
+    {
+      "code": "GF",
+      "name": "French Guiana",
+      "total": 5,
+      "visible": 5,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 5,
+      "guides": 2
+    },
+    {
+      "code": "GH",
+      "name": "Ghana",
+      "total": 218,
+      "visible": 218,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 218,
+      "guides": 1
+    },
+    {
+      "code": "GI",
+      "name": "Gibraltar",
+      "total": 2,
+      "visible": 2,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 2,
+      "guides": 0
+    },
+    {
+      "code": "GL",
+      "name": "Greenland",
+      "total": 5,
+      "visible": 3,
+      "closed": 2,
+      "adult": 0,
+      "feeds": 5,
+      "guides": 1
+    },
+    {
+      "code": "GM",
+      "name": "Gambia",
+      "total": 7,
+      "visible": 7,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 7,
+      "guides": 0
+    },
+    {
+      "code": "GN",
+      "name": "Guinea",
+      "total": 40,
+      "visible": 39,
+      "closed": 1,
+      "adult": 0,
+      "feeds": 40,
+      "guides": 2
+    },
+    {
+      "code": "GP",
+      "name": "Guadeloupe",
+      "total": 12,
+      "visible": 12,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 12,
+      "guides": 5
+    },
+    {
+      "code": "GQ",
+      "name": "Equatorial Guinea",
+      "total": 10,
+      "visible": 10,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 10,
+      "guides": 0
+    },
+    {
+      "code": "GR",
+      "name": "Greece",
+      "total": 243,
+      "visible": 220,
+      "closed": 22,
+      "adult": 1,
+      "feeds": 259,
+      "guides": 31
+    },
+    {
+      "code": "GT",
+      "name": "Guatemala",
+      "total": 161,
+      "visible": 161,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 161,
+      "guides": 8
+    },
+    {
+      "code": "GU",
+      "name": "Guam",
+      "total": 12,
+      "visible": 12,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 12,
+      "guides": 3
+    },
+    {
+      "code": "GW",
+      "name": "Guinea-Bissau",
+      "total": 2,
+      "visible": 2,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 2,
+      "guides": 0
+    },
+    {
+      "code": "GY",
+      "name": "Guyana",
+      "total": 35,
+      "visible": 34,
+      "closed": 1,
+      "adult": 0,
+      "feeds": 35,
+      "guides": 1
+    },
+    {
+      "code": "HK",
+      "name": "Hong Kong",
+      "total": 147,
+      "visible": 125,
+      "closed": 18,
+      "adult": 4,
+      "feeds": 150,
+      "guides": 240
+    },
+    {
+      "code": "HN",
+      "name": "Honduras",
+      "total": 158,
+      "visible": 158,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 158,
+      "guides": 12
+    },
+    {
+      "code": "HR",
+      "name": "Croatia",
+      "total": 94,
+      "visible": 92,
+      "closed": 2,
+      "adult": 0,
+      "feeds": 99,
+      "guides": 99
+    },
+    {
+      "code": "HT",
+      "name": "Haiti",
+      "total": 53,
+      "visible": 53,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 53,
+      "guides": 1
+    },
+    {
+      "code": "HU",
+      "name": "Hungary",
+      "total": 202,
+      "visible": 183,
+      "closed": 18,
+      "adult": 1,
+      "feeds": 216,
+      "guides": 342
+    },
+    {
+      "code": "ID",
+      "name": "Indonesia",
+      "total": 396,
+      "visible": 346,
+      "closed": 50,
+      "adult": 3,
+      "feeds": 466,
+      "guides": 386
+    },
+    {
+      "code": "IE",
+      "name": "Ireland",
+      "total": 87,
+      "visible": 82,
+      "closed": 5,
+      "adult": 0,
+      "feeds": 118,
+      "guides": 129
+    },
+    {
+      "code": "IL",
+      "name": "Israel",
+      "total": 133,
+      "visible": 129,
+      "closed": 4,
+      "adult": 0,
+      "feeds": 133,
+      "guides": 35
+    },
+    {
+      "code": "IN",
+      "name": "India",
+      "total": 1542,
+      "visible": 1442,
+      "closed": 100,
+      "adult": 0,
+      "feeds": 1790,
+      "guides": 2044
+    },
+    {
+      "code": "IQ",
+      "name": "Iraq",
+      "total": 139,
+      "visible": 139,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 140,
+      "guides": 50
+    },
+    {
+      "code": "IR",
+      "name": "Iran",
+      "total": 195,
+      "visible": 191,
+      "closed": 4,
+      "adult": 0,
+      "feeds": 195,
+      "guides": 10
+    },
+    {
+      "code": "IS",
+      "name": "Iceland",
+      "total": 26,
+      "visible": 25,
+      "closed": 1,
+      "adult": 0,
+      "feeds": 26,
+      "guides": 15
+    },
+    {
+      "code": "IT",
+      "name": "Italy",
+      "total": 653,
+      "visible": 613,
+      "closed": 36,
+      "adult": 4,
+      "feeds": 826,
+      "guides": 928
+    },
+    {
+      "code": "JM",
+      "name": "Jamaica",
+      "total": 38,
+      "visible": 36,
+      "closed": 2,
+      "adult": 0,
+      "feeds": 38,
+      "guides": 0
+    },
+    {
+      "code": "JO",
+      "name": "Jordan",
+      "total": 62,
+      "visible": 62,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 62,
+      "guides": 26
+    },
+    {
+      "code": "JP",
+      "name": "Japan",
+      "total": 296,
+      "visible": 261,
+      "closed": 17,
+      "adult": 18,
+      "feeds": 369,
+      "guides": 242
+    },
+    {
+      "code": "KE",
+      "name": "Kenya",
+      "total": 161,
+      "visible": 161,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 161,
+      "guides": 0
+    },
+    {
+      "code": "KG",
+      "name": "Kyrgyzstan",
+      "total": 33,
+      "visible": 28,
+      "closed": 5,
+      "adult": 0,
+      "feeds": 33,
+      "guides": 6
+    },
+    {
+      "code": "KH",
+      "name": "Cambodia",
+      "total": 44,
+      "visible": 44,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 44,
+      "guides": 0
+    },
+    {
+      "code": "KI",
+      "name": "Kiribati",
+      "total": 2,
+      "visible": 2,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 2,
+      "guides": 0
+    },
+    {
+      "code": "KM",
+      "name": "Comoros",
+      "total": 2,
+      "visible": 2,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 2,
+      "guides": 1
+    },
+    {
+      "code": "KN",
+      "name": "Saint Kitts and Nevis",
+      "total": 5,
+      "visible": 5,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 5,
+      "guides": 0
+    },
+    {
+      "code": "KP",
+      "name": "North Korea",
+      "total": 4,
+      "visible": 4,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 8,
+      "guides": 0
+    },
+    {
+      "code": "KR",
+      "name": "South Korea",
+      "total": 311,
+      "visible": 291,
+      "closed": 15,
+      "adult": 5,
+      "feeds": 321,
+      "guides": 175
+    },
+    {
+      "code": "KW",
+      "name": "Kuwait",
+      "total": 26,
+      "visible": 26,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 26,
+      "guides": 11
+    },
+    {
+      "code": "KY",
+      "name": "Cayman Islands",
+      "total": 6,
+      "visible": 6,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 6,
+      "guides": 0
+    },
+    {
+      "code": "KZ",
+      "name": "Kazakhstan",
+      "total": 92,
+      "visible": 87,
+      "closed": 5,
+      "adult": 0,
+      "feeds": 104,
+      "guides": 46
+    },
+    {
+      "code": "LA",
+      "name": "Laos",
+      "total": 26,
+      "visible": 26,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 26,
+      "guides": 0
+    },
+    {
+      "code": "LB",
+      "name": "Lebanon",
+      "total": 49,
+      "visible": 48,
+      "closed": 1,
+      "adult": 0,
+      "feeds": 49,
+      "guides": 19
+    },
+    {
+      "code": "LC",
+      "name": "Saint Lucia",
+      "total": 15,
+      "visible": 15,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 15,
+      "guides": 0
+    },
+    {
+      "code": "LI",
+      "name": "Liechtenstein",
+      "total": 5,
+      "visible": 5,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 5,
+      "guides": 5
+    },
+    {
+      "code": "LK",
+      "name": "Sri Lanka",
+      "total": 91,
+      "visible": 91,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 91,
+      "guides": 1
+    },
+    {
+      "code": "LR",
+      "name": "Liberia",
+      "total": 20,
+      "visible": 20,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 20,
+      "guides": 0
+    },
+    {
+      "code": "LS",
+      "name": "Lesotho",
+      "total": 1,
+      "visible": 1,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 1,
+      "guides": 1
+    },
+    {
+      "code": "LT",
+      "name": "Lithuania",
+      "total": 51,
+      "visible": 44,
+      "closed": 7,
+      "adult": 0,
+      "feeds": 58,
+      "guides": 25
+    },
+    {
+      "code": "LU",
+      "name": "Luxembourg",
+      "total": 25,
+      "visible": 23,
+      "closed": 0,
+      "adult": 2,
+      "feeds": 25,
+      "guides": 23
+    },
+    {
+      "code": "LV",
+      "name": "Latvia",
+      "total": 43,
+      "visible": 39,
+      "closed": 4,
+      "adult": 0,
+      "feeds": 48,
+      "guides": 29
+    },
+    {
+      "code": "LY",
+      "name": "Libya",
+      "total": 26,
+      "visible": 26,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 26,
+      "guides": 3
+    },
+    {
+      "code": "MA",
+      "name": "Morocco",
+      "total": 30,
+      "visible": 30,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 45,
+      "guides": 46
+    },
+    {
+      "code": "MC",
+      "name": "Monaco",
+      "total": 5,
+      "visible": 5,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 5,
+      "guides": 5
+    },
+    {
+      "code": "MD",
+      "name": "Moldova",
+      "total": 65,
+      "visible": 62,
+      "closed": 3,
+      "adult": 0,
+      "feeds": 66,
+      "guides": 11
+    },
+    {
+      "code": "ME",
+      "name": "Montenegro",
+      "total": 32,
+      "visible": 32,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 32,
+      "guides": 15
+    },
+    {
+      "code": "MG",
+      "name": "Madagascar",
+      "total": 50,
+      "visible": 49,
+      "closed": 1,
+      "adult": 0,
+      "feeds": 50,
+      "guides": 0
+    },
+    {
+      "code": "MK",
+      "name": "North Macedonia",
+      "total": 69,
+      "visible": 69,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 69,
+      "guides": 40
+    },
+    {
+      "code": "ML",
+      "name": "Mali",
+      "total": 48,
+      "visible": 48,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 48,
+      "guides": 3
+    },
+    {
+      "code": "MM",
+      "name": "Myanmar",
+      "total": 66,
+      "visible": 66,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 66,
+      "guides": 0
+    },
+    {
+      "code": "MN",
+      "name": "Mongolia",
+      "total": 133,
+      "visible": 130,
+      "closed": 2,
+      "adult": 1,
+      "feeds": 135,
+      "guides": 28
+    },
+    {
+      "code": "MO",
+      "name": "Macao",
+      "total": 15,
+      "visible": 15,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 15,
+      "guides": 1
+    },
+    {
+      "code": "MP",
+      "name": "Northern Mariana Islands",
+      "total": 3,
+      "visible": 3,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 3,
+      "guides": 0
+    },
+    {
+      "code": "MQ",
+      "name": "Martinique",
+      "total": 15,
+      "visible": 15,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 15,
+      "guides": 6
+    },
+    {
+      "code": "MR",
+      "name": "Mauritania",
+      "total": 16,
+      "visible": 16,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 17,
+      "guides": 0
+    },
+    {
+      "code": "MS",
+      "name": "Montserrat",
+      "total": 1,
+      "visible": 1,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 1,
+      "guides": 0
+    },
+    {
+      "code": "MT",
+      "name": "Malta",
+      "total": 24,
+      "visible": 24,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 24,
+      "guides": 22
+    },
+    {
+      "code": "MU",
+      "name": "Mauritius",
+      "total": 16,
+      "visible": 13,
+      "closed": 3,
+      "adult": 0,
+      "feeds": 16,
+      "guides": 0
+    },
+    {
+      "code": "MV",
+      "name": "Maldives",
+      "total": 25,
+      "visible": 25,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 25,
+      "guides": 0
+    },
+    {
+      "code": "MW",
+      "name": "Malawi",
+      "total": 19,
+      "visible": 18,
+      "closed": 1,
+      "adult": 0,
+      "feeds": 19,
+      "guides": 0
+    },
+    {
+      "code": "MX",
+      "name": "Mexico",
+      "total": 521,
+      "visible": 510,
+      "closed": 11,
+      "adult": 0,
+      "feeds": 546,
+      "guides": 184
+    },
+    {
+      "code": "MY",
+      "name": "Malaysia",
+      "total": 122,
+      "visible": 93,
+      "closed": 29,
+      "adult": 1,
+      "feeds": 126,
+      "guides": 68
+    },
+    {
+      "code": "MZ",
+      "name": "Mozambique",
+      "total": 52,
+      "visible": 51,
+      "closed": 1,
+      "adult": 0,
+      "feeds": 52,
+      "guides": 5
+    },
+    {
+      "code": "NA",
+      "name": "Namibia",
+      "total": 13,
+      "visible": 13,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 13,
+      "guides": 0
+    },
+    {
+      "code": "NC",
+      "name": "New Caledonia",
+      "total": 4,
+      "visible": 4,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 4,
+      "guides": 1
+    },
+    {
+      "code": "NE",
+      "name": "Niger",
+      "total": 19,
+      "visible": 19,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 19,
+      "guides": 0
+    },
+    {
+      "code": "NG",
+      "name": "Nigeria",
+      "total": 302,
+      "visible": 302,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 305,
+      "guides": 15
+    },
+    {
+      "code": "NI",
+      "name": "Nicaragua",
+      "total": 116,
+      "visible": 114,
+      "closed": 2,
+      "adult": 0,
+      "feeds": 116,
+      "guides": 2
+    },
+    {
+      "code": "NL",
+      "name": "Netherlands",
+      "total": 376,
+      "visible": 339,
+      "closed": 20,
+      "adult": 17,
+      "feeds": 479,
+      "guides": 664
+    },
+    {
+      "code": "NO",
+      "name": "Norway",
+      "total": 90,
+      "visible": 72,
+      "closed": 18,
+      "adult": 0,
+      "feeds": 96,
+      "guides": 21
+    },
+    {
+      "code": "NP",
+      "name": "Nepal",
+      "total": 118,
+      "visible": 118,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 147,
+      "guides": 1
+    },
+    {
+      "code": "NR",
+      "name": "Nauru",
+      "total": 1,
+      "visible": 1,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 1,
+      "guides": 0
+    },
+    {
+      "code": "NU",
+      "name": "Niue",
+      "total": 1,
+      "visible": 1,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 1,
+      "guides": 0
+    },
+    {
+      "code": "NZ",
+      "name": "New Zealand",
+      "total": 80,
+      "visible": 72,
+      "closed": 8,
+      "adult": 0,
+      "feeds": 88,
+      "guides": 211
+    },
+    {
+      "code": "OM",
+      "name": "Oman",
+      "total": 6,
+      "visible": 6,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 6,
+      "guides": 11
+    },
+    {
+      "code": "PA",
+      "name": "Panama",
+      "total": 62,
+      "visible": 62,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 62,
+      "guides": 3
+    },
+    {
+      "code": "PE",
+      "name": "Peru",
+      "total": 420,
+      "visible": 415,
+      "closed": 5,
+      "adult": 0,
+      "feeds": 422,
+      "guides": 37
+    },
+    {
+      "code": "PF",
+      "name": "French Polynesia",
+      "total": 4,
+      "visible": 4,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 4,
+      "guides": 3
+    },
+    {
+      "code": "PG",
+      "name": "Papua New Guinea",
+      "total": 12,
+      "visible": 12,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 12,
+      "guides": 0
+    },
+    {
+      "code": "PH",
+      "name": "Philippines",
+      "total": 148,
+      "visible": 128,
+      "closed": 20,
+      "adult": 0,
+      "feeds": 155,
+      "guides": 50
+    },
+    {
+      "code": "PK",
+      "name": "Pakistan",
+      "total": 205,
+      "visible": 201,
+      "closed": 4,
+      "adult": 0,
+      "feeds": 240,
+      "guides": 13
+    },
+    {
+      "code": "PL",
+      "name": "Poland",
+      "total": 370,
+      "visible": 350,
+      "closed": 20,
+      "adult": 0,
+      "feeds": 447,
+      "guides": 379
+    },
+    {
+      "code": "PM",
+      "name": "Saint Pierre and Miquelon",
+      "total": 1,
+      "visible": 1,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 1,
+      "guides": 2
+    },
+    {
+      "code": "PR",
+      "name": "Puerto Rico",
+      "total": 70,
+      "visible": 70,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 74,
+      "guides": 13
+    },
+    {
+      "code": "PS",
+      "name": "Palestine",
+      "total": 41,
+      "visible": 39,
+      "closed": 2,
+      "adult": 0,
+      "feeds": 41,
+      "guides": 5
+    },
+    {
+      "code": "PT",
+      "name": "Portugal",
+      "total": 151,
+      "visible": 139,
+      "closed": 8,
+      "adult": 4,
+      "feeds": 161,
+      "guides": 342
+    },
+    {
+      "code": "PW",
+      "name": "Palau",
+      "total": 3,
+      "visible": 3,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 3,
+      "guides": 0
+    },
+    {
+      "code": "PY",
+      "name": "Paraguay",
+      "total": 161,
+      "visible": 161,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 161,
+      "guides": 12
+    },
+    {
+      "code": "QA",
+      "name": "Qatar",
+      "total": 86,
+      "visible": 86,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 130,
+      "guides": 391
+    },
+    {
+      "code": "RE",
+      "name": "Reunion",
+      "total": 11,
+      "visible": 11,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 11,
+      "guides": 3
+    },
+    {
+      "code": "RO",
+      "name": "Romania",
+      "total": 237,
+      "visible": 220,
+      "closed": 16,
+      "adult": 1,
+      "feeds": 291,
+      "guides": 120
+    },
+    {
+      "code": "RS",
+      "name": "Serbia",
+      "total": 374,
+      "visible": 354,
+      "closed": 5,
+      "adult": 15,
+      "feeds": 394,
+      "guides": 207
+    },
+    {
+      "code": "RU",
+      "name": "Russia",
+      "total": 935,
+      "visible": 779,
+      "closed": 116,
+      "adult": 45,
+      "feeds": 1323,
+      "guides": 946
+    },
+    {
+      "code": "RW",
+      "name": "Rwanda",
+      "total": 25,
+      "visible": 24,
+      "closed": 1,
+      "adult": 0,
+      "feeds": 25,
+      "guides": 0
+    },
+    {
+      "code": "SA",
+      "name": "Saudi Arabia",
+      "total": 166,
+      "visible": 164,
+      "closed": 2,
+      "adult": 0,
+      "feeds": 168,
+      "guides": 216
+    },
+    {
+      "code": "SB",
+      "name": "Solomon Islands",
+      "total": 4,
+      "visible": 4,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 4,
+      "guides": 0
+    },
+    {
+      "code": "SC",
+      "name": "Seychelles",
+      "total": 6,
+      "visible": 6,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 6,
+      "guides": 0
+    },
+    {
+      "code": "SD",
+      "name": "Sudan",
+      "total": 31,
+      "visible": 31,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 31,
+      "guides": 3
+    },
+    {
+      "code": "SE",
+      "name": "Sweden",
+      "total": 466,
+      "visible": 335,
+      "closed": 131,
+      "adult": 0,
+      "feeds": 788,
+      "guides": 325
+    },
+    {
+      "code": "SG",
+      "name": "Singapore",
+      "total": 94,
+      "visible": 84,
+      "closed": 10,
+      "adult": 0,
+      "feeds": 144,
+      "guides": 353
+    },
+    {
+      "code": "SH",
+      "name": "Saint Helena",
+      "total": 1,
+      "visible": 1,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 1,
+      "guides": 0
+    },
+    {
+      "code": "SI",
+      "name": "Slovenia",
+      "total": 135,
+      "visible": 113,
+      "closed": 2,
+      "adult": 20,
+      "feeds": 176,
+      "guides": 153
+    },
+    {
+      "code": "SK",
+      "name": "Slovakia",
+      "total": 125,
+      "visible": 121,
+      "closed": 4,
+      "adult": 0,
+      "feeds": 129,
+      "guides": 103
+    },
+    {
+      "code": "SL",
+      "name": "Sierra Leone",
+      "total": 16,
+      "visible": 16,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 16,
+      "guides": 0
+    },
+    {
+      "code": "SM",
+      "name": "San Marino",
+      "total": 2,
+      "visible": 2,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 2,
+      "guides": 6
+    },
+    {
+      "code": "SN",
+      "name": "Senegal",
+      "total": 101,
+      "visible": 101,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 101,
+      "guides": 14
+    },
+    {
+      "code": "SO",
+      "name": "Somalia",
+      "total": 25,
+      "visible": 25,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 25,
+      "guides": 0
+    },
+    {
+      "code": "SR",
+      "name": "Suriname",
+      "total": 56,
+      "visible": 56,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 56,
+      "guides": 0
+    },
+    {
+      "code": "SS",
+      "name": "South Sudan",
+      "total": 10,
+      "visible": 10,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 10,
+      "guides": 0
+    },
+    {
+      "code": "ST",
+      "name": "Sao Tome and Principe",
+      "total": 1,
+      "visible": 1,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 1,
+      "guides": 0
+    },
+    {
+      "code": "SV",
+      "name": "El Salvador",
+      "total": 85,
+      "visible": 80,
+      "closed": 5,
+      "adult": 0,
+      "feeds": 85,
+      "guides": 17
+    },
+    {
+      "code": "SX",
+      "name": "Sint Maarten",
+      "total": 14,
+      "visible": 14,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 14,
+      "guides": 1
+    },
+    {
+      "code": "SY",
+      "name": "Syria",
+      "total": 30,
+      "visible": 30,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 30,
+      "guides": 7
+    },
+    {
+      "code": "SZ",
+      "name": "Swaziland",
+      "total": 3,
+      "visible": 3,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 3,
+      "guides": 0
+    },
+    {
+      "code": "TC",
+      "name": "Turks and Caicos Islands",
+      "total": 4,
+      "visible": 3,
+      "closed": 1,
+      "adult": 0,
+      "feeds": 4,
+      "guides": 0
+    },
+    {
+      "code": "TD",
+      "name": "Chad",
+      "total": 11,
+      "visible": 11,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 11,
+      "guides": 0
+    },
+    {
+      "code": "TG",
+      "name": "Togo",
+      "total": 41,
+      "visible": 41,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 41,
+      "guides": 0
+    },
+    {
+      "code": "TH",
+      "name": "Thailand",
+      "total": 260,
+      "visible": 256,
+      "closed": 3,
+      "adult": 1,
+      "feeds": 263,
+      "guides": 69
+    },
+    {
+      "code": "TJ",
+      "name": "Tajikistan",
+      "total": 16,
+      "visible": 16,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 16,
+      "guides": 0
+    },
+    {
+      "code": "TL",
+      "name": "East Timor",
+      "total": 5,
+      "visible": 5,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 5,
+      "guides": 0
+    },
+    {
+      "code": "TM",
+      "name": "Turkmenistan",
+      "total": 8,
+      "visible": 8,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 8,
+      "guides": 0
+    },
+    {
+      "code": "TN",
+      "name": "Tunisia",
+      "total": 27,
+      "visible": 27,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 27,
+      "guides": 22
+    },
+    {
+      "code": "TO",
+      "name": "Tonga",
+      "total": 4,
+      "visible": 4,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 4,
+      "guides": 0
+    },
+    {
+      "code": "TR",
+      "name": "Turkiye",
+      "total": 435,
+      "visible": 415,
+      "closed": 20,
+      "adult": 0,
+      "feeds": 440,
+      "guides": 469
+    },
+    {
+      "code": "TT",
+      "name": "Trinidad and Tobago",
+      "total": 41,
+      "visible": 41,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 41,
+      "guides": 1
+    },
+    {
+      "code": "TV",
+      "name": "Tuvalu",
+      "total": 2,
+      "visible": 2,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 2,
+      "guides": 0
+    },
+    {
+      "code": "TW",
+      "name": "Taiwan",
+      "total": 154,
+      "visible": 132,
+      "closed": 6,
+      "adult": 16,
+      "feeds": 154,
+      "guides": 32
+    },
+    {
+      "code": "TZ",
+      "name": "Tanzania",
+      "total": 93,
+      "visible": 93,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 93,
+      "guides": 1
+    },
+    {
+      "code": "UA",
+      "name": "Ukraine",
+      "total": 399,
+      "visible": 375,
+      "closed": 19,
+      "adult": 5,
+      "feeds": 441,
+      "guides": 107
+    },
+    {
+      "code": "UG",
+      "name": "Uganda",
+      "total": 108,
+      "visible": 104,
+      "closed": 4,
+      "adult": 0,
+      "feeds": 108,
+      "guides": 1
+    },
+    {
+      "code": "US",
+      "name": "United States",
+      "total": 5212,
+      "visible": 4946,
+      "closed": 164,
+      "adult": 103,
+      "feeds": 15014,
+      "guides": 5248
+    },
+    {
+      "code": "UY",
+      "name": "Uruguay",
+      "total": 158,
+      "visible": 153,
+      "closed": 5,
+      "adult": 0,
+      "feeds": 158,
+      "guides": 88
+    },
+    {
+      "code": "UZ",
+      "name": "Uzbekistan",
+      "total": 72,
+      "visible": 72,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 72,
+      "guides": 0
+    },
+    {
+      "code": "VA",
+      "name": "Vatican City",
+      "total": 7,
+      "visible": 7,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 7,
+      "guides": 1
+    },
+    {
+      "code": "VC",
+      "name": "Saint Vincent and the Grenadines",
+      "total": 4,
+      "visible": 4,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 4,
+      "guides": 0
+    },
+    {
+      "code": "VE",
+      "name": "Venezuela",
+      "total": 199,
+      "visible": 194,
+      "closed": 5,
+      "adult": 0,
+      "feeds": 205,
+      "guides": 41
+    },
+    {
+      "code": "VG",
+      "name": "British Virgin Islands",
+      "total": 4,
+      "visible": 4,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 4,
+      "guides": 0
+    },
+    {
+      "code": "VI",
+      "name": "U.S. Virgin Islands",
+      "total": 9,
+      "visible": 9,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 11,
+      "guides": 0
+    },
+    {
+      "code": "VN",
+      "name": "Vietnam",
+      "total": 223,
+      "visible": 187,
+      "closed": 36,
+      "adult": 0,
+      "feeds": 244,
+      "guides": 3
+    },
+    {
+      "code": "VU",
+      "name": "Vanuatu",
+      "total": 3,
+      "visible": 3,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 3,
+      "guides": 0
+    },
+    {
+      "code": "WF",
+      "name": "Wallis and Futuna",
+      "total": 1,
+      "visible": 1,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 1,
+      "guides": 1
+    },
+    {
+      "code": "WS",
+      "name": "Samoa",
+      "total": 9,
+      "visible": 9,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 9,
+      "guides": 0
+    },
+    {
+      "code": "XK",
+      "name": "Kosovo",
+      "total": 72,
+      "visible": 72,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 72,
+      "guides": 83
+    },
+    {
+      "code": "YE",
+      "name": "Yemen",
+      "total": 23,
+      "visible": 22,
+      "closed": 1,
+      "adult": 0,
+      "feeds": 23,
+      "guides": 10
+    },
+    {
+      "code": "YT",
+      "name": "Mayotte",
+      "total": 6,
+      "visible": 6,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 6,
+      "guides": 1
+    },
+    {
+      "code": "ZA",
+      "name": "South Africa",
+      "total": 225,
+      "visible": 221,
+      "closed": 4,
+      "adult": 0,
+      "feeds": 226,
+      "guides": 88
+    },
+    {
+      "code": "ZM",
+      "name": "Zambia",
+      "total": 56,
+      "visible": 56,
+      "closed": 0,
+      "adult": 0,
+      "feeds": 56,
+      "guides": 6
+    },
+    {
+      "code": "ZW",
+      "name": "Zimbabwe",
+      "total": 21,
+      "visible": 20,
+      "closed": 1,
+      "adult": 0,
+      "feeds": 21,
+      "guides": 0
+    }
+  ]
+}
