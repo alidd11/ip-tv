@@ -74,6 +74,20 @@ final class CatalogueStore: ObservableObject {
             .first
     }
 
+    /** Approved direct HLS only; no websites, login pages or subscription feed guessing. */
+    func nativeHlsSource(for channel: TVChannel) -> PlaybackSource? {
+        sources.filter {
+            $0.feedId == channel.id + "-main" && $0.enabled && !$0.requiresAuth &&
+            $0.url.hasPrefix("https://") && $0.type == "hls" &&
+            $0.playbackMode == "native" &&
+            ["verified-official", "verified-public-authorized"].contains($0.authorization)
+        }.sorted { $0.priority < $1.priority }.first
+    }
+
+    func nativeChannelQueue(for country: String) -> [TVChannel] {
+        channels(for: country).filter { nativeHlsSource(for: $0) != nil }
+    }
+
     func featured(for country: String) -> TVChannel? {
         channels(for: country).min { lhs, rhs in
             let lhsRank = rank(source(for: lhs))
