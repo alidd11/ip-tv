@@ -30,6 +30,7 @@ import androidx.compose.ui.unit.sp
 import androidx.tv.material3.Text
 import com.alidd11.iptv.core.TvCatalogRepository
 import com.alidd11.iptv.core.TvChannel
+import com.alidd11.iptv.core.ChannelPlayback
 import com.alidd11.iptv.ui.components.ChannelCard
 import com.alidd11.iptv.ui.components.FocusButton
 import com.alidd11.iptv.ui.theme.AstraAccent
@@ -99,7 +100,7 @@ fun AstraTvApp() {
                         primary = true,
                         onClick = {
                             if (heroSource == null) explore = true
-                            else context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(heroSource.url)))
+                            else hero?.let { ChannelPlayback.open(context, catalog, it.id) }
                         },
                     )
                     FocusButton(label = "Explore worldwide", onClick = { explore = true })
@@ -138,9 +139,7 @@ fun AstraTvApp() {
                 ChannelCard(
                     channel = channel,
                     onClick = {
-                        catalog.sourceFor(channel.id)?.let { source ->
-                            context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(source.url)))
-                        }
+                        ChannelPlayback.open(context, catalog, channel.id)
                     },
                 )
             }
