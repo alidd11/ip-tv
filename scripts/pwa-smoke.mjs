@@ -19,6 +19,9 @@ try {
   await page.locator("#directoryStatus").waitFor({state:"visible"});
   await page.waitForFunction(()=>document.querySelector("#directoryStatus")?.textContent?.includes("channel"));
   assert.equal(await page.locator("#heroTitle").textContent(),"Sky News");
+  const heroSize=await page.locator("#hero").evaluate(x=>x.getBoundingClientRect().height);
+  assert.ok(heroSize<470,"Mobile hero should not dominate viewport: "+heroSize);
+  assert.equal(await page.locator("#heroArtNetwork").textContent(),"Sky");
   assert.equal(await page.locator("#heroPrimary").textContent(),"Watch on official site");
   const countries=await page.locator("#directoryCountry option").count();
   assert.ok(countries>=200,"global country selection needs 200+ countries");
@@ -69,6 +72,8 @@ try {
   const desktop=await browser.newPage({viewport:{width:1440,height:900}});
   await desktop.goto(base,{waitUntil:"networkidle"});
   await desktop.waitForFunction(()=>document.querySelector("#directoryStatus")?.textContent?.includes("channel"));
+  const desktopNav = await desktop.locator(".tabbar").boundingBox();
+  assert.ok(desktopNav && desktopNav.y < 100, "Desktop nav must not obscure the content rails");
   await desktop.screenshot({path:"artifacts/pwa/desktop-home.png",fullPage:false});
   const sourceUrl=await page.evaluate(()=>{
     const url=new URL("./player.html?channel=gb-sky-news&name=Sky",location.href);

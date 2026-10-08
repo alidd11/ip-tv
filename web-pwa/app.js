@@ -85,6 +85,7 @@ function renderHero() {
 
   const premium = ["subscription", "ppv"].includes(channel.access.model);
   $("heroEyebrow").textContent = sourceRankLabel(sourceFor(channel));
+  $("heroArtNetwork").textContent = channel.network || channel.shortName || "IP TV";
   $("heroTitle").textContent = channel.name;
   $("heroMeta").textContent = [channel.network, ...channel.categories].filter(Boolean).join("  •  ");
   const source=sourceFor(channel);
@@ -113,7 +114,7 @@ function renderSections() {
     const wrapper = document.createElement("section");
     const head = document.createElement("div");
     head.className = "section-head";
-    head.innerHTML = '<div><div class="eyebrow">' + eyebrow + '</div><h2>' + title + '</h2></div><small>' + rows.length + ' channels</small>';
+    head.innerHTML = '<div><div class="eyebrow">' + eyebrow + '</div><h2>' + title + '</h2></div><small>' + rows.length + (rows.length===1?' channel':' channels') + '</small>';
 
     const rail = document.createElement("div");
     rail.className = "rail";
