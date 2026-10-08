@@ -8,11 +8,11 @@ import android.net.Uri
 /** Chooses the same authorised channel source for Android phone and TV. */
 object ChannelPlayback {
     fun open(context: Context, catalog: TvCatalog, channelId: String): Boolean {
-        val source = catalog.sourceFor(channelId) ?: return false
+        val native = catalog.nativeHlsSourceFor(channelId)
+        val source = native ?: catalog.sourceFor(channelId) ?: return false
         return try {
             when {
-                source.playbackMode == "native" && source.type == "hls" &&
-                    source.authorization in setOf("verified-official", "verified-public-authorized") -> {
+                native != null -> {
                     context.startActivity(Intent(context, LivePlayerActivity::class.java)
                         .putExtra(LivePlayerActivity.EXTRA_CHANNEL_ID, channelId))
                     true

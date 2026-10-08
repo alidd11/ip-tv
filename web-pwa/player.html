@@ -3,46 +3,61 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <meta name="theme-color" content="#000000" />
-  <title>IP TV · Live player</title>
+  <meta name="theme-color" content="#07080d" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>Watch live · IP TV</title>
   <style>
-    html,body{margin:0;height:100%;background:#000;color:#fff;font-family:-apple-system,BlinkMacSystemFont,sans-serif}
-    body{display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0)}
-    header{display:flex;gap:12px;align-items:center;padding:12px 16px;background:#07080d}
-    h1{font-size:16px;margin:0}button{border:0;background:#ffffff19;color:#fff;border-radius:12px;padding:10px 14px;font:inherit}
-    #stage{flex:1;display:flex;align-items:center;justify-content:center}
-    video{width:100%;max-height:100%;object-fit:contain}
-    #message{padding:24px;color:#a3a9b6;text-align:center}
+    :root {color-scheme:dark;color:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;}
+    * {box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+    body {margin:0;min-height:100dvh;background:#07080d;display:flex;flex-direction:column;
+      padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);}
+    header {display:flex;align-items:center;gap:16px;padding:15px 18px;background:#111420;}
+    a {text-decoration:none;color:#fff;border-radius:14px;padding:9px 12px;background:#ffffff18;
+       font-weight:600;white-space:nowrap;}
+    header h1 {font-size:17px;line-height:1.25;margin:0;font-weight:750;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+    .stage {flex:1;min-height:180px;display:grid;place-items:center;background:black;position:relative;}
+    video {max-height:100%;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;}
+    .error {position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:30px;
+      background:#0d1020;color:#d9dce9;line-height:1.5;font-size:15px;}
+    .error[hidden] {display:none;}
+    .footer {padding:18px 18px 24px;background:#131624;}
+    .eyebrow {color:#aaa0ff;font-size:11px;font-weight:800;letter-spacing:.13em;}
+    .footline {display:flex;align-items:center;justify-content:space-between;gap:14px;margin:8px 0 18px;}
+    .footline strong {font-size:21px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+    .footline small {color:#a8aebf;white-space:nowrap;}
+    .switch {display:grid;grid-template-columns:1fr 1fr;gap:11px;}
+    button {border:1px solid #ffffff2a;border-radius:16px;padding:14px;background:#232538;
+      color:#fff;font:inherit;font-weight:700;min-height:52px;}
+    button:disabled {opacity:.35;}
+    button:focus-visible,a:focus-visible {outline:3px solid #aaa0ff;outline-offset:3px;}
+    .hint {color:#959daf;font-size:12px;margin:16px 0 0;line-height:1.5;}
+    @media(min-width:750px){
+      .stage {max-height:calc(100dvh - 178px);}
+      .footer {display:grid;grid-template-columns:1fr auto;align-items:center;gap:18px;}
+      .switch {min-width:300px;}
+      .hint {grid-column:1/-1;margin:0;}
+      .footline {margin:4px 0 0;}
+    }
   </style>
 </head>
 <body>
-  <header><button type="button" onclick="history.back()">‹ Back</button><h1 id="title">Live TV</h1></header>
-  <main id="stage"><video id="video" controls playsinline autoplay></video><p id="message" hidden></p></main>
-  <script type="module">
-    const params=new URLSearchParams(location.search);
-    const id=params.get("channel")||"";
-    document.querySelector("#title").textContent=params.get("name")||"Live TV";
-    const video=document.querySelector("#video"), message=document.querySelector("#message");
-    function unavailable(text){video.hidden=true;message.hidden=false;message.textContent=text;}
-    if(!/^[a-z0-9-]{2,120}$/.test(id)){
-      unavailable("Invalid channel.");
-    }else{
-      try{
-        const response=await fetch("../config/playback-sources.verified.json");
-        if(!response.ok)throw Error("Source registry unavailable");
-        const sources=await response.json();
-        const source=sources
-          .filter(s=>s.enabled && s.feedId===id+"-main" &&
-            ["verified-official","verified-public-authorized"].includes(s.authorization) &&
-            s.playbackMode==="native" && s.type==="hls" &&
-            typeof s.url==="string" && s.url.startsWith("https://"))
-          .sort((a,b)=>a.priority-b.priority)[0];
-        if(!source) unavailable("No verified browser-playable source is available for this channel.");
-        else if(!video.canPlayType("application/vnd.apple.mpegurl"))
-          unavailable("This browser does not support native HLS playback.");
-        else video.src=source.url;
-      }catch(error){unavailable("Unable to load approved playback sources.");console.error(error);}
-    }
-  </script>
+  <header><a href="./" aria-label="Return to IP TV">← Back</a><h1 id="title">IP TV Live</h1></header>
+  <main class="stage">
+    <video id="video" controls playsinline autoplay preload="none" aria-label="Live television"></video>
+    <p id="message" class="error" role="status" hidden></p>
+  </main>
+  <footer class="footer">
+    <div>
+      <div class="eyebrow">LIVE TV · AUTHORISED SOURCES</div>
+      <div class="footline"><strong id="channelName">Loading channel…</strong>
+        <small id="channelCount">—</small></div>
+    </div>
+    <div class="switch">
+      <button type="button" id="previous" disabled>◀ Previous</button>
+      <button type="button" id="next" disabled>Next ▶</button>
+    </div>
+    <p class="hint">Switch only between approved in-app channels. Availability may depend on your region.</p>
+  </footer>
+  <script type="module" src="./player.js"></script>
 </body>
 </html>

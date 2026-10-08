@@ -102,7 +102,7 @@ struct MobileHomeView: View {
 
                 if let channel = heroChannel {
                     NavigationLink {
-                        PlayerView(channel: channel, source: catalogue.source(for: channel))
+                        PlayerView(channel: channel, catalogue: catalogue)
                     } label: {
                         Text(catalogue.sourceLabel(for: channel))
                             .font(.headline)
@@ -135,7 +135,7 @@ struct MobileHomeView: View {
                     HStack(spacing: 12) {
                         ForEach(channels) { channel in
                             NavigationLink {
-                                PlayerView(channel: channel, source: catalogue.source(for: channel))
+                                PlayerView(channel: channel, catalogue: catalogue)
                             } label: {
                                 ChannelTile(channel: channel, panel: panel, accent: accent)
                             }

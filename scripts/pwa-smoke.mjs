@@ -80,8 +80,20 @@ try {
     return url.href;
   });
   assert.ok(!new URL(sourceUrl).searchParams.has("source"),"Public player URL must never include a stream URL");
+  const live = await browser.newPage({viewport:{width:393,height:852}});
+  live.on("pageerror", error=>errors.push(error.message));
+  await live.goto(base+"player.html?channel=tr-trt-1",{waitUntil:"domcontentloaded"});
+  await live.waitForFunction(()=>document.querySelector("#channelCount")?.textContent?.includes("/ 3"));
+  assert.equal(await live.locator("#channelName").textContent(),"TRT 1");
+  assert.equal(await live.locator("#next").isEnabled(),true);
+  await live.locator("#next").click();
+  assert.notEqual(await live.locator("#channelName").textContent(),"TRT 1");
+  await live.locator("#previous").click();
+  assert.equal(await live.locator("#channelName").textContent(),"TRT 1");
+  assert.equal(new URL(live.url()).searchParams.has("source"),false);
+  await live.screenshot({path:"artifacts/pwa/iphone-native-player.png",fullPage:false});
   assert.deepEqual(errors,[],"Browser must have no uncaught JS errors");
-  console.log(JSON.stringify({passed:true,countries,gbResults,screenshots:3}));
+  console.log(JSON.stringify({passed:true,countries,gbResults,screenshots:4}));
 } finally {
   await browser.close();
 }

@@ -50,6 +50,19 @@ data class TvCatalog(
                 ) }
             .minByOrNull { it.priority }
 
+    /** Only rights-cleared direct HLS streams, never provider links. */
+    fun nativeHlsSourceFor(id: String): PlaybackSource? =
+        sources.filter { it.feedId == "${id}-main" && it.enabled && !it.requiresAuth &&
+            it.url.startsWith("https://") && it.type == "hls" &&
+            it.playbackMode == "native" && it.authorization in setOf(
+                "verified-official", "verified-public-authorized")
+        }.minByOrNull { it.priority }
+
+    fun nativeChannelQueue(id: String): List<TvChannel> {
+        val current = channels.firstOrNull { it.id == id } ?: return emptyList()
+        return channelsFor(current.country).filter { nativeHlsSourceFor(it.id) != null }
+    }
+
     fun featuredFor(countryCode: String): TvChannel? =
         channelsFor(countryCode).minWithOrNull(
             compareBy<TvChannel> { channel ->

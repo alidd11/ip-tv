@@ -58,6 +58,16 @@
       }
     },
     {
+      "id": "playback.in-app-channel-switching",
+      "parityRequired": true,
+      "clients": {
+        "pwa": "implemented",
+        "ios": "implemented",
+        "android-mobile": "implemented",
+        "android-tv": "implemented"
+      }
+    },
+    {
       "id": "playback.provider-handoff",
       "parityRequired": true,
       "clients": {
