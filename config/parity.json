@@ -98,6 +98,16 @@
       }
     },
     {
+      "id": "library.device-saved-channels",
+      "parityRequired": true,
+      "clients": {
+        "pwa": "implemented",
+        "ios": "implemented",
+        "android-mobile": "implemented",
+        "android-tv": "implemented"
+      }
+    },
+    {
       "id": "library.favourites",
       "parityRequired": true,
       "clients": {

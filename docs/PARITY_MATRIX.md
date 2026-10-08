@@ -22,7 +22,8 @@ The product is maintained as **one service across four client surfaces**:
 | Provider handoff | ✅ | ✅ | ✅ | ✅ | Same provider URL |
 | Search | ⏳ | ⏳ | ⏳ | ⏳ | Must ship together |
 | EPG / guide | ⏳ | ⏳ | ⏳ | ⏳ | Same programme IDs/data |
-| Favourites | ⏳ | ⏳ | ⏳ | ⏳ | Account-synced |
+| Saved channels (this device) | ✅ | ✅ | ✅ | ✅ | Per-device, no accounts; separate stable channel IDs |
+| Favourites (account-synced) | ⏳ | ⏳ | ⏳ | ⏳ | Shared account and profile service required |
 | Continue watching | ⏳ | ⏳ | ⏳ | ⏳ | Account-synced |
 | Profiles | ⏳ | ⏳ | ⏳ | ⏳ | Same profile model |
 | Parental controls | ⏳ | ⏳ | ⏳ | ⏳ | Same policy |
