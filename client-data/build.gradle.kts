@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.alidd11.iptv.core"
-    compileSdk = 37
+    compileSdk = 36
 
     defaultConfig {
         minSdk = 23
