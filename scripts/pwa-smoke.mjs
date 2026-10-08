@@ -19,6 +19,9 @@ try {
   await page.locator("#directoryStatus").waitFor({state:"visible"});
   await page.waitForFunction(()=>document.querySelector("#directoryStatus")?.textContent?.includes("channel"));
   assert.equal(await page.locator("#heroTitle").textContent(),"Sky News");
+  const heroSize=await page.locator("#hero").evaluate(x=>x.getBoundingClientRect().height);
+  assert.ok(heroSize<470,"Mobile hero should not dominate viewport: "+heroSize);
+  assert.equal(await page.locator("#heroArtNetwork").textContent(),"Sky");
   assert.equal(await page.locator("#heroPrimary").textContent(),"Watch on official site");
   const countries=await page.locator("#directoryCountry option").count();
   assert.ok(countries>=200,"global country selection needs 200+ countries");

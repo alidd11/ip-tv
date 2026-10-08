@@ -85,6 +85,7 @@ function renderHero() {
 
   const premium = ["subscription", "ppv"].includes(channel.access.model);
   $("heroEyebrow").textContent = sourceRankLabel(sourceFor(channel));
+  $("heroArtNetwork").textContent = channel.network || channel.shortName || "IP TV";
   $("heroTitle").textContent = channel.name;
   $("heroMeta").textContent = [channel.network, ...channel.categories].filter(Boolean).join("  •  ");
   const source=sourceFor(channel);

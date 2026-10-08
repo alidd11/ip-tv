@@ -48,3 +48,23 @@ The home surface uses:
 6. continue-watching rail when history exists.
 
 The guide is a dedicated full-screen surface rather than a popover.
+
+
+## Mobile editorial refinement (2026-10-08)
+
+Actual screenshot review exposed a 510px blank hero and overly tall dead space
+on phones. The PWA mobile hero is now around 416 CSS pixels with a decorative,
+data-driven network-name art panel. It deliberately uses **no broadcast network
+logo or programme image**, since source database logo candidates aren't
+licence-cleared visual assets.
+
+- editorial focal point is the selected approved viewing destination;
+- source-aware CTA remains above the fold on a typical iPhone viewport;
+- 12–18px clear copy, condensed 20–27px section hierarchy;
+- textured matte channel cards with premium/subscription labels;
+- small, touch-friendly segmented country chips and four-tab navigation.
+
+Native surfaces retain the same content hierarchy/source/action model.
+Further visual work should review the captured Chromium screenshots first and
+port any *meaningful* hierarchy change to native views rather than letting
+features or accessibility drift.
