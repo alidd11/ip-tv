@@ -31,6 +31,7 @@ data class PlaybackSource(
     val accessModel: String,
     val requiresAuth: Boolean,
     val priority: Int,
+    val enabled: Boolean,
 )
 
 data class TvCatalog(
@@ -43,6 +44,32 @@ data class TvCatalog(
 
     fun sourceFor(channelId: String): PlaybackSource? =
         sources
-            .filter { it.feedId == "$channelId-main" }
+            .filter { it.feedId == "$channelId-main" && it.enabled &&
+                it.url.startsWith("https://") && it.authorization in setOf(
+                    "verified-official", "verified-public-authorized", "subscription-provider"
+                ) }
             .minByOrNull { it.priority }
+
+    fun featuredFor(countryCode: String): TvChannel? =
+        channelsFor(countryCode).minWithOrNull(
+            compareBy<TvChannel> { channel ->
+                when (val source = sourceFor(channel.id)) {
+                    null -> 9
+                    else -> when {
+                        source.playbackMode == "native" && source.type == "hls" -> 0
+                        source.playbackMode == "external" -> 1
+                        source.playbackMode == "handoff" -> 2
+                        else -> 8
+                    }
+                }
+            }.thenBy { it.sortOrder }
+        )
+
+    fun sourceLabel(channelId: String): String =
+        when (sourceFor(channelId)?.playbackMode) {
+            "handoff" -> "View subscription"
+            "external" -> "Watch on official site"
+            "native" -> "Open live stream"
+            else -> "Explore channels"
+        }
 }

@@ -55,7 +55,8 @@ fun MobileHome() {
     val catalog = remember { TvCatalogRepository(context).load() }
     var country by remember { mutableStateOf("GB") }
     val channels = catalog.channelsFor(country)
-    val hero = channels.firstOrNull { it.id == "gb-sky-sports-main-event" } ?: channels.firstOrNull()
+    val hero = catalog.featuredFor(country)
+    val heroSource = hero?.let { catalog.sourceFor(it.id) }
 
     Column(
         modifier = Modifier
@@ -75,7 +76,13 @@ fun MobileHome() {
                 .padding(start = 22.dp, end = 22.dp, top = 64.dp, bottom = 24.dp),
         ) {
             Column {
-                Text("PREMIUM LIVE TV", color = Accent, fontSize = 12.sp, fontWeight = FontWeight.Bold)
+                Text(
+                    if (heroSource?.playbackMode == "native") "LIVE TV · OFFICIAL STREAM"
+                    else if (heroSource?.playbackMode == "external") "OFFICIAL VIEWING OPTION"
+                    else if (heroSource?.playbackMode == "handoff") "SUBSCRIPTION NETWORK"
+                    else "CHANNEL DIRECTORY",
+                    color = Accent, fontSize = 12.sp, fontWeight = FontWeight.Bold
+                )
                 Spacer(Modifier.height(10.dp))
                 Text(
                     hero?.name ?: "Live television, beautifully organised.",
@@ -95,15 +102,12 @@ fun MobileHome() {
                     color = Color.White,
                     shape = RoundedCornerShape(18.dp),
                     modifier = Modifier.clickable {
-                        hero?.let { channel ->
-                            catalog.sourceFor(channel.id)?.let { source ->
-                                context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(source.url)))
-                            }
-                        }
+                        if (heroSource == null) explore = true
+                        else context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(heroSource.url)))
                     },
                 ) {
                     Text(
-                        if (hero?.accessModel == "subscription") "Open provider" else "Watch live",
+                        hero?.let { catalog.sourceLabel(it.id) } ?: "Explore channels",
                         color = Color(0xFF090A0F),
                         fontWeight = FontWeight.Bold,
                         modifier = Modifier.padding(horizontal = 22.dp, vertical = 14.dp),
@@ -142,9 +146,20 @@ fun MobileHome() {
             fontSize = 18.sp, fontWeight = FontWeight.Bold, color = Accent
         )
         Spacer(Modifier.height(16.dp))
-        Section("Live now", channels.filter { it.accessModel != "subscription" }, catalog)
-        Section("Premium sport", channels.filter { "sports" in it.categories }, catalog)
-        Section("Cinema", channels.filter { "movies" in it.categories }, catalog)
+        Section(
+            "Official viewing options",
+            channels.filter {
+                catalog.sourceFor(it.id)?.authorization in
+                    setOf("verified-official", "verified-public-authorized")
+            },
+            catalog
+        )
+        Section(
+            "Premium sports providers",
+            channels.filter { "sports" in it.categories &&
+                catalog.sourceFor(it.id)?.authorization == "subscription-provider" },
+            catalog
+        )
         Spacer(Modifier.height(80.dp))
     }
 }
@@ -197,7 +212,7 @@ private fun Section(
                 ) {
                     Column(verticalArrangement = Arrangement.SpaceBetween, modifier = Modifier.fillMaxSize()) {
                         Text(
-                            if (channel.accessModel == "subscription") "PREMIUM" else "LIVE",
+                            if (channel.accessModel == "subscription") "SUBSCRIPTION" else "OFFICIAL VIEWING",
                             color = if (channel.accessModel == "subscription") Gold else Accent,
                             fontSize = 10.sp,
                             fontWeight = FontWeight.Bold,

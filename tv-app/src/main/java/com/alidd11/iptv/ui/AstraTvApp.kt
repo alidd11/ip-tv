@@ -48,7 +48,8 @@ fun AstraTvApp() {
     val catalog = remember { TvCatalogRepository(context).load() }
     var country by remember { mutableStateOf("GB") }
     val channels = catalog.channelsFor(country)
-    val hero = channels.firstOrNull { it.id == "gb-sky-sports-main-event" } ?: channels.firstOrNull()
+    val hero = catalog.featuredFor(country)
+    val heroSource = hero?.let { catalog.sourceFor(it.id) }
 
     Column(
         modifier = Modifier
@@ -68,7 +69,10 @@ fun AstraTvApp() {
         ) {
             Column(modifier = Modifier.fillMaxWidth(0.6f)) {
                 Text(
-                    text = "PREMIUM LIVE TV",
+                    text = if (heroSource?.playbackMode == "native") "LIVE TV · OFFICIAL STREAM"
+                    else if (heroSource?.playbackMode == "external") "OFFICIAL VIEWING OPTION"
+                    else if (heroSource?.playbackMode == "handoff") "SUBSCRIPTION NETWORK"
+                    else "CHANNEL DIRECTORY",
                     color = AstraAccent,
                     fontSize = 12.sp,
                     fontWeight = FontWeight.Bold,
@@ -91,14 +95,11 @@ fun AstraTvApp() {
                 Spacer(Modifier.height(24.dp))
                 Row(horizontalArrangement = Arrangement.spacedBy(14.dp)) {
                     FocusButton(
-                        label = if (hero?.accessModel == "subscription") "Open provider" else "Watch live",
+                        label = hero?.let { catalog.sourceLabel(it.id) } ?: "Explore channels",
                         primary = true,
                         onClick = {
-                            hero?.let { channel ->
-                                catalog.sourceFor(channel.id)?.let { source ->
-                                    context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(source.url)))
-                                }
-                            }
+                            if (heroSource == null) explore = true
+                            else context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(heroSource.url)))
                         },
                     )
                     FocusButton(label = "Explore worldwide", onClick = { explore = true })
@@ -120,7 +121,7 @@ fun AstraTvApp() {
         }
 
         Text(
-            text = "Live now",
+            text = "Channels with viewing options",
             color = AstraText,
             fontSize = 30.sp,
             fontWeight = FontWeight.Bold,
@@ -133,7 +134,7 @@ fun AstraTvApp() {
             contentPadding = PaddingValues(horizontal = 56.dp),
             horizontalArrangement = Arrangement.spacedBy(18.dp),
         ) {
-            items(channels, key = TvChannel::id) { channel ->
+            items(channels.filter { catalog.sourceFor(it.id) != null }, key = TvChannel::id) { channel ->
                 ChannelCard(
                     channel = channel,
                     onClick = {
