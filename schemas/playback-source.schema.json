@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/playback-source.schema.json",
+  "title": "IP TV Playback Source",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "feedId",
+    "type",
+    "url",
+    "priority",
+    "enabled",
+    "geo",
+    "headers",
+    "playbackMode",
+    "authorization",
+    "accessModel",
+    "requiresAuth",
+    "evidenceUrls"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "feedId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "type": {
+      "enum": [
+        "hls",
+        "dash",
+        "file",
+        "provider",
+        "web",
+        "youtube"
+      ]
+    },
+    "url": {
+      "type": "string",
+      "minLength": 1
+    },
+    "priority": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "enabled": {
+      "type": "boolean"
+    },
+    "geo": {
+      "type": "object",
+      "required": [
+        "mode",
+        "countries"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "mode": {
+          "enum": [
+            "global",
+            "allow",
+            "deny"
+          ]
+        },
+        "countries": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Z]{2}$"
+          }
+        }
+      }
+    },
+    "headers": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "playbackMode": {
+      "enum": [
+        "native",
+        "external",
+        "handoff"
+      ]
+    },
+    "authorization": {
+      "enum": [
+        "verified-official",
+        "verified-public-authorized",
+        "subscription-provider"
+      ]
+    },
+    "accessModel": {
+      "enum": [
+        "free-to-air",
+        "free-stream",
+        "subscription",
+        "ppv",
+        "mixed"
+      ]
+    },
+    "requiresAuth": {
+      "type": "boolean"
+    },
+    "evidenceUrls": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  }
+}

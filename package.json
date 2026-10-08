@@ -1,0 +1,14 @@
+{
+  "name": "ip-tv",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:index": "node scripts/build-index.mjs",
+    "validate": "node scripts/validate-catalog.mjs",
+    "check": "npm run build:index && npm run validate && npm test",
+    "import:metadata": "node scripts/import-iptv-org.mjs",
+    "test": "node --test",
+    "catalog": "node scripts/catalog-cli.mjs"
+  }
+}

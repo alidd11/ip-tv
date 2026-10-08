@@ -1,0 +1,164 @@
+[
+  {
+    "id": "general",
+    "name": "General",
+    "description": "A broad mix of programming.",
+    "sortOrder": 10
+  },
+  {
+    "id": "news",
+    "name": "News",
+    "description": "News and current affairs.",
+    "sortOrder": 20
+  },
+  {
+    "id": "sports",
+    "name": "Sports",
+    "description": "Live and recorded sports programming.",
+    "sortOrder": 30
+  },
+  {
+    "id": "entertainment",
+    "name": "Entertainment",
+    "description": "Entertainment, reality, variety and mixed-format shows.",
+    "sortOrder": 40
+  },
+  {
+    "id": "movies",
+    "name": "Movies",
+    "description": "Film-focused channels.",
+    "sortOrder": 50
+  },
+  {
+    "id": "series",
+    "name": "Series",
+    "description": "Scripted and episodic series.",
+    "sortOrder": 60
+  },
+  {
+    "id": "kids",
+    "name": "Kids",
+    "description": "Programming intended for children.",
+    "sortOrder": 70
+  },
+  {
+    "id": "documentary",
+    "name": "Documentary",
+    "description": "Documentaries and factual programming.",
+    "sortOrder": 80
+  },
+  {
+    "id": "business",
+    "name": "Business",
+    "description": "Business and financial coverage.",
+    "sortOrder": 90
+  },
+  {
+    "id": "music",
+    "name": "Music",
+    "description": "Music channels and music programming.",
+    "sortOrder": 100
+  },
+  {
+    "id": "education",
+    "name": "Education",
+    "description": "Educational programming.",
+    "sortOrder": 110
+  },
+  {
+    "id": "culture",
+    "name": "Culture",
+    "description": "Arts and cultural programming.",
+    "sortOrder": 120
+  },
+  {
+    "id": "lifestyle",
+    "name": "Lifestyle",
+    "description": "Lifestyle, health, home and leisure programming.",
+    "sortOrder": 130
+  },
+  {
+    "id": "travel",
+    "name": "Travel",
+    "description": "Travel and destination programming.",
+    "sortOrder": 140
+  },
+  {
+    "id": "weather",
+    "name": "Weather",
+    "description": "Weather information and forecasting.",
+    "sortOrder": 150
+  },
+  {
+    "id": "public",
+    "name": "Public",
+    "description": "Public-service and civic programming.",
+    "sortOrder": 160
+  },
+  {
+    "id": "legislative",
+    "name": "Legislative",
+    "description": "Government and legislative coverage.",
+    "sortOrder": 170
+  },
+  {
+    "id": "science",
+    "name": "Science",
+    "description": "Science and technology programming.",
+    "sortOrder": 180
+  },
+  {
+    "id": "cooking",
+    "name": "Cooking",
+    "description": "Food and cooking programming.",
+    "sortOrder": 190
+  },
+  {
+    "id": "comedy",
+    "name": "Comedy",
+    "description": "Comedy-focused programming.",
+    "sortOrder": 200
+  },
+  {
+    "id": "family",
+    "name": "Family",
+    "description": "Programming suitable for a broad family audience.",
+    "sortOrder": 210
+  },
+  {
+    "id": "auto",
+    "name": "Auto",
+    "description": "Cars, motorcycles and motoring.",
+    "sortOrder": 220
+  },
+  {
+    "id": "outdoor",
+    "name": "Outdoor",
+    "description": "Outdoor recreation and activities.",
+    "sortOrder": 230
+  },
+  {
+    "id": "relax",
+    "name": "Relax",
+    "description": "Ambient and relaxation programming.",
+    "sortOrder": 240
+  },
+  {
+    "id": "shop",
+    "name": "Shopping",
+    "description": "Shopping and retail programming.",
+    "sortOrder": 250
+  },
+  {
+    "id": "religious",
+    "name": "Religious",
+    "description": "Religious programming.",
+    "sortOrder": 260
+  },
+  {
+    "id": "interactive",
+    "name": "Interactive",
+    "description": "Interactive programming.",
+    "sortOrder": 270
+  }
+]

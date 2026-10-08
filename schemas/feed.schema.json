@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/feed.schema.json",
+  "title": "IP TV Channel Feed",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "channelId",
+    "name",
+    "isMain",
+    "broadcastAreas",
+    "timezones",
+    "languages",
+    "format",
+    "epgIds",
+    "enabled"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "channelId": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "isMain": {
+      "type": "boolean"
+    },
+    "broadcastAreas": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "timezones": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "languages": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z]{3}$"
+      }
+    },
+    "format": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "epgIds": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "enabled": {
+      "type": "boolean"
+    }
+  }
+}

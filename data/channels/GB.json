@@ -1,0 +1,1338 @@
+[
+  {
+    "id": "gb-bbc-one",
+    "name": "BBC One",
+    "shortName": "BBC One",
+    "aliases": [],
+    "country": "GB",
+    "languages": [
+      "eng"
+    ],
+    "categories": [
+      "general"
+    ],
+    "network": "BBC",
+    "website": "https://www.bbc.co.uk/bbcone",
+    "logo": null,
+    "epgIds": [],
+    "enabled": true,
+    "isAdult": false,
+    "sortOrder": 10,
+    "tags": [],
+    "access": {
+      "model": "free-to-air",
+      "providerIds": [],
+      "packageIds": []
+    }
+  },
+  {
+    "id": "gb-bbc-two",
+    "name": "BBC Two",
+    "shortName": "BBC Two",
+    "aliases": [],
+    "country": "GB",
+    "languages": [
+      "eng"
+    ],
+    "categories": [
+      "general"
+    ],
+    "network": "BBC",
+    "website": "https://www.bbc.co.uk/bbctwo",
+    "logo": null,
+    "epgIds": [],
+    "enabled": true,
+    "isAdult": false,
+    "sortOrder": 20,
+    "tags": [],
+    "access": {
+      "model": "free-to-air",
+      "providerIds": [],
+      "packageIds": []
+    }
+  },
+  {
+    "id": "gb-itv1",
+    "name": "ITV1",
+    "shortName": "ITV1",
+    "aliases": [],
+    "country": "GB",
+    "languages": [
+      "eng"
+    ],
+    "categories": [
+      "general",
+      "entertainment"
+    ],
+    "network": "ITV",
+    "website": "https://www.itv.com/",
+    "logo": null,
+    "epgIds": [],
+    "enabled": true,
+    "isAdult": false,
+    "sortOrder": 30,
+    "tags": [],
+    "access": {
+      "model": "free-to-air",
+      "providerIds": [],
+      "packageIds": []
+    }
+  },
+  {
+    "id": "gb-channel-4",
+    "name": "Channel 4",
+    "shortName": "Channel 4",
+    "aliases": [],
+    "country": "GB",
+    "languages": [
+      "eng"
+    ],
+    "categories": [
+      "general",
+      "entertainment"
+    ],
+    "network": "Channel 4",
+    "website": "https://www.channel4.com/",
+    "logo": null,
+    "epgIds": [],
+    "enabled": true,
+    "isAdult": false,
+    "sortOrder": 40,
+    "tags": [],
+    "access": {
+      "model": "free-to-air",
+      "providerIds": [],
+      "packageIds": []
+    }
+  },
+  {
+    "id": "gb-channel-5",
+    "name": "Channel 5",
+    "shortName": "Channel 5",
+    "aliases": [],
+    "country": "GB",
+    "languages": [
+      "eng"
+    ],
+    "categories": [
+      "general",
+      "entertainment"
+    ],
+    "network": "Channel 5",
+    "website": "https://www.channel5.com/",
+    "logo": null,
+    "epgIds": [],
+    "enabled": true,
+    "isAdult": false,
+    "sortOrder": 50,
+    "tags": [],
+    "access": {
+      "model": "free-to-air",
+      "providerIds": [],
+      "packageIds": []
+    }
+  },
+  {
+    "id": "gb-bbc-news",
+    "name": "BBC News",
+    "shortName": "BBC News",
+    "aliases": [],
+    "country": "GB",
+    "languages": [
+      "eng"
+    ],
+    "categories": [
+      "news"
+    ],
+    "network": "BBC",
+    "website": "https://www.bbc.co.uk/news",
+    "logo": null,
+    "epgIds": [],
+    "enabled": true,
+    "isAdult": false,
+    "sortOrder": 60,
+    "tags": [],
+    "access": {
+      "model": "free-to-air",
+      "providerIds": [],
+      "packageIds": []
+    }
+  },
+  {
+    "id": "gb-sky-news",
+    "name": "Sky News",
+    "shortName": "Sky News",
+    "aliases": [],
+    "country": "GB",
+    "languages": [
+      "eng"
+    ],
+    "categories": [
+      "news"
+    ],
+    "network": "Sky",
+    "website": "https://news.sky.com/",
+    "logo": null,
+    "epgIds": [],
+    "enabled": true,
+    "isAdult": false,
+    "sortOrder": 70,
+    "tags": [],
+    "access": {
+      "model": "free-to-air",
+      "providerIds": [],
+      "packageIds": []
+    }
+  },
+  {
+    "id": "gb-bbc-three",
+    "name": "BBC Three",
+    "shortName": "BBC Three",
+    "aliases": [],
+    "country": "GB",
+    "languages": [
+      "eng"
+    ],
+    "categories": [
+      "entertainment"
+    ],
+    "network": "BBC",
+    "website": "https://www.bbc.co.uk/bbcthree",
+    "logo": null,
+    "epgIds": [],
+    "enabled": true,
+    "isAdult": false,
+    "sortOrder": 80,
+    "tags": [],
+    "access": {
+      "model": "free-to-air",
+      "providerIds": [],
+      "packageIds": []
+    }
+  },
+  {
+    "id": "gb-bbc-four",
+    "name": "BBC Four",
+    "shortName": "BBC Four",
+    "aliases": [],
+    "country": "GB",
+    "languages": [
+      "eng"
+    ],
+    "categories": [
+      "culture",
+      "documentary"
+    ],
+    "network": "BBC",
+    "website": "https://www.bbc.co.uk/bbcfour",
+    "logo": null,
+    "epgIds": [],
+    "enabled": true,
+    "isAdult": false,
+    "sortOrder": 90,
+    "tags": [],
+    "access": {
+      "model": "free-to-air",
+      "providerIds": [],
+      "packageIds": []
+    }
+  },
+  {
+    "id": "gb-cbbc",
+    "name": "CBBC",
+    "shortName": "CBBC",
+    "aliases": [],
+    "country": "GB",
+    "languages": [
+      "eng"
+    ],
+    "categories": [
+      "kids"
+    ],
+    "network": "BBC",
+    "website": "https://www.bbc.co.uk/cbbc",
+    "logo": null,
+    "epgIds": [],
+    "enabled": true,
+    "isAdult": false,
+    "sortOrder": 100,
+    "tags": [],
+    "access": {
+      "model": "free-to-air",
+      "providerIds": [],
+      "packageIds": []
+    }
+  },
+  {
+    "id": "gb-cbeebies",
+    "name": "CBeebies",
+    "shortName": "CBeebies",
+    "aliases": [],
+    "country": "GB",
+    "languages": [
+      "eng"
+    ],
+    "categories": [
+      "kids"
+    ],
+    "network": "BBC",
+    "website": "https://www.bbc.co.uk/cbeebies",
+    "logo": null,
+    "epgIds": [],
+    "enabled": true,
+    "isAdult": false,
+    "sortOrder": 110,
+    "tags": [],
+    "access": {
+      "model": "free-to-air",
+      "providerIds": [],
+      "packageIds": []
+    }
+  },
+  {
+    "id": "gb-itv2",
+    "name": "ITV2",
+    "shortName": "ITV2",
+    "aliases": [],
+    "country": "GB",
+    "languages": [
+      "eng"
+    ],
+    "categories": [
+      "entertainment"
+    ],
+    "network": "ITV",
+    "website": null,
+    "logo": null,
+    "epgIds": [],
+    "enabled": true,
+    "isAdult": false,
+    "sortOrder": 120,
+    "tags": [],
+    "access": {
+      "model": "free-to-air",
+      "providerIds": [],
+      "packageIds": []
+    }
+  },
+  {
+    "id": "gb-itv3",
+    "name": "ITV3",
+    "shortName": "ITV3",
+    "aliases": [],
+    "country": "GB",
+    "languages": [
+      "eng"
+    ],
+    "categories": [
+      "entertainment",
+      "series"
+    ],
+    "network": "ITV",
+    "website": null,
+    "logo": null,
+    "epgIds": [],
+    "enabled": true,
+    "isAdult": false,
+    "sortOrder": 130,
+    "tags": [],
+    "access": {
+      "model": "free-to-air",
+      "providerIds": [],
+      "packageIds": []
+    }
+  },
+  {
+    "id": "gb-itv4",
+    "name": "ITV4",
+    "shortName": "ITV4",
+    "aliases": [],
+    "country": "GB",
+    "languages": [
+      "eng"
+    ],
+    "categories": [
+      "entertainment",
+      "sports"
+    ],
+    "network": "ITV",
+    "website": null,
+    "logo": null,
+    "epgIds": [],
+    "enabled": true,
+    "isAdult": false,
+    "sortOrder": 140,
+    "tags": [],
+    "access": {
+      "model": "free-to-air",
+      "providerIds": [],
+      "packageIds": []
+    }
+  },
+  {
+    "id": "gb-e4",
+    "name": "E4",
+    "shortName": "E4",
+    "aliases": [],
+    "country": "GB",
+    "languages": [
+      "eng"
+    ],
+    "categories": [
+      "entertainment",
+      "series"
+    ],
+    "network": "Channel 4",
+    "website": null,
+    "logo": null,
+    "epgIds": [],
+    "enabled": true,
+    "isAdult": false,
+    "sortOrder": 150,
+    "tags": [],
+    "access": {
+      "model": "free-to-air",
+      "providerIds": [],
+      "packageIds": []
+    }
+  },
+  {
+    "id": "gb-more4",
+    "name": "More4",
+    "shortName": "More4",
+    "aliases": [],
+    "country": "GB",
+    "languages": [
+      "eng"
+    ],
+    "categories": [
+      "entertainment",
+      "documentary"
+    ],
+    "network": "Channel 4",
+    "website": null,
+    "logo": null,
+    "epgIds": [],
+    "enabled": true,
+    "isAdult": false,
+    "sortOrder": 160,
+    "tags": [],
+    "access": {
+      "model": "free-to-air",
+      "providerIds": [],
+      "packageIds": []
+    }
+  },
+  {
+    "id": "gb-film4",
+    "name": "Film4",
+    "shortName": "Film4",
+    "aliases": [],
+    "country": "GB",
+    "languages": [
+      "eng"
+    ],
+    "categories": [
+      "movies"
+    ],
+    "network": "Channel 4",
+    "website": null,
+    "logo": null,
+    "epgIds": [],
+    "enabled": true,
+    "isAdult": false,
+    "sortOrder": 170,
+    "tags": [],
+    "access": {
+      "model": "free-to-air",
+      "providerIds": [],
+      "packageIds": []
+    }
+  },
+  {
+    "id": "gb-5usa",
+    "name": "5USA",
+    "shortName": "5USA",
+    "aliases": [],
+    "country": "GB",
+    "languages": [
+      "eng"
+    ],
+    "categories": [
+      "entertainment",
+      "series"
+    ],
+    "network": "Channel 5",
+    "website": null,
+    "logo": null,
+    "epgIds": [],
+    "enabled": true,
+    "isAdult": false,
+    "sortOrder": 180,
+    "tags": [],
+    "access": {
+      "model": "free-to-air",
+      "providerIds": [],
+      "packageIds": []
+    }
+  },
+  {
+    "id": "gb-5star",
+    "name": "5Star",
+    "shortName": "5Star",
+    "aliases": [],
+    "country": "GB",
+    "languages": [
+      "eng"
+    ],
+    "categories": [
+      "entertainment"
+    ],
+    "network": "Channel 5",
+    "website": null,
+    "logo": null,
+    "epgIds": [],
+    "enabled": true,
+    "isAdult": false,
+    "sortOrder": 190,
+    "tags": [],
+    "access": {
+      "model": "free-to-air",
+      "providerIds": [],
+      "packageIds": []
+    }
+  },
+  {
+    "id": "gb-sky-sports-main-event",
+    "name": "Sky Sports Main Event",
+    "shortName": "Sky Main Event",
+    "aliases": [],
+    "country": "GB",
+    "languages": [
+      "eng"
+    ],
+    "categories": [
+      "sports"
+    ],
+    "network": "Sky Sports",
+    "website": "https://www.sky.com/tv/sports",
+    "logo": null,
+    "epgIds": [],
+    "enabled": true,
+    "isAdult": false,
+    "sortOrder": 200,
+    "tags": [
+      "premium"
+    ],
+    "access": {
+      "model": "subscription",
+      "providerIds": [
+        "sky"
+      ],
+      "packageIds": [
+        "gb-sky-sports-complete"
+      ]
+    }
+  },
+  {
+    "id": "gb-sky-sports-premier-league",
+    "name": "Sky Sports Premier League",
+    "shortName": "Sky PL",
+    "aliases": [],
+    "country": "GB",
+    "languages": [
+      "eng"
+    ],
+    "categories": [
+      "sports"
+    ],
+    "network": "Sky Sports",
+    "website": "https://www.sky.com/tv/sports",
+    "logo": null,
+    "epgIds": [],
+    "enabled": true,
+    "isAdult": false,
+    "sortOrder": 210,
+    "tags": [
+      "premium"
+    ],
+    "access": {
+      "model": "subscription",
+      "providerIds": [
+        "sky"
+      ],
+      "packageIds": [
+        "gb-sky-sports-complete"
+      ]
+    }
+  },
+  {
+    "id": "gb-sky-sports-football",
+    "name": "Sky Sports Football",
+    "shortName": "Sky Football",
+    "aliases": [],
+    "country": "GB",
+    "languages": [
+      "eng"
+    ],
+    "categories": [
+      "sports"
+    ],
+    "network": "Sky Sports",
+    "website": "https://www.sky.com/tv/sports",
+    "logo": null,
+    "epgIds": [],
+    "enabled": true,
+    "isAdult": false,
+    "sortOrder": 220,
+    "tags": [
+      "premium"
+    ],
+    "access": {
+      "model": "subscription",
+      "providerIds": [
+        "sky"
+      ],
+      "packageIds": [
+        "gb-sky-sports-complete"
+      ]
+    }
+  },
+  {
+    "id": "gb-sky-sports-plus",
+    "name": "Sky Sports+",
+    "shortName": "Sky Sports+",
+    "aliases": [],
+    "country": "GB",
+    "languages": [
+      "eng"
+    ],
+    "categories": [
+      "sports"
+    ],
+    "network": "Sky Sports",
+    "website": "https://www.sky.com/tv/sports",
+    "logo": null,
+    "epgIds": [],
+    "enabled": true,
+    "isAdult": false,
+    "sortOrder": 230,
+    "tags": [
+      "premium"
+    ],
+    "access": {
+      "model": "subscription",
+      "providerIds": [
+        "sky"
+      ],
+      "packageIds": [
+        "gb-sky-sports-complete"
+      ]
+    }
+  },
+  {
+    "id": "gb-sky-sports-cricket",
+    "name": "Sky Sports Cricket",
+    "shortName": "Sky Cricket",
+    "aliases": [],
+    "country": "GB",
+    "languages": [
+      "eng"
+    ],
+    "categories": [
+      "sports"
+    ],
+    "network": "Sky Sports",
+    "website": "https://www.sky.com/tv/sports",
+    "logo": null,
+    "epgIds": [],
+    "enabled": true,
+    "isAdult": false,
+    "sortOrder": 240,
+    "tags": [
+      "premium"
+    ],
+    "access": {
+      "model": "subscription",
+      "providerIds": [
+        "sky"
+      ],
+      "packageIds": [
+        "gb-sky-sports-complete"
+      ]
+    }
+  },
+  {
+    "id": "gb-sky-sports-golf",
+    "name": "Sky Sports Golf",
+    "shortName": "Sky Golf",
+    "aliases": [],
+    "country": "GB",
+    "languages": [
+      "eng"
+    ],
+    "categories": [
+      "sports"
+    ],
+    "network": "Sky Sports",
+    "website": "https://www.sky.com/tv/sports",
+    "logo": null,
+    "epgIds": [],
+    "enabled": true,
+    "isAdult": false,
+    "sortOrder": 250,
+    "tags": [
+      "premium"
+    ],
+    "access": {
+      "model": "subscription",
+      "providerIds": [
+        "sky"
+      ],
+      "packageIds": [
+        "gb-sky-sports-complete"
+      ]
+    }
+  },
+  {
+    "id": "gb-sky-sports-f1",
+    "name": "Sky Sports F1",
+    "shortName": "Sky F1",
+    "aliases": [],
+    "country": "GB",
+    "languages": [
+      "eng"
+    ],
+    "categories": [
+      "sports"
+    ],
+    "network": "Sky Sports",
+    "website": "https://www.sky.com/tv/sports",
+    "logo": null,
+    "epgIds": [],
+    "enabled": true,
+    "isAdult": false,
+    "sortOrder": 260,
+    "tags": [
+      "premium"
+    ],
+    "access": {
+      "model": "subscription",
+      "providerIds": [
+        "sky"
+      ],
+      "packageIds": [
+        "gb-sky-sports-complete"
+      ]
+    }
+  },
+  {
+    "id": "gb-sky-sports-tennis",
+    "name": "Sky Sports Tennis",
+    "shortName": "Sky Tennis",
+    "aliases": [],
+    "country": "GB",
+    "languages": [
+      "eng"
+    ],
+    "categories": [
+      "sports"
+    ],
+    "network": "Sky Sports",
+    "website": "https://www.sky.com/tv/sports",
+    "logo": null,
+    "epgIds": [],
+    "enabled": true,
+    "isAdult": false,
+    "sortOrder": 270,
+    "tags": [
+      "premium"
+    ],
+    "access": {
+      "model": "subscription",
+      "providerIds": [
+        "sky"
+      ],
+      "packageIds": [
+        "gb-sky-sports-complete"
+      ]
+    }
+  },
+  {
+    "id": "gb-sky-sports-action",
+    "name": "Sky Sports Action",
+    "shortName": "Sky Action",
+    "aliases": [],
+    "country": "GB",
+    "languages": [
+      "eng"
+    ],
+    "categories": [
+      "sports"
+    ],
+    "network": "Sky Sports",
+    "website": "https://www.sky.com/tv/sports",
+    "logo": null,
+    "epgIds": [],
+    "enabled": true,
+    "isAdult": false,
+    "sortOrder": 280,
+    "tags": [
+      "premium"
+    ],
+    "access": {
+      "model": "subscription",
+      "providerIds": [
+        "sky"
+      ],
+      "packageIds": [
+        "gb-sky-sports-complete"
+      ]
+    }
+  },
+  {
+    "id": "gb-sky-sports-racing",
+    "name": "Sky Sports Racing",
+    "shortName": "Sky Racing",
+    "aliases": [],
+    "country": "GB",
+    "languages": [
+      "eng"
+    ],
+    "categories": [
+      "sports"
+    ],
+    "network": "Sky Sports",
+    "website": "https://www.sky.com/tv/sports",
+    "logo": null,
+    "epgIds": [],
+    "enabled": true,
+    "isAdult": false,
+    "sortOrder": 290,
+    "tags": [
+      "premium"
+    ],
+    "access": {
+      "model": "subscription",
+      "providerIds": [
+        "sky"
+      ],
+      "packageIds": [
+        "gb-sky-sports-complete"
+      ]
+    }
+  },
+  {
+    "id": "gb-sky-sports-mix",
+    "name": "Sky Sports Mix",
+    "shortName": "Sky Mix",
+    "aliases": [],
+    "country": "GB",
+    "languages": [
+      "eng"
+    ],
+    "categories": [
+      "sports"
+    ],
+    "network": "Sky Sports",
+    "website": "https://www.sky.com/tv/sports",
+    "logo": null,
+    "epgIds": [],
+    "enabled": true,
+    "isAdult": false,
+    "sortOrder": 300,
+    "tags": [
+      "premium"
+    ],
+    "access": {
+      "model": "subscription",
+      "providerIds": [
+        "sky"
+      ],
+      "packageIds": [
+        "gb-sky-sports-complete"
+      ]
+    }
+  },
+  {
+    "id": "gb-sky-sports-news",
+    "name": "Sky Sports News",
+    "shortName": "Sky Sports News",
+    "aliases": [],
+    "country": "GB",
+    "languages": [
+      "eng"
+    ],
+    "categories": [
+      "sports"
+    ],
+    "network": "Sky Sports",
+    "website": "https://www.sky.com/tv/sports",
+    "logo": null,
+    "epgIds": [],
+    "enabled": true,
+    "isAdult": false,
+    "sortOrder": 310,
+    "tags": [
+      "premium"
+    ],
+    "access": {
+      "model": "subscription",
+      "providerIds": [
+        "sky"
+      ],
+      "packageIds": [
+        "gb-sky-sports-complete"
+      ]
+    }
+  },
+  {
+    "id": "gb-tnt-sports-1",
+    "name": "TNT Sports 1",
+    "shortName": "TNT 1",
+    "aliases": [],
+    "country": "GB",
+    "languages": [
+      "eng"
+    ],
+    "categories": [
+      "sports"
+    ],
+    "network": "TNT Sports",
+    "website": "https://www.tntsports.co.uk/",
+    "logo": null,
+    "epgIds": [],
+    "enabled": true,
+    "isAdult": false,
+    "sortOrder": 330,
+    "tags": [
+      "premium"
+    ],
+    "access": {
+      "model": "subscription",
+      "providerIds": [
+        "tnt-sports"
+      ],
+      "packageIds": [
+        "gb-tnt-sports"
+      ]
+    }
+  },
+  {
+    "id": "gb-tnt-sports-2",
+    "name": "TNT Sports 2",
+    "shortName": "TNT 2",
+    "aliases": [],
+    "country": "GB",
+    "languages": [
+      "eng"
+    ],
+    "categories": [
+      "sports"
+    ],
+    "network": "TNT Sports",
+    "website": "https://www.tntsports.co.uk/",
+    "logo": null,
+    "epgIds": [],
+    "enabled": true,
+    "isAdult": false,
+    "sortOrder": 340,
+    "tags": [
+      "premium"
+    ],
+    "access": {
+      "model": "subscription",
+      "providerIds": [
+        "tnt-sports"
+      ],
+      "packageIds": [
+        "gb-tnt-sports"
+      ]
+    }
+  },
+  {
+    "id": "gb-tnt-sports-3",
+    "name": "TNT Sports 3",
+    "shortName": "TNT 3",
+    "aliases": [],
+    "country": "GB",
+    "languages": [
+      "eng"
+    ],
+    "categories": [
+      "sports"
+    ],
+    "network": "TNT Sports",
+    "website": "https://www.tntsports.co.uk/",
+    "logo": null,
+    "epgIds": [],
+    "enabled": true,
+    "isAdult": false,
+    "sortOrder": 350,
+    "tags": [
+      "premium"
+    ],
+    "access": {
+      "model": "subscription",
+      "providerIds": [
+        "tnt-sports"
+      ],
+      "packageIds": [
+        "gb-tnt-sports"
+      ]
+    }
+  },
+  {
+    "id": "gb-tnt-sports-4",
+    "name": "TNT Sports 4",
+    "shortName": "TNT 4",
+    "aliases": [],
+    "country": "GB",
+    "languages": [
+      "eng"
+    ],
+    "categories": [
+      "sports"
+    ],
+    "network": "TNT Sports",
+    "website": "https://www.tntsports.co.uk/",
+    "logo": null,
+    "epgIds": [],
+    "enabled": true,
+    "isAdult": false,
+    "sortOrder": 360,
+    "tags": [
+      "premium"
+    ],
+    "access": {
+      "model": "subscription",
+      "providerIds": [
+        "tnt-sports"
+      ],
+      "packageIds": [
+        "gb-tnt-sports"
+      ]
+    }
+  },
+  {
+    "id": "gb-tnt-sports-ultimate",
+    "name": "TNT Sports Ultimate",
+    "shortName": "TNT Ultimate",
+    "aliases": [],
+    "country": "GB",
+    "languages": [
+      "eng"
+    ],
+    "categories": [
+      "sports"
+    ],
+    "network": "TNT Sports",
+    "website": "https://www.tntsports.co.uk/",
+    "logo": null,
+    "epgIds": [],
+    "enabled": true,
+    "isAdult": false,
+    "sortOrder": 370,
+    "tags": [
+      "premium"
+    ],
+    "access": {
+      "model": "subscription",
+      "providerIds": [
+        "tnt-sports"
+      ],
+      "packageIds": [
+        "gb-tnt-sports"
+      ]
+    }
+  },
+  {
+    "id": "gb-tnt-sports-box-office",
+    "name": "TNT Sports Box Office",
+    "shortName": "TNT Box Office",
+    "aliases": [],
+    "country": "GB",
+    "languages": [
+      "eng"
+    ],
+    "categories": [
+      "sports"
+    ],
+    "network": "TNT Sports",
+    "website": "https://www.tntsports.co.uk/",
+    "logo": null,
+    "epgIds": [],
+    "enabled": true,
+    "isAdult": false,
+    "sortOrder": 380,
+    "tags": [
+      "premium",
+      "ppv"
+    ],
+    "access": {
+      "model": "subscription",
+      "providerIds": [
+        "tnt-sports"
+      ],
+      "packageIds": [
+        "gb-tnt-sports"
+      ]
+    }
+  },
+  {
+    "id": "gb-sky-cinema-premiere",
+    "name": "Sky Cinema Premiere",
+    "shortName": "Sky Premiere",
+    "aliases": [],
+    "country": "GB",
+    "languages": [
+      "eng"
+    ],
+    "categories": [
+      "movies"
+    ],
+    "network": "Sky Cinema",
+    "website": "https://www.sky.com/tv/cinema",
+    "logo": null,
+    "epgIds": [],
+    "enabled": true,
+    "isAdult": false,
+    "sortOrder": 400,
+    "tags": [
+      "premium"
+    ],
+    "access": {
+      "model": "subscription",
+      "providerIds": [
+        "sky"
+      ],
+      "packageIds": [
+        "gb-sky-cinema"
+      ]
+    }
+  },
+  {
+    "id": "gb-sky-cinema-family",
+    "name": "Sky Cinema Family",
+    "shortName": "Sky Family",
+    "aliases": [],
+    "country": "GB",
+    "languages": [
+      "eng"
+    ],
+    "categories": [
+      "movies"
+    ],
+    "network": "Sky Cinema",
+    "website": "https://www.sky.com/tv/cinema",
+    "logo": null,
+    "epgIds": [],
+    "enabled": true,
+    "isAdult": false,
+    "sortOrder": 410,
+    "tags": [
+      "premium"
+    ],
+    "access": {
+      "model": "subscription",
+      "providerIds": [
+        "sky"
+      ],
+      "packageIds": [
+        "gb-sky-cinema"
+      ]
+    }
+  },
+  {
+    "id": "gb-sky-cinema-action",
+    "name": "Sky Cinema Action",
+    "shortName": "Sky Action",
+    "aliases": [],
+    "country": "GB",
+    "languages": [
+      "eng"
+    ],
+    "categories": [
+      "movies"
+    ],
+    "network": "Sky Cinema",
+    "website": "https://www.sky.com/tv/cinema",
+    "logo": null,
+    "epgIds": [],
+    "enabled": true,
+    "isAdult": false,
+    "sortOrder": 420,
+    "tags": [
+      "premium"
+    ],
+    "access": {
+      "model": "subscription",
+      "providerIds": [
+        "sky"
+      ],
+      "packageIds": [
+        "gb-sky-cinema"
+      ]
+    }
+  },
+  {
+    "id": "gb-sky-cinema-greats",
+    "name": "Sky Cinema Greats",
+    "shortName": "Sky Greats",
+    "aliases": [],
+    "country": "GB",
+    "languages": [
+      "eng"
+    ],
+    "categories": [
+      "movies"
+    ],
+    "network": "Sky Cinema",
+    "website": "https://www.sky.com/tv/cinema",
+    "logo": null,
+    "epgIds": [],
+    "enabled": true,
+    "isAdult": false,
+    "sortOrder": 430,
+    "tags": [
+      "premium"
+    ],
+    "access": {
+      "model": "subscription",
+      "providerIds": [
+        "sky"
+      ],
+      "packageIds": [
+        "gb-sky-cinema"
+      ]
+    }
+  },
+  {
+    "id": "gb-sky-cinema-comedy",
+    "name": "Sky Cinema Comedy",
+    "shortName": "Sky Comedy",
+    "aliases": [],
+    "country": "GB",
+    "languages": [
+      "eng"
+    ],
+    "categories": [
+      "movies"
+    ],
+    "network": "Sky Cinema",
+    "website": "https://www.sky.com/tv/cinema",
+    "logo": null,
+    "epgIds": [],
+    "enabled": true,
+    "isAdult": false,
+    "sortOrder": 440,
+    "tags": [
+      "premium"
+    ],
+    "access": {
+      "model": "subscription",
+      "providerIds": [
+        "sky"
+      ],
+      "packageIds": [
+        "gb-sky-cinema"
+      ]
+    }
+  },
+  {
+    "id": "gb-sky-cinema-thriller",
+    "name": "Sky Cinema Thriller",
+    "shortName": "Sky Thriller",
+    "aliases": [],
+    "country": "GB",
+    "languages": [
+      "eng"
+    ],
+    "categories": [
+      "movies"
+    ],
+    "network": "Sky Cinema",
+    "website": "https://www.sky.com/tv/cinema",
+    "logo": null,
+    "epgIds": [],
+    "enabled": true,
+    "isAdult": false,
+    "sortOrder": 450,
+    "tags": [
+      "premium"
+    ],
+    "access": {
+      "model": "subscription",
+      "providerIds": [
+        "sky"
+      ],
+      "packageIds": [
+        "gb-sky-cinema"
+      ]
+    }
+  },
+  {
+    "id": "gb-sky-cinema-drama",
+    "name": "Sky Cinema Drama",
+    "shortName": "Sky Drama",
+    "aliases": [],
+    "country": "GB",
+    "languages": [
+      "eng"
+    ],
+    "categories": [
+      "movies"
+    ],
+    "network": "Sky Cinema",
+    "website": "https://www.sky.com/tv/cinema",
+    "logo": null,
+    "epgIds": [],
+    "enabled": true,
+    "isAdult": false,
+    "sortOrder": 460,
+    "tags": [
+      "premium"
+    ],
+    "access": {
+      "model": "subscription",
+      "providerIds": [
+        "sky"
+      ],
+      "packageIds": [
+        "gb-sky-cinema"
+      ]
+    }
+  },
+  {
+    "id": "gb-sky-cinema-sci-fi-horror",
+    "name": "Sky Cinema Sci-Fi & Horror",
+    "shortName": "Sky Sci-Fi/Horror",
+    "aliases": [],
+    "country": "GB",
+    "languages": [
+      "eng"
+    ],
+    "categories": [
+      "movies"
+    ],
+    "network": "Sky Cinema",
+    "website": "https://www.sky.com/tv/cinema",
+    "logo": null,
+    "epgIds": [],
+    "enabled": true,
+    "isAdult": false,
+    "sortOrder": 470,
+    "tags": [
+      "premium"
+    ],
+    "access": {
+      "model": "subscription",
+      "providerIds": [
+        "sky"
+      ],
+      "packageIds": [
+        "gb-sky-cinema"
+      ]
+    }
+  }
+]

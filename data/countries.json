@@ -1,0 +1,1994 @@
+[
+  {
+    "code": "AF",
+    "name": "Afghanistan",
+    "flag": "🇦🇫",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1000
+  },
+  {
+    "code": "AX",
+    "name": "Aland",
+    "flag": "🇦🇽",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1001
+  },
+  {
+    "code": "AL",
+    "name": "Albania",
+    "flag": "🇦🇱",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1002
+  },
+  {
+    "code": "DZ",
+    "name": "Algeria",
+    "flag": "🇩🇿",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1003
+  },
+  {
+    "code": "AS",
+    "name": "American Samoa",
+    "flag": "🇦🇸",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1004
+  },
+  {
+    "code": "AD",
+    "name": "Andorra",
+    "flag": "🇦🇩",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1005
+  },
+  {
+    "code": "AO",
+    "name": "Angola",
+    "flag": "🇦🇴",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1006
+  },
+  {
+    "code": "AI",
+    "name": "Anguilla",
+    "flag": "🇦🇮",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1007
+  },
+  {
+    "code": "AQ",
+    "name": "Antarctica",
+    "flag": "🇦🇶",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1008
+  },
+  {
+    "code": "AG",
+    "name": "Antigua and Barbuda",
+    "flag": "🇦🇬",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1009
+  },
+  {
+    "code": "AR",
+    "name": "Argentina",
+    "flag": "🇦🇷",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1010
+  },
+  {
+    "code": "AM",
+    "name": "Armenia",
+    "flag": "🇦🇲",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1011
+  },
+  {
+    "code": "AW",
+    "name": "Aruba",
+    "flag": "🇦🇼",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1012
+  },
+  {
+    "code": "AU",
+    "name": "Australia",
+    "flag": "🇦🇺",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1013
+  },
+  {
+    "code": "AT",
+    "name": "Austria",
+    "flag": "🇦🇹",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1014
+  },
+  {
+    "code": "AZ",
+    "name": "Azerbaijan",
+    "flag": "🇦🇿",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1015
+  },
+  {
+    "code": "BS",
+    "name": "Bahamas",
+    "flag": "🇧🇸",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1016
+  },
+  {
+    "code": "BH",
+    "name": "Bahrain",
+    "flag": "🇧🇭",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1017
+  },
+  {
+    "code": "BD",
+    "name": "Bangladesh",
+    "flag": "🇧🇩",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1018
+  },
+  {
+    "code": "BB",
+    "name": "Barbados",
+    "flag": "🇧🇧",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1019
+  },
+  {
+    "code": "BY",
+    "name": "Belarus",
+    "flag": "🇧🇾",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1020
+  },
+  {
+    "code": "BE",
+    "name": "Belgium",
+    "flag": "🇧🇪",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1021
+  },
+  {
+    "code": "BZ",
+    "name": "Belize",
+    "flag": "🇧🇿",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1022
+  },
+  {
+    "code": "BJ",
+    "name": "Benin",
+    "flag": "🇧🇯",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1023
+  },
+  {
+    "code": "BM",
+    "name": "Bermuda",
+    "flag": "🇧🇲",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1024
+  },
+  {
+    "code": "BT",
+    "name": "Bhutan",
+    "flag": "🇧🇹",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1025
+  },
+  {
+    "code": "BO",
+    "name": "Bolivia",
+    "flag": "🇧🇴",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1026
+  },
+  {
+    "code": "BQ",
+    "name": "Bonaire",
+    "flag": "🇧🇶",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1027
+  },
+  {
+    "code": "BA",
+    "name": "Bosnia and Herzegovina",
+    "flag": "🇧🇦",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1028
+  },
+  {
+    "code": "BW",
+    "name": "Botswana",
+    "flag": "🇧🇼",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1029
+  },
+  {
+    "code": "BV",
+    "name": "Bouvet Island",
+    "flag": "🇧🇻",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1030
+  },
+  {
+    "code": "BR",
+    "name": "Brazil",
+    "flag": "🇧🇷",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1031
+  },
+  {
+    "code": "IO",
+    "name": "British Indian Ocean Territory",
+    "flag": "🇮🇴",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1032
+  },
+  {
+    "code": "VG",
+    "name": "British Virgin Islands",
+    "flag": "🇻🇬",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1033
+  },
+  {
+    "code": "BN",
+    "name": "Brunei",
+    "flag": "🇧🇳",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1034
+  },
+  {
+    "code": "BG",
+    "name": "Bulgaria",
+    "flag": "🇧🇬",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1035
+  },
+  {
+    "code": "BF",
+    "name": "Burkina Faso",
+    "flag": "🇧🇫",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1036
+  },
+  {
+    "code": "BI",
+    "name": "Burundi",
+    "flag": "🇧🇮",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1037
+  },
+  {
+    "code": "KH",
+    "name": "Cambodia",
+    "flag": "🇰🇭",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1038
+  },
+  {
+    "code": "CM",
+    "name": "Cameroon",
+    "flag": "🇨🇲",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1039
+  },
+  {
+    "code": "CA",
+    "name": "Canada",
+    "flag": "🇨🇦",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1040
+  },
+  {
+    "code": "CV",
+    "name": "Cape Verde",
+    "flag": "🇨🇻",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1041
+  },
+  {
+    "code": "KY",
+    "name": "Cayman Islands",
+    "flag": "🇰🇾",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1042
+  },
+  {
+    "code": "CF",
+    "name": "Central African Republic",
+    "flag": "🇨🇫",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1043
+  },
+  {
+    "code": "TD",
+    "name": "Chad",
+    "flag": "🇹🇩",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1044
+  },
+  {
+    "code": "CL",
+    "name": "Chile",
+    "flag": "🇨🇱",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1045
+  },
+  {
+    "code": "CN",
+    "name": "China",
+    "flag": "🇨🇳",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1046
+  },
+  {
+    "code": "CX",
+    "name": "Christmas Island",
+    "flag": "🇨🇽",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1047
+  },
+  {
+    "code": "CC",
+    "name": "Cocos (Keeling) Islands",
+    "flag": "🇨🇨",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1048
+  },
+  {
+    "code": "CO",
+    "name": "Colombia",
+    "flag": "🇨🇴",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1049
+  },
+  {
+    "code": "KM",
+    "name": "Comoros",
+    "flag": "🇰🇲",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1050
+  },
+  {
+    "code": "CK",
+    "name": "Cook Islands",
+    "flag": "🇨🇰",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1051
+  },
+  {
+    "code": "CR",
+    "name": "Costa Rica",
+    "flag": "🇨🇷",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1052
+  },
+  {
+    "code": "HR",
+    "name": "Croatia",
+    "flag": "🇭🇷",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1053
+  },
+  {
+    "code": "CU",
+    "name": "Cuba",
+    "flag": "🇨🇺",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1054
+  },
+  {
+    "code": "CW",
+    "name": "Curacao",
+    "flag": "🇨🇼",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1055
+  },
+  {
+    "code": "CY",
+    "name": "Cyprus",
+    "flag": "🇨🇾",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1056
+  },
+  {
+    "code": "CZ",
+    "name": "Czech Republic",
+    "flag": "🇨🇿",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1057
+  },
+  {
+    "code": "CD",
+    "name": "Democratic Republic of the Congo",
+    "flag": "🇨🇩",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1058
+  },
+  {
+    "code": "DK",
+    "name": "Denmark",
+    "flag": "🇩🇰",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1059
+  },
+  {
+    "code": "DJ",
+    "name": "Djibouti",
+    "flag": "🇩🇯",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1060
+  },
+  {
+    "code": "DM",
+    "name": "Dominica",
+    "flag": "🇩🇲",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1061
+  },
+  {
+    "code": "DO",
+    "name": "Dominican Republic",
+    "flag": "🇩🇴",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1062
+  },
+  {
+    "code": "TL",
+    "name": "East Timor",
+    "flag": "🇹🇱",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1063
+  },
+  {
+    "code": "EC",
+    "name": "Ecuador",
+    "flag": "🇪🇨",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1064
+  },
+  {
+    "code": "EG",
+    "name": "Egypt",
+    "flag": "🇪🇬",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1065
+  },
+  {
+    "code": "SV",
+    "name": "El Salvador",
+    "flag": "🇸🇻",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1066
+  },
+  {
+    "code": "GQ",
+    "name": "Equatorial Guinea",
+    "flag": "🇬🇶",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1067
+  },
+  {
+    "code": "ER",
+    "name": "Eritrea",
+    "flag": "🇪🇷",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1068
+  },
+  {
+    "code": "EE",
+    "name": "Estonia",
+    "flag": "🇪🇪",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1069
+  },
+  {
+    "code": "ET",
+    "name": "Ethiopia",
+    "flag": "🇪🇹",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1070
+  },
+  {
+    "code": "FK",
+    "name": "Falkland Islands",
+    "flag": "🇫🇰",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1071
+  },
+  {
+    "code": "FO",
+    "name": "Faroe Islands",
+    "flag": "🇫🇴",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1072
+  },
+  {
+    "code": "FJ",
+    "name": "Fiji",
+    "flag": "🇫🇯",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1073
+  },
+  {
+    "code": "FI",
+    "name": "Finland",
+    "flag": "🇫🇮",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1074
+  },
+  {
+    "code": "FR",
+    "name": "France",
+    "flag": "🇫🇷",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1075
+  },
+  {
+    "code": "GF",
+    "name": "French Guiana",
+    "flag": "🇬🇫",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1076
+  },
+  {
+    "code": "PF",
+    "name": "French Polynesia",
+    "flag": "🇵🇫",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1077
+  },
+  {
+    "code": "TF",
+    "name": "French Southern Territories",
+    "flag": "🇹🇫",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1078
+  },
+  {
+    "code": "GA",
+    "name": "Gabon",
+    "flag": "🇬🇦",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1079
+  },
+  {
+    "code": "GM",
+    "name": "Gambia",
+    "flag": "🇬🇲",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1080
+  },
+  {
+    "code": "GE",
+    "name": "Georgia",
+    "flag": "🇬🇪",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1081
+  },
+  {
+    "code": "DE",
+    "name": "Germany",
+    "flag": "🇩🇪",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1082
+  },
+  {
+    "code": "GH",
+    "name": "Ghana",
+    "flag": "🇬🇭",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1083
+  },
+  {
+    "code": "GI",
+    "name": "Gibraltar",
+    "flag": "🇬🇮",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1084
+  },
+  {
+    "code": "GR",
+    "name": "Greece",
+    "flag": "🇬🇷",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1085
+  },
+  {
+    "code": "GL",
+    "name": "Greenland",
+    "flag": "🇬🇱",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1086
+  },
+  {
+    "code": "GD",
+    "name": "Grenada",
+    "flag": "🇬🇩",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1087
+  },
+  {
+    "code": "GP",
+    "name": "Guadeloupe",
+    "flag": "🇬🇵",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1088
+  },
+  {
+    "code": "GU",
+    "name": "Guam",
+    "flag": "🇬🇺",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1089
+  },
+  {
+    "code": "GT",
+    "name": "Guatemala",
+    "flag": "🇬🇹",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1090
+  },
+  {
+    "code": "GG",
+    "name": "Guernsey",
+    "flag": "🇬🇬",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1091
+  },
+  {
+    "code": "GN",
+    "name": "Guinea",
+    "flag": "🇬🇳",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1092
+  },
+  {
+    "code": "GW",
+    "name": "Guinea-Bissau",
+    "flag": "🇬🇼",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1093
+  },
+  {
+    "code": "GY",
+    "name": "Guyana",
+    "flag": "🇬🇾",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1094
+  },
+  {
+    "code": "HT",
+    "name": "Haiti",
+    "flag": "🇭🇹",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1095
+  },
+  {
+    "code": "HM",
+    "name": "Heard Island and McDonald Islands",
+    "flag": "🇭🇲",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1096
+  },
+  {
+    "code": "HN",
+    "name": "Honduras",
+    "flag": "🇭🇳",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1097
+  },
+  {
+    "code": "HK",
+    "name": "Hong Kong",
+    "flag": "🇭🇰",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1098
+  },
+  {
+    "code": "HU",
+    "name": "Hungary",
+    "flag": "🇭🇺",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1099
+  },
+  {
+    "code": "IS",
+    "name": "Iceland",
+    "flag": "🇮🇸",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1100
+  },
+  {
+    "code": "IN",
+    "name": "India",
+    "flag": "🇮🇳",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1101
+  },
+  {
+    "code": "ID",
+    "name": "Indonesia",
+    "flag": "🇮🇩",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1102
+  },
+  {
+    "code": "IR",
+    "name": "Iran",
+    "flag": "🇮🇷",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1103
+  },
+  {
+    "code": "IQ",
+    "name": "Iraq",
+    "flag": "🇮🇶",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1104
+  },
+  {
+    "code": "IE",
+    "name": "Ireland",
+    "flag": "🇮🇪",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1105
+  },
+  {
+    "code": "IM",
+    "name": "Isle of Man",
+    "flag": "🇮🇲",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1106
+  },
+  {
+    "code": "IL",
+    "name": "Israel",
+    "flag": "🇮🇱",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1107
+  },
+  {
+    "code": "IT",
+    "name": "Italy",
+    "flag": "🇮🇹",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1108
+  },
+  {
+    "code": "CI",
+    "name": "Ivory Coast",
+    "flag": "🇨🇮",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1109
+  },
+  {
+    "code": "JM",
+    "name": "Jamaica",
+    "flag": "🇯🇲",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1110
+  },
+  {
+    "code": "JP",
+    "name": "Japan",
+    "flag": "🇯🇵",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1111
+  },
+  {
+    "code": "JE",
+    "name": "Jersey",
+    "flag": "🇯🇪",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1112
+  },
+  {
+    "code": "JO",
+    "name": "Jordan",
+    "flag": "🇯🇴",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1113
+  },
+  {
+    "code": "KZ",
+    "name": "Kazakhstan",
+    "flag": "🇰🇿",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1114
+  },
+  {
+    "code": "KE",
+    "name": "Kenya",
+    "flag": "🇰🇪",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1115
+  },
+  {
+    "code": "KI",
+    "name": "Kiribati",
+    "flag": "🇰🇮",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1116
+  },
+  {
+    "code": "KW",
+    "name": "Kuwait",
+    "flag": "🇰🇼",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1117
+  },
+  {
+    "code": "KG",
+    "name": "Kyrgyzstan",
+    "flag": "🇰🇬",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1118
+  },
+  {
+    "code": "LA",
+    "name": "Laos",
+    "flag": "🇱🇦",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1119
+  },
+  {
+    "code": "LV",
+    "name": "Latvia",
+    "flag": "🇱🇻",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1120
+  },
+  {
+    "code": "LB",
+    "name": "Lebanon",
+    "flag": "🇱🇧",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1121
+  },
+  {
+    "code": "LS",
+    "name": "Lesotho",
+    "flag": "🇱🇸",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1122
+  },
+  {
+    "code": "LR",
+    "name": "Liberia",
+    "flag": "🇱🇷",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1123
+  },
+  {
+    "code": "LY",
+    "name": "Libya",
+    "flag": "🇱🇾",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1124
+  },
+  {
+    "code": "LI",
+    "name": "Liechtenstein",
+    "flag": "🇱🇮",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1125
+  },
+  {
+    "code": "LT",
+    "name": "Lithuania",
+    "flag": "🇱🇹",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1126
+  },
+  {
+    "code": "LU",
+    "name": "Luxembourg",
+    "flag": "🇱🇺",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1127
+  },
+  {
+    "code": "MO",
+    "name": "Macao",
+    "flag": "🇲🇴",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1128
+  },
+  {
+    "code": "MG",
+    "name": "Madagascar",
+    "flag": "🇲🇬",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1129
+  },
+  {
+    "code": "MW",
+    "name": "Malawi",
+    "flag": "🇲🇼",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1130
+  },
+  {
+    "code": "MY",
+    "name": "Malaysia",
+    "flag": "🇲🇾",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1131
+  },
+  {
+    "code": "MV",
+    "name": "Maldives",
+    "flag": "🇲🇻",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1132
+  },
+  {
+    "code": "ML",
+    "name": "Mali",
+    "flag": "🇲🇱",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1133
+  },
+  {
+    "code": "MT",
+    "name": "Malta",
+    "flag": "🇲🇹",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1134
+  },
+  {
+    "code": "MH",
+    "name": "Marshall Islands",
+    "flag": "🇲🇭",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1135
+  },
+  {
+    "code": "MQ",
+    "name": "Martinique",
+    "flag": "🇲🇶",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1136
+  },
+  {
+    "code": "MR",
+    "name": "Mauritania",
+    "flag": "🇲🇷",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1137
+  },
+  {
+    "code": "MU",
+    "name": "Mauritius",
+    "flag": "🇲🇺",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1138
+  },
+  {
+    "code": "YT",
+    "name": "Mayotte",
+    "flag": "🇾🇹",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1139
+  },
+  {
+    "code": "MX",
+    "name": "Mexico",
+    "flag": "🇲🇽",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1140
+  },
+  {
+    "code": "FM",
+    "name": "Micronesia",
+    "flag": "🇫🇲",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1141
+  },
+  {
+    "code": "MD",
+    "name": "Moldova",
+    "flag": "🇲🇩",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1142
+  },
+  {
+    "code": "MC",
+    "name": "Monaco",
+    "flag": "🇲🇨",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1143
+  },
+  {
+    "code": "MN",
+    "name": "Mongolia",
+    "flag": "🇲🇳",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1144
+  },
+  {
+    "code": "ME",
+    "name": "Montenegro",
+    "flag": "🇲🇪",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1145
+  },
+  {
+    "code": "MS",
+    "name": "Montserrat",
+    "flag": "🇲🇸",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1146
+  },
+  {
+    "code": "MA",
+    "name": "Morocco",
+    "flag": "🇲🇦",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1147
+  },
+  {
+    "code": "MZ",
+    "name": "Mozambique",
+    "flag": "🇲🇿",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1148
+  },
+  {
+    "code": "MM",
+    "name": "Myanmar",
+    "flag": "🇲🇲",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1149
+  },
+  {
+    "code": "NA",
+    "name": "Namibia",
+    "flag": "🇳🇦",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1150
+  },
+  {
+    "code": "NR",
+    "name": "Nauru",
+    "flag": "🇳🇷",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1151
+  },
+  {
+    "code": "NP",
+    "name": "Nepal",
+    "flag": "🇳🇵",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1152
+  },
+  {
+    "code": "NL",
+    "name": "Netherlands",
+    "flag": "🇳🇱",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1153
+  },
+  {
+    "code": "NC",
+    "name": "New Caledonia",
+    "flag": "🇳🇨",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1154
+  },
+  {
+    "code": "NZ",
+    "name": "New Zealand",
+    "flag": "🇳🇿",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1155
+  },
+  {
+    "code": "NI",
+    "name": "Nicaragua",
+    "flag": "🇳🇮",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1156
+  },
+  {
+    "code": "NE",
+    "name": "Niger",
+    "flag": "🇳🇪",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1157
+  },
+  {
+    "code": "NG",
+    "name": "Nigeria",
+    "flag": "🇳🇬",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1158
+  },
+  {
+    "code": "NU",
+    "name": "Niue",
+    "flag": "🇳🇺",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1159
+  },
+  {
+    "code": "NF",
+    "name": "Norfolk Island",
+    "flag": "🇳🇫",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1160
+  },
+  {
+    "code": "KP",
+    "name": "North Korea",
+    "flag": "🇰🇵",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1161
+  },
+  {
+    "code": "MK",
+    "name": "North Macedonia",
+    "flag": "🇲🇰",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1162
+  },
+  {
+    "code": "MP",
+    "name": "Northern Mariana Islands",
+    "flag": "🇲🇵",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1163
+  },
+  {
+    "code": "NO",
+    "name": "Norway",
+    "flag": "🇳🇴",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1164
+  },
+  {
+    "code": "OM",
+    "name": "Oman",
+    "flag": "🇴🇲",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1165
+  },
+  {
+    "code": "PK",
+    "name": "Pakistan",
+    "flag": "🇵🇰",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1166
+  },
+  {
+    "code": "PW",
+    "name": "Palau",
+    "flag": "🇵🇼",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1167
+  },
+  {
+    "code": "PS",
+    "name": "Palestine",
+    "flag": "🇵🇸",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1168
+  },
+  {
+    "code": "PA",
+    "name": "Panama",
+    "flag": "🇵🇦",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1169
+  },
+  {
+    "code": "PG",
+    "name": "Papua New Guinea",
+    "flag": "🇵🇬",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1170
+  },
+  {
+    "code": "PY",
+    "name": "Paraguay",
+    "flag": "🇵🇾",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1171
+  },
+  {
+    "code": "PE",
+    "name": "Peru",
+    "flag": "🇵🇪",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1172
+  },
+  {
+    "code": "PH",
+    "name": "Philippines",
+    "flag": "🇵🇭",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1173
+  },
+  {
+    "code": "PN",
+    "name": "Pitcairn Islands",
+    "flag": "🇵🇳",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1174
+  },
+  {
+    "code": "PL",
+    "name": "Poland",
+    "flag": "🇵🇱",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1175
+  },
+  {
+    "code": "PT",
+    "name": "Portugal",
+    "flag": "🇵🇹",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1176
+  },
+  {
+    "code": "PR",
+    "name": "Puerto Rico",
+    "flag": "🇵🇷",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1177
+  },
+  {
+    "code": "QA",
+    "name": "Qatar",
+    "flag": "🇶🇦",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1178
+  },
+  {
+    "code": "CG",
+    "name": "Republic of the Congo",
+    "flag": "🇨🇬",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1179
+  },
+  {
+    "code": "RE",
+    "name": "Reunion",
+    "flag": "🇷🇪",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1180
+  },
+  {
+    "code": "RO",
+    "name": "Romania",
+    "flag": "🇷🇴",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1181
+  },
+  {
+    "code": "RU",
+    "name": "Russia",
+    "flag": "🇷🇺",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1182
+  },
+  {
+    "code": "RW",
+    "name": "Rwanda",
+    "flag": "🇷🇼",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1183
+  },
+  {
+    "code": "BL",
+    "name": "Saint Barthélemy",
+    "flag": "🇧🇱",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1184
+  },
+  {
+    "code": "SH",
+    "name": "Saint Helena",
+    "flag": "🇸🇭",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1185
+  },
+  {
+    "code": "KN",
+    "name": "Saint Kitts and Nevis",
+    "flag": "🇰🇳",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1186
+  },
+  {
+    "code": "LC",
+    "name": "Saint Lucia",
+    "flag": "🇱🇨",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1187
+  },
+  {
+    "code": "MF",
+    "name": "Saint Martin",
+    "flag": "🇲🇫",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1188
+  },
+  {
+    "code": "PM",
+    "name": "Saint Pierre and Miquelon",
+    "flag": "🇵🇲",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1189
+  },
+  {
+    "code": "VC",
+    "name": "Saint Vincent and the Grenadines",
+    "flag": "🇻🇨",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1190
+  },
+  {
+    "code": "WS",
+    "name": "Samoa",
+    "flag": "🇼🇸",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1191
+  },
+  {
+    "code": "SM",
+    "name": "San Marino",
+    "flag": "🇸🇲",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1192
+  },
+  {
+    "code": "ST",
+    "name": "Sao Tome and Principe",
+    "flag": "🇸🇹",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1193
+  },
+  {
+    "code": "SA",
+    "name": "Saudi Arabia",
+    "flag": "🇸🇦",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1194
+  },
+  {
+    "code": "SN",
+    "name": "Senegal",
+    "flag": "🇸🇳",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1195
+  },
+  {
+    "code": "RS",
+    "name": "Serbia",
+    "flag": "🇷🇸",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1196
+  },
+  {
+    "code": "SC",
+    "name": "Seychelles",
+    "flag": "🇸🇨",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1197
+  },
+  {
+    "code": "SL",
+    "name": "Sierra Leone",
+    "flag": "🇸🇱",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1198
+  },
+  {
+    "code": "SG",
+    "name": "Singapore",
+    "flag": "🇸🇬",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1199
+  },
+  {
+    "code": "SX",
+    "name": "Sint Maarten",
+    "flag": "🇸🇽",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1200
+  },
+  {
+    "code": "SK",
+    "name": "Slovakia",
+    "flag": "🇸🇰",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1201
+  },
+  {
+    "code": "SI",
+    "name": "Slovenia",
+    "flag": "🇸🇮",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1202
+  },
+  {
+    "code": "SB",
+    "name": "Solomon Islands",
+    "flag": "🇸🇧",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1203
+  },
+  {
+    "code": "SO",
+    "name": "Somalia",
+    "flag": "🇸🇴",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1204
+  },
+  {
+    "code": "ZA",
+    "name": "South Africa",
+    "flag": "🇿🇦",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1205
+  },
+  {
+    "code": "GS",
+    "name": "South Georgia and the South Sandwich Islands",
+    "flag": "🇬🇸",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1206
+  },
+  {
+    "code": "KR",
+    "name": "South Korea",
+    "flag": "🇰🇷",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1207
+  },
+  {
+    "code": "SS",
+    "name": "South Sudan",
+    "flag": "🇸🇸",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1208
+  },
+  {
+    "code": "ES",
+    "name": "Spain",
+    "flag": "🇪🇸",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1209
+  },
+  {
+    "code": "LK",
+    "name": "Sri Lanka",
+    "flag": "🇱🇰",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1210
+  },
+  {
+    "code": "SD",
+    "name": "Sudan",
+    "flag": "🇸🇩",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1211
+  },
+  {
+    "code": "SR",
+    "name": "Suriname",
+    "flag": "🇸🇷",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1212
+  },
+  {
+    "code": "SJ",
+    "name": "Svalbard and Jan Mayen",
+    "flag": "🇸🇯",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1213
+  },
+  {
+    "code": "SZ",
+    "name": "Swaziland",
+    "flag": "🇸🇿",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1214
+  },
+  {
+    "code": "SE",
+    "name": "Sweden",
+    "flag": "🇸🇪",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1215
+  },
+  {
+    "code": "CH",
+    "name": "Switzerland",
+    "flag": "🇨🇭",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1216
+  },
+  {
+    "code": "SY",
+    "name": "Syria",
+    "flag": "🇸🇾",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1217
+  },
+  {
+    "code": "TW",
+    "name": "Taiwan",
+    "flag": "🇹🇼",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1218
+  },
+  {
+    "code": "TJ",
+    "name": "Tajikistan",
+    "flag": "🇹🇯",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1219
+  },
+  {
+    "code": "TZ",
+    "name": "Tanzania",
+    "flag": "🇹🇿",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1220
+  },
+  {
+    "code": "TH",
+    "name": "Thailand",
+    "flag": "🇹🇭",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1221
+  },
+  {
+    "code": "TG",
+    "name": "Togo",
+    "flag": "🇹🇬",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1222
+  },
+  {
+    "code": "TK",
+    "name": "Tokelau",
+    "flag": "🇹🇰",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1223
+  },
+  {
+    "code": "TO",
+    "name": "Tonga",
+    "flag": "🇹🇴",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1224
+  },
+  {
+    "code": "TT",
+    "name": "Trinidad and Tobago",
+    "flag": "🇹🇹",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1225
+  },
+  {
+    "code": "TN",
+    "name": "Tunisia",
+    "flag": "🇹🇳",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1226
+  },
+  {
+    "code": "TR",
+    "name": "Turkiye",
+    "flag": "🇹🇷",
+    "enabled": true,
+    "featured": true,
+    "sortOrder": 20
+  },
+  {
+    "code": "TM",
+    "name": "Turkmenistan",
+    "flag": "🇹🇲",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1228
+  },
+  {
+    "code": "TC",
+    "name": "Turks and Caicos Islands",
+    "flag": "🇹🇨",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1229
+  },
+  {
+    "code": "TV",
+    "name": "Tuvalu",
+    "flag": "🇹🇻",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1230
+  },
+  {
+    "code": "UM",
+    "name": "U.S. Minor Outlying Islands",
+    "flag": "🇺🇲",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1231
+  },
+  {
+    "code": "VI",
+    "name": "U.S. Virgin Islands",
+    "flag": "🇻🇮",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1232
+  },
+  {
+    "code": "UG",
+    "name": "Uganda",
+    "flag": "🇺🇬",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1233
+  },
+  {
+    "code": "UA",
+    "name": "Ukraine",
+    "flag": "🇺🇦",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1234
+  },
+  {
+    "code": "AE",
+    "name": "United Arab Emirates",
+    "flag": "🇦🇪",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1235
+  },
+  {
+    "code": "GB",
+    "name": "United Kingdom",
+    "flag": "🇬🇧",
+    "enabled": true,
+    "featured": true,
+    "sortOrder": 10
+  },
+  {
+    "code": "US",
+    "name": "United States",
+    "flag": "🇺🇸",
+    "enabled": true,
+    "featured": true,
+    "sortOrder": 30
+  },
+  {
+    "code": "UY",
+    "name": "Uruguay",
+    "flag": "🇺🇾",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1238
+  },
+  {
+    "code": "UZ",
+    "name": "Uzbekistan",
+    "flag": "🇺🇿",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1239
+  },
+  {
+    "code": "VU",
+    "name": "Vanuatu",
+    "flag": "🇻🇺",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1240
+  },
+  {
+    "code": "VA",
+    "name": "Vatican City",
+    "flag": "🇻🇦",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1241
+  },
+  {
+    "code": "VE",
+    "name": "Venezuela",
+    "flag": "🇻🇪",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1242
+  },
+  {
+    "code": "VN",
+    "name": "Vietnam",
+    "flag": "🇻🇳",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1243
+  },
+  {
+    "code": "WF",
+    "name": "Wallis and Futuna",
+    "flag": "🇼🇫",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1244
+  },
+  {
+    "code": "EH",
+    "name": "Western Sahara",
+    "flag": "🇪🇭",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1245
+  },
+  {
+    "code": "YE",
+    "name": "Yemen",
+    "flag": "🇾🇪",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1246
+  },
+  {
+    "code": "ZM",
+    "name": "Zambia",
+    "flag": "🇿🇲",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1247
+  },
+  {
+    "code": "ZW",
+    "name": "Zimbabwe",
+    "flag": "🇿🇼",
+    "enabled": false,
+    "featured": false,
+    "sortOrder": 1248
+  }
+]

@@ -1,0 +1,67 @@
+[
+  {
+    "id": "gb-sky-sports-complete",
+    "providerId": "sky",
+    "name": "Sky Sports",
+    "country": "GB",
+    "accessModel": "subscription",
+    "website": "https://www.sky.com/tv/sports",
+    "channelIds": [
+      "gb-sky-sports-main-event",
+      "gb-sky-sports-premier-league",
+      "gb-sky-sports-football",
+      "gb-sky-sports-plus",
+      "gb-sky-sports-cricket",
+      "gb-sky-sports-golf",
+      "gb-sky-sports-f1",
+      "gb-sky-sports-tennis",
+      "gb-sky-sports-action",
+      "gb-sky-sports-racing",
+      "gb-sky-sports-mix",
+      "gb-sky-sports-news"
+    ]
+  },
+  {
+    "id": "gb-sky-cinema",
+    "providerId": "sky",
+    "name": "Sky Cinema",
+    "country": "GB",
+    "accessModel": "subscription",
+    "website": "https://www.sky.com/tv/cinema",
+    "channelIds": [
+      "gb-sky-cinema-premiere",
+      "gb-sky-cinema-family",
+      "gb-sky-cinema-action",
+      "gb-sky-cinema-greats",
+      "gb-sky-cinema-comedy",
+      "gb-sky-cinema-thriller",
+      "gb-sky-cinema-drama",
+      "gb-sky-cinema-sci-fi-horror"
+    ]
+  },
+  {
+    "id": "gb-tnt-sports",
+    "providerId": "tnt-sports",
+    "name": "TNT Sports",
+    "country": "GB",
+    "accessModel": "subscription",
+    "website": "https://www.tntsports.co.uk/",
+    "channelIds": [
+      "gb-tnt-sports-1",
+      "gb-tnt-sports-2",
+      "gb-tnt-sports-3",
+      "gb-tnt-sports-4",
+      "gb-tnt-sports-ultimate",
+      "gb-tnt-sports-box-office"
+    ]
+  },
+  {
+    "id": "gb-dazn",
+    "providerId": "dazn",
+    "name": "DAZN",
+    "country": "GB",
+    "accessModel": "subscription",
+    "website": "https://www.dazn.com/en-GB/",
+    "channelIds": []
+  }
+]

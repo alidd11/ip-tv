@@ -1,0 +1,788 @@
+[
+  {
+    "id": "us-bloomberg-tv-official-hls",
+    "feedId": "us-bloomberg-tv-main",
+    "type": "hls",
+    "url": "https://bloomberg.com/media-manifest/streams/eu.m3u8",
+    "priority": 10,
+    "enabled": true,
+    "playbackMode": "native",
+    "authorization": "verified-official",
+    "accessModel": "free-stream",
+    "requiresAuth": false,
+    "geo": {
+      "mode": "global",
+      "countries": []
+    },
+    "headers": {},
+    "evidenceUrls": [
+      "https://www.bloomberg.com/livestream"
+    ]
+  },
+  {
+    "id": "tr-trt-1-official-hls",
+    "feedId": "tr-trt-1-main",
+    "type": "hls",
+    "url": "https://tv-trt1.medya.trt.com.tr/master.m3u8",
+    "priority": 10,
+    "enabled": true,
+    "playbackMode": "native",
+    "authorization": "verified-official",
+    "accessModel": "free-stream",
+    "requiresAuth": false,
+    "geo": {
+      "mode": "allow",
+      "countries": [
+        "TR"
+      ]
+    },
+    "headers": {},
+    "evidenceUrls": [
+      "https://www.trt1.com.tr/"
+    ]
+  },
+  {
+    "id": "tr-trt-haber-official-hls",
+    "feedId": "tr-trt-haber-main",
+    "type": "hls",
+    "url": "https://tv-trthaber.medya.trt.com.tr/master.m3u8",
+    "priority": 10,
+    "enabled": true,
+    "playbackMode": "native",
+    "authorization": "verified-official",
+    "accessModel": "free-stream",
+    "requiresAuth": false,
+    "geo": {
+      "mode": "global",
+      "countries": []
+    },
+    "headers": {},
+    "evidenceUrls": [
+      "https://www.trthaber.com/canli-yayin-izle.html"
+    ]
+  },
+  {
+    "id": "tr-trt-cocuk-official-hls",
+    "feedId": "tr-trt-cocuk-main",
+    "type": "hls",
+    "url": "https://tv-trtcocuk.medya.trt.com.tr/master.m3u8",
+    "priority": 10,
+    "enabled": true,
+    "playbackMode": "native",
+    "authorization": "verified-official",
+    "accessModel": "free-stream",
+    "requiresAuth": false,
+    "geo": {
+      "mode": "allow",
+      "countries": [
+        "TR"
+      ]
+    },
+    "headers": {},
+    "evidenceUrls": [
+      "https://www.trtcocuk.net.tr/"
+    ]
+  },
+  {
+    "id": "gb-sky-news-official-web",
+    "feedId": "gb-sky-news-main",
+    "type": "web",
+    "url": "https://news.sky.com/watch-live",
+    "priority": 20,
+    "enabled": true,
+    "playbackMode": "external",
+    "authorization": "verified-official",
+    "accessModel": "free-stream",
+    "requiresAuth": false,
+    "geo": {
+      "mode": "global",
+      "countries": []
+    },
+    "headers": {},
+    "evidenceUrls": [
+      "https://news.sky.com/watch-live"
+    ]
+  },
+  {
+    "id": "tr-kanal-d-official-web",
+    "feedId": "tr-kanal-d-main",
+    "type": "web",
+    "url": "https://www.kanald.com.tr/canli-yayin/",
+    "priority": 20,
+    "enabled": true,
+    "playbackMode": "external",
+    "authorization": "verified-official",
+    "accessModel": "free-stream",
+    "requiresAuth": false,
+    "geo": {
+      "mode": "allow",
+      "countries": [
+        "TR"
+      ]
+    },
+    "headers": {},
+    "evidenceUrls": [
+      "https://www.kanald.com.tr/canli-yayin/"
+    ]
+  },
+  {
+    "id": "tr-star-tv-official-web",
+    "feedId": "tr-star-tv-main",
+    "type": "web",
+    "url": "https://www.startv.com.tr/canli-yayin",
+    "priority": 20,
+    "enabled": true,
+    "playbackMode": "external",
+    "authorization": "verified-official",
+    "accessModel": "free-stream",
+    "requiresAuth": false,
+    "geo": {
+      "mode": "allow",
+      "countries": [
+        "TR"
+      ]
+    },
+    "headers": {},
+    "evidenceUrls": [
+      "https://www.startv.com.tr/canli-yayin"
+    ]
+  },
+  {
+    "id": "tr-now-official-web",
+    "feedId": "tr-now-main",
+    "type": "web",
+    "url": "https://www.nowtv.com.tr/canli-yayin",
+    "priority": 20,
+    "enabled": true,
+    "playbackMode": "external",
+    "authorization": "verified-official",
+    "accessModel": "free-stream",
+    "requiresAuth": false,
+    "geo": {
+      "mode": "allow",
+      "countries": [
+        "TR"
+      ]
+    },
+    "headers": {},
+    "evidenceUrls": [
+      "https://www.nowtv.com.tr/canli-yayin"
+    ]
+  },
+  {
+    "id": "tr-tv8-official-web",
+    "feedId": "tr-tv8-main",
+    "type": "web",
+    "url": "https://www.tv8.com.tr/canli-yayin",
+    "priority": 20,
+    "enabled": true,
+    "playbackMode": "external",
+    "authorization": "verified-official",
+    "accessModel": "free-stream",
+    "requiresAuth": false,
+    "geo": {
+      "mode": "allow",
+      "countries": [
+        "TR"
+      ]
+    },
+    "headers": {},
+    "evidenceUrls": [
+      "https://www.tv8.com.tr/canli-yayin"
+    ]
+  },
+  {
+    "id": "tr-atv-official-web",
+    "feedId": "tr-atv-main",
+    "type": "web",
+    "url": "https://www.atv.com.tr/canli-yayin",
+    "priority": 20,
+    "enabled": true,
+    "playbackMode": "external",
+    "authorization": "verified-official",
+    "accessModel": "free-stream",
+    "requiresAuth": false,
+    "geo": {
+      "mode": "allow",
+      "countries": [
+        "TR"
+      ]
+    },
+    "headers": {},
+    "evidenceUrls": [
+      "https://www.atv.com.tr/canli-yayin"
+    ]
+  },
+  {
+    "id": "gb-sky-sports-main-event-provider",
+    "feedId": "gb-sky-sports-main-event-main",
+    "type": "provider",
+    "url": "https://www.sky.com/tv/sports",
+    "priority": 100,
+    "enabled": true,
+    "playbackMode": "handoff",
+    "authorization": "subscription-provider",
+    "accessModel": "subscription",
+    "requiresAuth": true,
+    "geo": {
+      "mode": "allow",
+      "countries": [
+        "GB"
+      ]
+    },
+    "headers": {},
+    "evidenceUrls": [
+      "https://www.sky.com/tv/sports"
+    ]
+  },
+  {
+    "id": "gb-sky-sports-premier-league-provider",
+    "feedId": "gb-sky-sports-premier-league-main",
+    "type": "provider",
+    "url": "https://www.sky.com/tv/sports",
+    "priority": 100,
+    "enabled": true,
+    "playbackMode": "handoff",
+    "authorization": "subscription-provider",
+    "accessModel": "subscription",
+    "requiresAuth": true,
+    "geo": {
+      "mode": "allow",
+      "countries": [
+        "GB"
+      ]
+    },
+    "headers": {},
+    "evidenceUrls": [
+      "https://www.sky.com/tv/sports"
+    ]
+  },
+  {
+    "id": "gb-sky-sports-football-provider",
+    "feedId": "gb-sky-sports-football-main",
+    "type": "provider",
+    "url": "https://www.sky.com/tv/sports",
+    "priority": 100,
+    "enabled": true,
+    "playbackMode": "handoff",
+    "authorization": "subscription-provider",
+    "accessModel": "subscription",
+    "requiresAuth": true,
+    "geo": {
+      "mode": "allow",
+      "countries": [
+        "GB"
+      ]
+    },
+    "headers": {},
+    "evidenceUrls": [
+      "https://www.sky.com/tv/sports"
+    ]
+  },
+  {
+    "id": "gb-sky-sports-plus-provider",
+    "feedId": "gb-sky-sports-plus-main",
+    "type": "provider",
+    "url": "https://www.sky.com/tv/sports",
+    "priority": 100,
+    "enabled": true,
+    "playbackMode": "handoff",
+    "authorization": "subscription-provider",
+    "accessModel": "subscription",
+    "requiresAuth": true,
+    "geo": {
+      "mode": "allow",
+      "countries": [
+        "GB"
+      ]
+    },
+    "headers": {},
+    "evidenceUrls": [
+      "https://www.sky.com/tv/sports"
+    ]
+  },
+  {
+    "id": "gb-sky-sports-cricket-provider",
+    "feedId": "gb-sky-sports-cricket-main",
+    "type": "provider",
+    "url": "https://www.sky.com/tv/sports",
+    "priority": 100,
+    "enabled": true,
+    "playbackMode": "handoff",
+    "authorization": "subscription-provider",
+    "accessModel": "subscription",
+    "requiresAuth": true,
+    "geo": {
+      "mode": "allow",
+      "countries": [
+        "GB"
+      ]
+    },
+    "headers": {},
+    "evidenceUrls": [
+      "https://www.sky.com/tv/sports"
+    ]
+  },
+  {
+    "id": "gb-sky-sports-golf-provider",
+    "feedId": "gb-sky-sports-golf-main",
+    "type": "provider",
+    "url": "https://www.sky.com/tv/sports",
+    "priority": 100,
+    "enabled": true,
+    "playbackMode": "handoff",
+    "authorization": "subscription-provider",
+    "accessModel": "subscription",
+    "requiresAuth": true,
+    "geo": {
+      "mode": "allow",
+      "countries": [
+        "GB"
+      ]
+    },
+    "headers": {},
+    "evidenceUrls": [
+      "https://www.sky.com/tv/sports"
+    ]
+  },
+  {
+    "id": "gb-sky-sports-f1-provider",
+    "feedId": "gb-sky-sports-f1-main",
+    "type": "provider",
+    "url": "https://www.sky.com/tv/sports",
+    "priority": 100,
+    "enabled": true,
+    "playbackMode": "handoff",
+    "authorization": "subscription-provider",
+    "accessModel": "subscription",
+    "requiresAuth": true,
+    "geo": {
+      "mode": "allow",
+      "countries": [
+        "GB"
+      ]
+    },
+    "headers": {},
+    "evidenceUrls": [
+      "https://www.sky.com/tv/sports"
+    ]
+  },
+  {
+    "id": "gb-sky-sports-tennis-provider",
+    "feedId": "gb-sky-sports-tennis-main",
+    "type": "provider",
+    "url": "https://www.sky.com/tv/sports",
+    "priority": 100,
+    "enabled": true,
+    "playbackMode": "handoff",
+    "authorization": "subscription-provider",
+    "accessModel": "subscription",
+    "requiresAuth": true,
+    "geo": {
+      "mode": "allow",
+      "countries": [
+        "GB"
+      ]
+    },
+    "headers": {},
+    "evidenceUrls": [
+      "https://www.sky.com/tv/sports"
+    ]
+  },
+  {
+    "id": "gb-sky-sports-action-provider",
+    "feedId": "gb-sky-sports-action-main",
+    "type": "provider",
+    "url": "https://www.sky.com/tv/sports",
+    "priority": 100,
+    "enabled": true,
+    "playbackMode": "handoff",
+    "authorization": "subscription-provider",
+    "accessModel": "subscription",
+    "requiresAuth": true,
+    "geo": {
+      "mode": "allow",
+      "countries": [
+        "GB"
+      ]
+    },
+    "headers": {},
+    "evidenceUrls": [
+      "https://www.sky.com/tv/sports"
+    ]
+  },
+  {
+    "id": "gb-sky-sports-racing-provider",
+    "feedId": "gb-sky-sports-racing-main",
+    "type": "provider",
+    "url": "https://www.sky.com/tv/sports",
+    "priority": 100,
+    "enabled": true,
+    "playbackMode": "handoff",
+    "authorization": "subscription-provider",
+    "accessModel": "subscription",
+    "requiresAuth": true,
+    "geo": {
+      "mode": "allow",
+      "countries": [
+        "GB"
+      ]
+    },
+    "headers": {},
+    "evidenceUrls": [
+      "https://www.sky.com/tv/sports"
+    ]
+  },
+  {
+    "id": "gb-sky-sports-mix-provider",
+    "feedId": "gb-sky-sports-mix-main",
+    "type": "provider",
+    "url": "https://www.sky.com/tv/sports",
+    "priority": 100,
+    "enabled": true,
+    "playbackMode": "handoff",
+    "authorization": "subscription-provider",
+    "accessModel": "subscription",
+    "requiresAuth": true,
+    "geo": {
+      "mode": "allow",
+      "countries": [
+        "GB"
+      ]
+    },
+    "headers": {},
+    "evidenceUrls": [
+      "https://www.sky.com/tv/sports"
+    ]
+  },
+  {
+    "id": "gb-sky-sports-news-provider",
+    "feedId": "gb-sky-sports-news-main",
+    "type": "provider",
+    "url": "https://www.sky.com/tv/sports",
+    "priority": 100,
+    "enabled": true,
+    "playbackMode": "handoff",
+    "authorization": "subscription-provider",
+    "accessModel": "subscription",
+    "requiresAuth": true,
+    "geo": {
+      "mode": "allow",
+      "countries": [
+        "GB"
+      ]
+    },
+    "headers": {},
+    "evidenceUrls": [
+      "https://www.sky.com/tv/sports"
+    ]
+  },
+  {
+    "id": "gb-tnt-sports-1-provider",
+    "feedId": "gb-tnt-sports-1-main",
+    "type": "provider",
+    "url": "https://www.tntsports.co.uk/",
+    "priority": 100,
+    "enabled": true,
+    "playbackMode": "handoff",
+    "authorization": "subscription-provider",
+    "accessModel": "subscription",
+    "requiresAuth": true,
+    "geo": {
+      "mode": "allow",
+      "countries": [
+        "GB"
+      ]
+    },
+    "headers": {},
+    "evidenceUrls": [
+      "https://www.tntsports.co.uk/"
+    ]
+  },
+  {
+    "id": "gb-tnt-sports-2-provider",
+    "feedId": "gb-tnt-sports-2-main",
+    "type": "provider",
+    "url": "https://www.tntsports.co.uk/",
+    "priority": 100,
+    "enabled": true,
+    "playbackMode": "handoff",
+    "authorization": "subscription-provider",
+    "accessModel": "subscription",
+    "requiresAuth": true,
+    "geo": {
+      "mode": "allow",
+      "countries": [
+        "GB"
+      ]
+    },
+    "headers": {},
+    "evidenceUrls": [
+      "https://www.tntsports.co.uk/"
+    ]
+  },
+  {
+    "id": "gb-tnt-sports-3-provider",
+    "feedId": "gb-tnt-sports-3-main",
+    "type": "provider",
+    "url": "https://www.tntsports.co.uk/",
+    "priority": 100,
+    "enabled": true,
+    "playbackMode": "handoff",
+    "authorization": "subscription-provider",
+    "accessModel": "subscription",
+    "requiresAuth": true,
+    "geo": {
+      "mode": "allow",
+      "countries": [
+        "GB"
+      ]
+    },
+    "headers": {},
+    "evidenceUrls": [
+      "https://www.tntsports.co.uk/"
+    ]
+  },
+  {
+    "id": "gb-tnt-sports-4-provider",
+    "feedId": "gb-tnt-sports-4-main",
+    "type": "provider",
+    "url": "https://www.tntsports.co.uk/",
+    "priority": 100,
+    "enabled": true,
+    "playbackMode": "handoff",
+    "authorization": "subscription-provider",
+    "accessModel": "subscription",
+    "requiresAuth": true,
+    "geo": {
+      "mode": "allow",
+      "countries": [
+        "GB"
+      ]
+    },
+    "headers": {},
+    "evidenceUrls": [
+      "https://www.tntsports.co.uk/"
+    ]
+  },
+  {
+    "id": "gb-tnt-sports-ultimate-provider",
+    "feedId": "gb-tnt-sports-ultimate-main",
+    "type": "provider",
+    "url": "https://www.tntsports.co.uk/",
+    "priority": 100,
+    "enabled": true,
+    "playbackMode": "handoff",
+    "authorization": "subscription-provider",
+    "accessModel": "subscription",
+    "requiresAuth": true,
+    "geo": {
+      "mode": "allow",
+      "countries": [
+        "GB"
+      ]
+    },
+    "headers": {},
+    "evidenceUrls": [
+      "https://www.tntsports.co.uk/"
+    ]
+  },
+  {
+    "id": "gb-tnt-sports-box-office-provider",
+    "feedId": "gb-tnt-sports-box-office-main",
+    "type": "provider",
+    "url": "https://www.tntsports.co.uk/",
+    "priority": 100,
+    "enabled": true,
+    "playbackMode": "handoff",
+    "authorization": "subscription-provider",
+    "accessModel": "subscription",
+    "requiresAuth": true,
+    "geo": {
+      "mode": "allow",
+      "countries": [
+        "GB"
+      ]
+    },
+    "headers": {},
+    "evidenceUrls": [
+      "https://www.tntsports.co.uk/"
+    ]
+  },
+  {
+    "id": "gb-sky-cinema-premiere-provider",
+    "feedId": "gb-sky-cinema-premiere-main",
+    "type": "provider",
+    "url": "https://www.sky.com/tv/cinema",
+    "priority": 100,
+    "enabled": true,
+    "playbackMode": "handoff",
+    "authorization": "subscription-provider",
+    "accessModel": "subscription",
+    "requiresAuth": true,
+    "geo": {
+      "mode": "allow",
+      "countries": [
+        "GB"
+      ]
+    },
+    "headers": {},
+    "evidenceUrls": [
+      "https://www.sky.com/tv/cinema"
+    ]
+  },
+  {
+    "id": "gb-sky-cinema-family-provider",
+    "feedId": "gb-sky-cinema-family-main",
+    "type": "provider",
+    "url": "https://www.sky.com/tv/cinema",
+    "priority": 100,
+    "enabled": true,
+    "playbackMode": "handoff",
+    "authorization": "subscription-provider",
+    "accessModel": "subscription",
+    "requiresAuth": true,
+    "geo": {
+      "mode": "allow",
+      "countries": [
+        "GB"
+      ]
+    },
+    "headers": {},
+    "evidenceUrls": [
+      "https://www.sky.com/tv/cinema"
+    ]
+  },
+  {
+    "id": "gb-sky-cinema-action-provider",
+    "feedId": "gb-sky-cinema-action-main",
+    "type": "provider",
+    "url": "https://www.sky.com/tv/cinema",
+    "priority": 100,
+    "enabled": true,
+    "playbackMode": "handoff",
+    "authorization": "subscription-provider",
+    "accessModel": "subscription",
+    "requiresAuth": true,
+    "geo": {
+      "mode": "allow",
+      "countries": [
+        "GB"
+      ]
+    },
+    "headers": {},
+    "evidenceUrls": [
+      "https://www.sky.com/tv/cinema"
+    ]
+  },
+  {
+    "id": "gb-sky-cinema-greats-provider",
+    "feedId": "gb-sky-cinema-greats-main",
+    "type": "provider",
+    "url": "https://www.sky.com/tv/cinema",
+    "priority": 100,
+    "enabled": true,
+    "playbackMode": "handoff",
+    "authorization": "subscription-provider",
+    "accessModel": "subscription",
+    "requiresAuth": true,
+    "geo": {
+      "mode": "allow",
+      "countries": [
+        "GB"
+      ]
+    },
+    "headers": {},
+    "evidenceUrls": [
+      "https://www.sky.com/tv/cinema"
+    ]
+  },
+  {
+    "id": "gb-sky-cinema-comedy-provider",
+    "feedId": "gb-sky-cinema-comedy-main",
+    "type": "provider",
+    "url": "https://www.sky.com/tv/cinema",
+    "priority": 100,
+    "enabled": true,
+    "playbackMode": "handoff",
+    "authorization": "subscription-provider",
+    "accessModel": "subscription",
+    "requiresAuth": true,
+    "geo": {
+      "mode": "allow",
+      "countries": [
+        "GB"
+      ]
+    },
+    "headers": {},
+    "evidenceUrls": [
+      "https://www.sky.com/tv/cinema"
+    ]
+  },
+  {
+    "id": "gb-sky-cinema-thriller-provider",
+    "feedId": "gb-sky-cinema-thriller-main",
+    "type": "provider",
+    "url": "https://www.sky.com/tv/cinema",
+    "priority": 100,
+    "enabled": true,
+    "playbackMode": "handoff",
+    "authorization": "subscription-provider",
+    "accessModel": "subscription",
+    "requiresAuth": true,
+    "geo": {
+      "mode": "allow",
+      "countries": [
+        "GB"
+      ]
+    },
+    "headers": {},
+    "evidenceUrls": [
+      "https://www.sky.com/tv/cinema"
+    ]
+  },
+  {
+    "id": "gb-sky-cinema-drama-provider",
+    "feedId": "gb-sky-cinema-drama-main",
+    "type": "provider",
+    "url": "https://www.sky.com/tv/cinema",
+    "priority": 100,
+    "enabled": true,
+    "playbackMode": "handoff",
+    "authorization": "subscription-provider",
+    "accessModel": "subscription",
+    "requiresAuth": true,
+    "geo": {
+      "mode": "allow",
+      "countries": [
+        "GB"
+      ]
+    },
+    "headers": {},
+    "evidenceUrls": [
+      "https://www.sky.com/tv/cinema"
+    ]
+  },
+  {
+    "id": "gb-sky-cinema-sci-fi-horror-provider",
+    "feedId": "gb-sky-cinema-sci-fi-horror-main",
+    "type": "provider",
+    "url": "https://www.sky.com/tv/cinema",
+    "priority": 100,
+    "enabled": true,
+    "playbackMode": "handoff",
+    "authorization": "subscription-provider",
+    "accessModel": "subscription",
+    "requiresAuth": true,
+    "geo": {
+      "mode": "allow",
+      "countries": [
+        "GB"
+      ]
+    },
+    "headers": {},
+    "evidenceUrls": [
+      "https://www.sky.com/tv/cinema"
+    ]
+  }
+]

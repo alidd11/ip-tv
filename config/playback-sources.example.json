@@ -1,0 +1,22 @@
+[
+  {
+    "id": "example-source",
+    "feedId": "gb-bbc-one-main",
+    "type": "hls",
+    "url": "https://example.invalid/live/stream.m3u8",
+    "priority": 100,
+    "enabled": false,
+    "geo": {
+      "mode": "global",
+      "countries": []
+    },
+    "headers": {},
+    "playbackMode": "native",
+    "authorization": "verified-official",
+    "accessModel": "free-stream",
+    "requiresAuth": false,
+    "evidenceUrls": [
+      "https://example.invalid/evidence"
+    ]
+  }
+]

@@ -1,0 +1,812 @@
+[
+  {
+    "id": "gb-5star-main",
+    "channelId": "gb-5star",
+    "name": "Main",
+    "isMain": true,
+    "broadcastAreas": [
+      "c/GB"
+    ],
+    "timezones": [
+      "Europe/London"
+    ],
+    "languages": [
+      "eng"
+    ],
+    "format": null,
+    "epgIds": [],
+    "enabled": true
+  },
+  {
+    "id": "gb-5usa-main",
+    "channelId": "gb-5usa",
+    "name": "Main",
+    "isMain": true,
+    "broadcastAreas": [
+      "c/GB"
+    ],
+    "timezones": [
+      "Europe/London"
+    ],
+    "languages": [
+      "eng"
+    ],
+    "format": null,
+    "epgIds": [],
+    "enabled": true
+  },
+  {
+    "id": "gb-bbc-four-main",
+    "channelId": "gb-bbc-four",
+    "name": "Main",
+    "isMain": true,
+    "broadcastAreas": [
+      "c/GB"
+    ],
+    "timezones": [
+      "Europe/London"
+    ],
+    "languages": [
+      "eng"
+    ],
+    "format": null,
+    "epgIds": [],
+    "enabled": true
+  },
+  {
+    "id": "gb-bbc-news-main",
+    "channelId": "gb-bbc-news",
+    "name": "Main",
+    "isMain": true,
+    "broadcastAreas": [
+      "c/GB"
+    ],
+    "timezones": [
+      "Europe/London"
+    ],
+    "languages": [
+      "eng"
+    ],
+    "format": null,
+    "epgIds": [],
+    "enabled": true
+  },
+  {
+    "id": "gb-bbc-one-main",
+    "channelId": "gb-bbc-one",
+    "name": "Main",
+    "isMain": true,
+    "broadcastAreas": [
+      "c/GB"
+    ],
+    "timezones": [
+      "Europe/London"
+    ],
+    "languages": [
+      "eng"
+    ],
+    "format": null,
+    "epgIds": [],
+    "enabled": true
+  },
+  {
+    "id": "gb-bbc-three-main",
+    "channelId": "gb-bbc-three",
+    "name": "Main",
+    "isMain": true,
+    "broadcastAreas": [
+      "c/GB"
+    ],
+    "timezones": [
+      "Europe/London"
+    ],
+    "languages": [
+      "eng"
+    ],
+    "format": null,
+    "epgIds": [],
+    "enabled": true
+  },
+  {
+    "id": "gb-bbc-two-main",
+    "channelId": "gb-bbc-two",
+    "name": "Main",
+    "isMain": true,
+    "broadcastAreas": [
+      "c/GB"
+    ],
+    "timezones": [
+      "Europe/London"
+    ],
+    "languages": [
+      "eng"
+    ],
+    "format": null,
+    "epgIds": [],
+    "enabled": true
+  },
+  {
+    "id": "gb-cbbc-main",
+    "channelId": "gb-cbbc",
+    "name": "Main",
+    "isMain": true,
+    "broadcastAreas": [
+      "c/GB"
+    ],
+    "timezones": [
+      "Europe/London"
+    ],
+    "languages": [
+      "eng"
+    ],
+    "format": null,
+    "epgIds": [],
+    "enabled": true
+  },
+  {
+    "id": "gb-cbeebies-main",
+    "channelId": "gb-cbeebies",
+    "name": "Main",
+    "isMain": true,
+    "broadcastAreas": [
+      "c/GB"
+    ],
+    "timezones": [
+      "Europe/London"
+    ],
+    "languages": [
+      "eng"
+    ],
+    "format": null,
+    "epgIds": [],
+    "enabled": true
+  },
+  {
+    "id": "gb-channel-4-main",
+    "channelId": "gb-channel-4",
+    "name": "Main",
+    "isMain": true,
+    "broadcastAreas": [
+      "c/GB"
+    ],
+    "timezones": [
+      "Europe/London"
+    ],
+    "languages": [
+      "eng"
+    ],
+    "format": null,
+    "epgIds": [],
+    "enabled": true
+  },
+  {
+    "id": "gb-channel-5-main",
+    "channelId": "gb-channel-5",
+    "name": "Main",
+    "isMain": true,
+    "broadcastAreas": [
+      "c/GB"
+    ],
+    "timezones": [
+      "Europe/London"
+    ],
+    "languages": [
+      "eng"
+    ],
+    "format": null,
+    "epgIds": [],
+    "enabled": true
+  },
+  {
+    "id": "gb-e4-main",
+    "channelId": "gb-e4",
+    "name": "Main",
+    "isMain": true,
+    "broadcastAreas": [
+      "c/GB"
+    ],
+    "timezones": [
+      "Europe/London"
+    ],
+    "languages": [
+      "eng"
+    ],
+    "format": null,
+    "epgIds": [],
+    "enabled": true
+  },
+  {
+    "id": "gb-film4-main",
+    "channelId": "gb-film4",
+    "name": "Main",
+    "isMain": true,
+    "broadcastAreas": [
+      "c/GB"
+    ],
+    "timezones": [
+      "Europe/London"
+    ],
+    "languages": [
+      "eng"
+    ],
+    "format": null,
+    "epgIds": [],
+    "enabled": true
+  },
+  {
+    "id": "gb-itv1-main",
+    "channelId": "gb-itv1",
+    "name": "Main",
+    "isMain": true,
+    "broadcastAreas": [
+      "c/GB"
+    ],
+    "timezones": [
+      "Europe/London"
+    ],
+    "languages": [
+      "eng"
+    ],
+    "format": null,
+    "epgIds": [],
+    "enabled": true
+  },
+  {
+    "id": "gb-itv2-main",
+    "channelId": "gb-itv2",
+    "name": "Main",
+    "isMain": true,
+    "broadcastAreas": [
+      "c/GB"
+    ],
+    "timezones": [
+      "Europe/London"
+    ],
+    "languages": [
+      "eng"
+    ],
+    "format": null,
+    "epgIds": [],
+    "enabled": true
+  },
+  {
+    "id": "gb-itv3-main",
+    "channelId": "gb-itv3",
+    "name": "Main",
+    "isMain": true,
+    "broadcastAreas": [
+      "c/GB"
+    ],
+    "timezones": [
+      "Europe/London"
+    ],
+    "languages": [
+      "eng"
+    ],
+    "format": null,
+    "epgIds": [],
+    "enabled": true
+  },
+  {
+    "id": "gb-itv4-main",
+    "channelId": "gb-itv4",
+    "name": "Main",
+    "isMain": true,
+    "broadcastAreas": [
+      "c/GB"
+    ],
+    "timezones": [
+      "Europe/London"
+    ],
+    "languages": [
+      "eng"
+    ],
+    "format": null,
+    "epgIds": [],
+    "enabled": true
+  },
+  {
+    "id": "gb-more4-main",
+    "channelId": "gb-more4",
+    "name": "Main",
+    "isMain": true,
+    "broadcastAreas": [
+      "c/GB"
+    ],
+    "timezones": [
+      "Europe/London"
+    ],
+    "languages": [
+      "eng"
+    ],
+    "format": null,
+    "epgIds": [],
+    "enabled": true
+  },
+  {
+    "id": "gb-sky-cinema-action-main",
+    "channelId": "gb-sky-cinema-action",
+    "name": "Main",
+    "isMain": true,
+    "broadcastAreas": [
+      "c/GB"
+    ],
+    "timezones": [
+      "Europe/London"
+    ],
+    "languages": [
+      "eng"
+    ],
+    "format": null,
+    "epgIds": [],
+    "enabled": true
+  },
+  {
+    "id": "gb-sky-cinema-comedy-main",
+    "channelId": "gb-sky-cinema-comedy",
+    "name": "Main",
+    "isMain": true,
+    "broadcastAreas": [
+      "c/GB"
+    ],
+    "timezones": [
+      "Europe/London"
+    ],
+    "languages": [
+      "eng"
+    ],
+    "format": null,
+    "epgIds": [],
+    "enabled": true
+  },
+  {
+    "id": "gb-sky-cinema-drama-main",
+    "channelId": "gb-sky-cinema-drama",
+    "name": "Main",
+    "isMain": true,
+    "broadcastAreas": [
+      "c/GB"
+    ],
+    "timezones": [
+      "Europe/London"
+    ],
+    "languages": [
+      "eng"
+    ],
+    "format": null,
+    "epgIds": [],
+    "enabled": true
+  },
+  {
+    "id": "gb-sky-cinema-family-main",
+    "channelId": "gb-sky-cinema-family",
+    "name": "Main",
+    "isMain": true,
+    "broadcastAreas": [
+      "c/GB"
+    ],
+    "timezones": [
+      "Europe/London"
+    ],
+    "languages": [
+      "eng"
+    ],
+    "format": null,
+    "epgIds": [],
+    "enabled": true
+  },
+  {
+    "id": "gb-sky-cinema-greats-main",
+    "channelId": "gb-sky-cinema-greats",
+    "name": "Main",
+    "isMain": true,
+    "broadcastAreas": [
+      "c/GB"
+    ],
+    "timezones": [
+      "Europe/London"
+    ],
+    "languages": [
+      "eng"
+    ],
+    "format": null,
+    "epgIds": [],
+    "enabled": true
+  },
+  {
+    "id": "gb-sky-cinema-premiere-main",
+    "channelId": "gb-sky-cinema-premiere",
+    "name": "Main",
+    "isMain": true,
+    "broadcastAreas": [
+      "c/GB"
+    ],
+    "timezones": [
+      "Europe/London"
+    ],
+    "languages": [
+      "eng"
+    ],
+    "format": null,
+    "epgIds": [],
+    "enabled": true
+  },
+  {
+    "id": "gb-sky-cinema-sci-fi-horror-main",
+    "channelId": "gb-sky-cinema-sci-fi-horror",
+    "name": "Main",
+    "isMain": true,
+    "broadcastAreas": [
+      "c/GB"
+    ],
+    "timezones": [
+      "Europe/London"
+    ],
+    "languages": [
+      "eng"
+    ],
+    "format": null,
+    "epgIds": [],
+    "enabled": true
+  },
+  {
+    "id": "gb-sky-cinema-thriller-main",
+    "channelId": "gb-sky-cinema-thriller",
+    "name": "Main",
+    "isMain": true,
+    "broadcastAreas": [
+      "c/GB"
+    ],
+    "timezones": [
+      "Europe/London"
+    ],
+    "languages": [
+      "eng"
+    ],
+    "format": null,
+    "epgIds": [],
+    "enabled": true
+  },
+  {
+    "id": "gb-sky-news-main",
+    "channelId": "gb-sky-news",
+    "name": "Main",
+    "isMain": true,
+    "broadcastAreas": [
+      "c/GB"
+    ],
+    "timezones": [
+      "Europe/London"
+    ],
+    "languages": [
+      "eng"
+    ],
+    "format": null,
+    "epgIds": [],
+    "enabled": true
+  },
+  {
+    "id": "gb-sky-sports-action-main",
+    "channelId": "gb-sky-sports-action",
+    "name": "Main",
+    "isMain": true,
+    "broadcastAreas": [
+      "c/GB"
+    ],
+    "timezones": [
+      "Europe/London"
+    ],
+    "languages": [
+      "eng"
+    ],
+    "format": null,
+    "epgIds": [],
+    "enabled": true
+  },
+  {
+    "id": "gb-sky-sports-cricket-main",
+    "channelId": "gb-sky-sports-cricket",
+    "name": "Main",
+    "isMain": true,
+    "broadcastAreas": [
+      "c/GB"
+    ],
+    "timezones": [
+      "Europe/London"
+    ],
+    "languages": [
+      "eng"
+    ],
+    "format": null,
+    "epgIds": [],
+    "enabled": true
+  },
+  {
+    "id": "gb-sky-sports-f1-main",
+    "channelId": "gb-sky-sports-f1",
+    "name": "Main",
+    "isMain": true,
+    "broadcastAreas": [
+      "c/GB"
+    ],
+    "timezones": [
+      "Europe/London"
+    ],
+    "languages": [
+      "eng"
+    ],
+    "format": null,
+    "epgIds": [],
+    "enabled": true
+  },
+  {
+    "id": "gb-sky-sports-football-main",
+    "channelId": "gb-sky-sports-football",
+    "name": "Main",
+    "isMain": true,
+    "broadcastAreas": [
+      "c/GB"
+    ],
+    "timezones": [
+      "Europe/London"
+    ],
+    "languages": [
+      "eng"
+    ],
+    "format": null,
+    "epgIds": [],
+    "enabled": true
+  },
+  {
+    "id": "gb-sky-sports-golf-main",
+    "channelId": "gb-sky-sports-golf",
+    "name": "Main",
+    "isMain": true,
+    "broadcastAreas": [
+      "c/GB"
+    ],
+    "timezones": [
+      "Europe/London"
+    ],
+    "languages": [
+      "eng"
+    ],
+    "format": null,
+    "epgIds": [],
+    "enabled": true
+  },
+  {
+    "id": "gb-sky-sports-main-event-main",
+    "channelId": "gb-sky-sports-main-event",
+    "name": "Main",
+    "isMain": true,
+    "broadcastAreas": [
+      "c/GB"
+    ],
+    "timezones": [
+      "Europe/London"
+    ],
+    "languages": [
+      "eng"
+    ],
+    "format": null,
+    "epgIds": [],
+    "enabled": true
+  },
+  {
+    "id": "gb-sky-sports-mix-main",
+    "channelId": "gb-sky-sports-mix",
+    "name": "Main",
+    "isMain": true,
+    "broadcastAreas": [
+      "c/GB"
+    ],
+    "timezones": [
+      "Europe/London"
+    ],
+    "languages": [
+      "eng"
+    ],
+    "format": null,
+    "epgIds": [],
+    "enabled": true
+  },
+  {
+    "id": "gb-sky-sports-news-main",
+    "channelId": "gb-sky-sports-news",
+    "name": "Main",
+    "isMain": true,
+    "broadcastAreas": [
+      "c/GB"
+    ],
+    "timezones": [
+      "Europe/London"
+    ],
+    "languages": [
+      "eng"
+    ],
+    "format": null,
+    "epgIds": [],
+    "enabled": true
+  },
+  {
+    "id": "gb-sky-sports-plus-main",
+    "channelId": "gb-sky-sports-plus",
+    "name": "Main",
+    "isMain": true,
+    "broadcastAreas": [
+      "c/GB"
+    ],
+    "timezones": [
+      "Europe/London"
+    ],
+    "languages": [
+      "eng"
+    ],
+    "format": null,
+    "epgIds": [],
+    "enabled": true
+  },
+  {
+    "id": "gb-sky-sports-premier-league-main",
+    "channelId": "gb-sky-sports-premier-league",
+    "name": "Main",
+    "isMain": true,
+    "broadcastAreas": [
+      "c/GB"
+    ],
+    "timezones": [
+      "Europe/London"
+    ],
+    "languages": [
+      "eng"
+    ],
+    "format": null,
+    "epgIds": [],
+    "enabled": true
+  },
+  {
+    "id": "gb-sky-sports-racing-main",
+    "channelId": "gb-sky-sports-racing",
+    "name": "Main",
+    "isMain": true,
+    "broadcastAreas": [
+      "c/GB"
+    ],
+    "timezones": [
+      "Europe/London"
+    ],
+    "languages": [
+      "eng"
+    ],
+    "format": null,
+    "epgIds": [],
+    "enabled": true
+  },
+  {
+    "id": "gb-sky-sports-tennis-main",
+    "channelId": "gb-sky-sports-tennis",
+    "name": "Main",
+    "isMain": true,
+    "broadcastAreas": [
+      "c/GB"
+    ],
+    "timezones": [
+      "Europe/London"
+    ],
+    "languages": [
+      "eng"
+    ],
+    "format": null,
+    "epgIds": [],
+    "enabled": true
+  },
+  {
+    "id": "gb-tnt-sports-1-main",
+    "channelId": "gb-tnt-sports-1",
+    "name": "Main",
+    "isMain": true,
+    "broadcastAreas": [
+      "c/GB"
+    ],
+    "timezones": [
+      "Europe/London"
+    ],
+    "languages": [
+      "eng"
+    ],
+    "format": null,
+    "epgIds": [],
+    "enabled": true
+  },
+  {
+    "id": "gb-tnt-sports-2-main",
+    "channelId": "gb-tnt-sports-2",
+    "name": "Main",
+    "isMain": true,
+    "broadcastAreas": [
+      "c/GB"
+    ],
+    "timezones": [
+      "Europe/London"
+    ],
+    "languages": [
+      "eng"
+    ],
+    "format": null,
+    "epgIds": [],
+    "enabled": true
+  },
+  {
+    "id": "gb-tnt-sports-3-main",
+    "channelId": "gb-tnt-sports-3",
+    "name": "Main",
+    "isMain": true,
+    "broadcastAreas": [
+      "c/GB"
+    ],
+    "timezones": [
+      "Europe/London"
+    ],
+    "languages": [
+      "eng"
+    ],
+    "format": null,
+    "epgIds": [],
+    "enabled": true
+  },
+  {
+    "id": "gb-tnt-sports-4-main",
+    "channelId": "gb-tnt-sports-4",
+    "name": "Main",
+    "isMain": true,
+    "broadcastAreas": [
+      "c/GB"
+    ],
+    "timezones": [
+      "Europe/London"
+    ],
+    "languages": [
+      "eng"
+    ],
+    "format": null,
+    "epgIds": [],
+    "enabled": true
+  },
+  {
+    "id": "gb-tnt-sports-box-office-main",
+    "channelId": "gb-tnt-sports-box-office",
+    "name": "Main",
+    "isMain": true,
+    "broadcastAreas": [
+      "c/GB"
+    ],
+    "timezones": [
+      "Europe/London"
+    ],
+    "languages": [
+      "eng"
+    ],
+    "format": null,
+    "epgIds": [],
+    "enabled": true
+  },
+  {
+    "id": "gb-tnt-sports-ultimate-main",
+    "channelId": "gb-tnt-sports-ultimate",
+    "name": "Main",
+    "isMain": true,
+    "broadcastAreas": [
+      "c/GB"
+    ],
+    "timezones": [
+      "Europe/London"
+    ],
+    "languages": [
+      "eng"
+    ],
+    "format": null,
+    "epgIds": [],
+    "enabled": true
+  }
+]

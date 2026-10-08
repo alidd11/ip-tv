@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "countries": [
+    {
+      "code": "GB",
+      "channelFile": "data/channels/GB.json",
+      "feedFile": "data/feeds/GB.json",
+      "channelCount": 45,
+      "feedCount": 45
+    },
+    {
+      "code": "TR",
+      "channelFile": "data/channels/TR.json",
+      "feedFile": "data/feeds/TR.json",
+      "channelCount": 15,
+      "feedCount": 15
+    },
+    {
+      "code": "US",
+      "channelFile": "data/channels/US.json",
+      "feedFile": "data/feeds/US.json",
+      "channelCount": 11,
+      "feedCount": 11
+    }
+  ],
+  "totalChannels": 71,
+  "totalFeeds": 71
+}
