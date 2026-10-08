@@ -39,6 +39,11 @@ import com.alidd11.iptv.ui.theme.AstraText
 
 @Composable
 fun AstraTvApp() {
+    var explore by remember { mutableStateOf(false) }
+    if (explore) {
+        WorldExploreTv(onClose = { explore = false })
+        return
+    }
     val context = LocalContext.current
     val catalog = remember { TvCatalogRepository(context).load() }
     var country by remember { mutableStateOf("GB") }
@@ -96,7 +101,7 @@ fun AstraTvApp() {
                             }
                         },
                     )
-                    FocusButton(label = "Guide", onClick = {})
+                    FocusButton(label = "Explore worldwide", onClick = { explore = true })
                 }
             }
         }
