@@ -1,0 +1,54 @@
+name: Build Android clients
+
+on:
+  pull_request:
+    paths:
+      - "build.gradle.kts"
+      - "settings.gradle.kts"
+      - "gradle.properties"
+      - "client-data/**"
+      - "mobile-android/**"
+      - "tv-app/**"
+      - "data/**"
+      - "config/**"
+  push:
+    branches: [main]
+    paths:
+      - "build.gradle.kts"
+      - "settings.gradle.kts"
+      - "gradle.properties"
+      - "client-data/**"
+      - "mobile-android/**"
+      - "tv-app/**"
+      - "data/**"
+      - "config/**"
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      ANDROID_HOME: /usr/local/lib/android/sdk
+      ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "9.6.0"
+
+      - name: Configure Android SDK
+        run: |
+          SDKMANAGER="$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager"
+          yes | "$SDKMANAGER" --licenses >/dev/null || true
+          "$SDKMANAGER" "platforms;android-36" "build-tools;36.0.0" "platform-tools"
+
+      - name: Build mobile and TV debug APKs
+        run: gradle :client-data:assemble :mobile-android:assembleDebug :tv-app:assembleDebug

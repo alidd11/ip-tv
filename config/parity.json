@@ -1,0 +1,164 @@
+{
+  "version": 1,
+  "clients": [
+    "pwa",
+    "ios",
+    "android-mobile",
+    "android-tv"
+  ],
+  "capabilities": [
+    {
+      "id": "catalogue.countries",
+      "parityRequired": true,
+      "clients": {
+        "pwa": "implemented",
+        "ios": "implemented",
+        "android-mobile": "implemented",
+        "android-tv": "implemented"
+      }
+    },
+    {
+      "id": "catalogue.channels",
+      "parityRequired": true,
+      "clients": {
+        "pwa": "implemented",
+        "ios": "implemented",
+        "android-mobile": "implemented",
+        "android-tv": "implemented"
+      }
+    },
+    {
+      "id": "catalogue.access-labels",
+      "parityRequired": true,
+      "clients": {
+        "pwa": "implemented",
+        "ios": "implemented",
+        "android-mobile": "implemented",
+        "android-tv": "implemented"
+      }
+    },
+    {
+      "id": "playback.source-decision",
+      "parityRequired": true,
+      "clients": {
+        "pwa": "implemented",
+        "ios": "implemented",
+        "android-mobile": "implemented",
+        "android-tv": "implemented"
+      }
+    },
+    {
+      "id": "playback.provider-handoff",
+      "parityRequired": true,
+      "clients": {
+        "pwa": "implemented",
+        "ios": "implemented",
+        "android-mobile": "implemented",
+        "android-tv": "implemented"
+      }
+    },
+    {
+      "id": "browse.live-channels",
+      "parityRequired": true,
+      "clients": {
+        "pwa": "implemented",
+        "ios": "implemented",
+        "android-mobile": "implemented",
+        "android-tv": "implemented"
+      }
+    },
+    {
+      "id": "search.channels",
+      "parityRequired": true,
+      "clients": {
+        "pwa": "planned",
+        "ios": "planned",
+        "android-mobile": "planned",
+        "android-tv": "planned"
+      }
+    },
+    {
+      "id": "guide.epg",
+      "parityRequired": true,
+      "clients": {
+        "pwa": "planned",
+        "ios": "planned",
+        "android-mobile": "planned",
+        "android-tv": "planned"
+      }
+    },
+    {
+      "id": "library.favourites",
+      "parityRequired": true,
+      "clients": {
+        "pwa": "planned",
+        "ios": "planned",
+        "android-mobile": "planned",
+        "android-tv": "planned"
+      }
+    },
+    {
+      "id": "history.continue-watching",
+      "parityRequired": true,
+      "clients": {
+        "pwa": "planned",
+        "ios": "planned",
+        "android-mobile": "planned",
+        "android-tv": "planned"
+      }
+    },
+    {
+      "id": "accounts.profiles",
+      "parityRequired": true,
+      "clients": {
+        "pwa": "planned",
+        "ios": "planned",
+        "android-mobile": "planned",
+        "android-tv": "planned"
+      }
+    },
+    {
+      "id": "safety.parental-controls",
+      "parityRequired": true,
+      "clients": {
+        "pwa": "planned",
+        "ios": "planned",
+        "android-mobile": "planned",
+        "android-tv": "planned"
+      }
+    },
+    {
+      "id": "input.touch",
+      "parityRequired": false,
+      "clients": {
+        "pwa": "implemented",
+        "ios": "implemented",
+        "android-mobile": "implemented",
+        "android-tv": "not-applicable"
+      },
+      "reason": "TV is remote-first; touch is not a required TV capability."
+    },
+    {
+      "id": "input.remote",
+      "parityRequired": false,
+      "clients": {
+        "pwa": "not-applicable",
+        "ios": "not-applicable",
+        "android-mobile": "not-applicable",
+        "android-tv": "implemented"
+      },
+      "reason": "D-pad/CEC remote control is specific to the TV surface."
+    },
+    {
+      "id": "playback.picture-in-picture",
+      "parityRequired": false,
+      "clients": {
+        "pwa": "planned",
+        "ios": "planned",
+        "android-mobile": "planned",
+        "android-tv": "not-applicable"
+      },
+      "reason": "Picture in Picture is a mobile/web capability rather than the primary TV experience."
+    }
+  ]
+}
