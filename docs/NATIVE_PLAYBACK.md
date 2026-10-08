@@ -26,3 +26,36 @@
 
 Use `gradle :mobile-android:assembleDebug :tv-app:assembleDebug` to compile.
 The release claim here is **build integration**, not real-device video QA.
+
+## In-app channel switching
+
+The same **authorised HLS-only** channel queue now applies to every client:
+
+- **Android mobile:** Media3 full-screen player has touch-operable Previous/Next buttons.
+- **Android TV/Fire TV:** the same player also responds to Channel Up / Channel Down
+  keys; Play/Pause/seek controls remain remote-operable.
+- **iOS native:** AVPlayer / SwiftUI player offers touch Previous/Next buttons
+  while staying on the same viewing screen.
+- **iPhone PWA:** iOS Safari plays HLS in the embedded video surface. The player
+  includes touch buttons and keyboard navigation, with no raw stream URL in
+  page query parameters.
+
+Only channels with an enabled, HTTPS, directly approved HLS source and
+`requiresAuth === false` are included. The queue is ordered by the curated
+country/channel list and wraps at its ends. It never silently switches into
+a subscription-provider login, another website or an unauthorised URL.
+
+**Source inventory at implementation time:** four direct HLS source records
+(one US / three Turkish). Other indexed channels are **not** suddenly playable
+because player controls exist. Streams may still be geo-restricted, unavailable,
+DRM-protected or temporarily offline. This work has build/browser validations,
+not physical TV/iPhone end-to-end channel-play verification.
+
+### Follow-up milestones
+
+- Improve on-screen remote focus and overlay auto-hide with hardware input tests.
+- Add in-app channel guide with actual licensed EPG programme data.
+- Add authorised subscription entitlements / DRM SDK integrations per provider.
+- Physical HDMI-CEC and codec/network testing on target TV sticks.
+- iOS native PiP, media sessions and background playback policy review.
+- Enable GitHub Pages for the PWA preview (currently repository-setting blocked).
