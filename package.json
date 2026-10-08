@@ -6,13 +6,15 @@
   "scripts": {
     "build:index": "node scripts/build-index.mjs",
     "validate": "node scripts/validate-catalog.mjs",
-    "check": "npm run build:index && npm run validate && npm test",
+    "check": "npm run build:index && npm run validate && npm test && npm run check:pwa",
     "import:metadata": "node scripts/import-iptv-org.mjs",
     "catalog:worldwide:sync": "node scripts/sync-worldwide-catalog.mjs",
     "catalog:worldwide:verify": "node scripts/verify-worldwide-catalog.mjs",
     "test": "node --test",
     "catalog": "node scripts/catalog-cli.mjs",
     "validate:parity": "node scripts/validate-parity.mjs",
-    "worldwide": "node scripts/worldwide-cli.mjs"
+    "worldwide": "node scripts/worldwide-cli.mjs",
+    "check:pwa": "node --check web-pwa/app.js && node --check web-pwa/discovery.mjs",
+    "build:web": "node scripts/build-web.mjs"
   }
 }

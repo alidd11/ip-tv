@@ -46,6 +46,11 @@ private val Gold = Color(0xFFFFD16A)
 
 @Composable
 fun MobileHome() {
+    var explore by remember { mutableStateOf(false) }
+    if (explore) {
+        WorldExploreMobile(onClose = { explore = false })
+        return
+    }
     val context = LocalContext.current
     val catalog = remember { TvCatalogRepository(context).load() }
     var country by remember { mutableStateOf("GB") }
@@ -129,7 +134,14 @@ fun MobileHome() {
             }
         }
 
-        Spacer(Modifier.height(30.dp))
+        Spacer(Modifier.height(16.dp))
+        Text(
+            "Explore 31,522 channels worldwide   →",
+            modifier = Modifier.fillMaxWidth().clickable { explore = true }
+                .padding(horizontal = 20.dp, vertical = 15.dp),
+            fontSize = 18.sp, fontWeight = FontWeight.Bold, color = Accent
+        )
+        Spacer(Modifier.height(16.dp))
         Section("Live now", channels.filter { it.accessModel != "subscription" }, catalog)
         Section("Premium sport", channels.filter { "sports" in it.categories }, catalog)
         Section("Cinema", channels.filter { "movies" in it.categories }, catalog)

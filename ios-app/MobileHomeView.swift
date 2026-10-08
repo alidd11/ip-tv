@@ -13,6 +13,20 @@ struct MobileHomeView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 30) {
                     hero
+                    NavigationLink {
+                        WorldwideExploreView()
+                    } label: {
+                        HStack {
+                            Text("Explore 31,522 channels worldwide")
+                                .font(.headline)
+                            Spacer()
+                            Image(systemName: "arrow.right")
+                        }
+                        .padding(18)
+                        .background(.white.opacity(0.1), in: RoundedRectangle(cornerRadius: 18))
+                    }
+                    .buttonStyle(.plain)
+                    .padding(.horizontal, 20)
 
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 10) {

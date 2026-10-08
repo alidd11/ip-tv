@@ -1,4 +1,5 @@
 import Foundation
+import Combine
 
 struct TVCountry: Codable, Identifiable {
     var id: String { code }
@@ -46,15 +47,15 @@ final class CatalogueStore: ObservableObject {
     @Published private(set) var sources: [PlaybackSource] = []
 
     func load() {
-        countries = decode("countries", subdirectory: "catalogue")
+        countries = decode("countries", subdirectory: "data")
             .filter(\.enabled)
             .sorted { $0.sortOrder < $1.sortOrder }
 
         channels = countries.flatMap { country in
-            decode(country.code, subdirectory: "catalogue/channels")
+            decode(country.code, subdirectory: "data/channels")
         }
 
-        sources = decode("playback-sources.verified", subdirectory: "catalogue")
+        sources = decode("playback-sources.verified", subdirectory: "config")
     }
 
     func channels(for country: String) -> [TVChannel] {
