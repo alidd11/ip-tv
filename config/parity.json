@@ -68,6 +68,16 @@
       }
     },
     {
+      "id": "browse.worldwide",
+      "parityRequired": true,
+      "clients": {
+        "pwa": "implemented",
+        "ios": "implemented",
+        "android-mobile": "implemented",
+        "android-tv": "implemented"
+      }
+    },
+    {
       "id": "search.channels",
       "parityRequired": true,
       "clients": {
