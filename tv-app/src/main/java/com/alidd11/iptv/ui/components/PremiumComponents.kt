@@ -35,7 +35,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.tv.material3.Text
-import com.alidd11.iptv.model.TvChannel
+import com.alidd11.iptv.core.TvChannel
 import com.alidd11.iptv.ui.theme.AstraAccent
 import com.alidd11.iptv.ui.theme.AstraCyan
 import com.alidd11.iptv.ui.theme.AstraGold
