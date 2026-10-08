@@ -25,8 +25,12 @@ try {
 
   await page.screenshot({path:"artifacts/pwa/iphone-home.png",fullPage:true});
   await page.locator("#directoryCountry").selectOption("TR");
-  await page.waitForFunction(()=>document.querySelector("#directoryCountry")?.value==="TR"&&
-    document.querySelector("#directoryStatus")?.textContent?.includes("Turkey"));
+  await page.waitForFunction(()=>{
+    const selector=document.querySelector("#directoryCountry");
+    const name=selector?.selectedOptions?.[0]?.textContent?.split(" · ")[0];
+    const status=document.querySelector("#directoryStatus")?.textContent||"";
+    return selector?.value==="TR"&&name&&status.includes("in "+name);
+  });
   await page.locator("#directorySearch").fill("TRT");
   await page.waitForTimeout(200);
   const text=await page.locator("#directoryStatus").textContent();
