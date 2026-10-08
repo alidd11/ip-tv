@@ -1,3 +1,4 @@
+import {readSaved,writeSaved,toggleSaved} from "./saved.mjs";
 import {filterDiscovery,visibleCount,directoryCountryOptions} from "./discovery.mjs";
 const state = {
   countries: [],
@@ -12,6 +13,7 @@ const state = {
   worldwideQuery: '',
   worldwideOffset: 0,
   worldwideRequest: 0,
+  saved: [],
 };
 
 const $ = (id) => document.getElementById(id);
@@ -30,10 +32,12 @@ async function load() {
     state.channels.set(country.code, await json("../data/channels/" + country.code + ".json"));
   }));
 
+  state.saved = readSaved(window.localStorage);
   state.sources = await json("../config/playback-sources.verified.json");
   state.worldwideManifest = await json("../data/worldwide/manifest.json");
   render();
   initialiseDiscovery();
+  renderSaved();
   await renderDirectory();
 
   if ("serviceWorker" in navigator) {
@@ -135,6 +139,7 @@ function openSheet(channel) {
   state.selected = channel;
   const source = sourceFor(channel);
   const premium = ["subscription", "ppv"].includes(channel.access.model);
+  $("sheetSave").hidden = true;
   $("sheetEyebrow").textContent = premium ? "PREMIUM CHANNEL" : "LIVE CHANNEL";
   $("sheetTitle").textContent = channel.name;
   $("sheetMeta").textContent = [
@@ -181,7 +186,7 @@ document.querySelectorAll(".tab[data-section]").forEach((button)=>{
 });
 function openSection(name) {
   const target=name==="home"?document.body:
-    name==="live"?$("content"):$("directory");
+    name==="live"?$("content"):name==="saved"?$("saved"):$("directory");
   target.scrollIntoView({behavior:"smooth",block:"start"});
   document.querySelectorAll(".tab[data-section]").forEach(button=>{
     const active=button.dataset.section===name;
@@ -295,11 +300,30 @@ function directoryCard(record) {
   detail.className="directory-card-meta";
   detail.textContent=(record.categories||[]).slice(0,2).join(" · ")+" · "+
     (record.feeds?.length||0)+" "+((record.feeds?.length||0)===1?"feed":"feeds");
+  if(state.saved.some(x=>x.id===record.id)) {
+    const star=document.createElement("span");
+    star.textContent="★"; star.className="saved-indicator";
+    upper.append(star);
+  }
   button.append(upper,title,detail);
   button.onclick=()=>openDirectorySheet(record);
   return button;
 }
 function openDirectorySheet(record) {
+  state.selected = record;
+  const saveButton=$("sheetSave");
+  saveButton.hidden=false;
+  const refreshSaveLabel=()=>{saveButton.textContent=state.saved.some(x=>x.id===record.id)?"★ Remove from saved":"☆ Save channel";};
+  refreshSaveLabel();
+  saveButton.onclick=()=>{
+    state.saved=toggleSaved(state.saved,record);
+    if(!writeSaved(window.localStorage,state.saved)) {
+      $("directoryStatus").textContent="Unable to save permanently in this browser.";
+    }
+    refreshSaveLabel();
+    renderSaved();
+    renderDirectory();
+  };
   $("sheetEyebrow").textContent="CHANNEL DIRECTORY";
   $("sheetTitle").textContent=record.name;
   $("sheetMeta").textContent=[
@@ -318,4 +342,28 @@ function openDirectorySheet(record) {
       window.open(record.website,"_blank","noopener,noreferrer");
   };
   $("sheet").classList.remove("hidden");
+}
+
+function renderSaved() {
+  $("savedCount").textContent=state.saved.length+" saved";
+  $("savedEmpty").hidden=state.saved.length>0;
+  $("savedResults").replaceChildren(...state.saved.map(saved=>{
+    const button=document.createElement("button");
+    button.className="directory-card saved-card";
+    const country=document.createElement("span");
+    country.className="directory-card-top";
+    country.textContent=saved.country+" · SAVED";
+    const name=document.createElement("span");
+    name.className="directory-card-name";
+    name.textContent=saved.name;
+    const subtitle=document.createElement("span");
+    subtitle.className="directory-card-meta";
+    subtitle.textContent=saved.network||"Channel directory";
+    button.append(country,name,subtitle);
+    button.onclick=()=>openDirectorySheet({
+      ...saved, feeds:Array.from({length:saved.feedsCount||0},()=>({})),
+      guides:Array.from({length:saved.guidesCount||0},()=>({}))
+    });
+    return button;
+  }));
 }
