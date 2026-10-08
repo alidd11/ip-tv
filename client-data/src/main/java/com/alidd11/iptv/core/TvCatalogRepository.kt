@@ -44,6 +44,7 @@ class TvCatalogRepository(private val context: Context) {
                 accessModel = obj.getString("accessModel"),
                 requiresAuth = obj.getBoolean("requiresAuth"),
                 priority = obj.getInt("priority"),
+                enabled = obj.optBoolean("enabled", false),
             )
         }
 
