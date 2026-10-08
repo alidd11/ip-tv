@@ -1,0 +1,13 @@
+{
+  "name": "IP TV",
+  "short_name": "IP TV",
+  "description": "Premium live television across mobile and TV.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#07080d",
+  "theme_color": "#07080d",
+  "orientation": "any",
+  "categories": ["entertainment", "video"],
+  "icons": [{"src":"./icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}
