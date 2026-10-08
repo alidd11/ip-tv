@@ -1,0 +1,48 @@
+name: Worldwide channel discovery
+on:
+  push:
+    branches: [feat/worldwide-channel-index]
+  pull_request:
+    paths:
+      - 'scripts/sync-worldwide-catalog.mjs'
+      - 'scripts/verify-worldwide-catalog.mjs'
+      - 'test/worldwide-catalog.test.mjs'
+      - 'data/worldwide/**'
+      - '.github/workflows/worldwide-catalog.yml'
+  workflow_dispatch:
+  schedule:
+    - cron: '17 5 * * 1'
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    if: github.repository == 'alidd11/ip-tv'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test importer
+        run: node --test test/worldwide-catalog.test.mjs
+      - name: Import worldwide data
+        run: npm run catalog:worldwide:sync
+      - name: Verify snapshot
+        run: npm run catalog:worldwide:verify
+      - uses: actions/upload-artifact@v4
+        with:
+          name: worldwide-channel-catalogue
+          path: data/worldwide/
+          retention-days: 14
+      - name: Commit snapshot onto import branch
+        if: github.event_name == 'push' && github.ref == 'refs/heads/feat/worldwide-channel-index'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/worldwide/
+          if ! git diff --cached --quiet; then
+            git commit -m "Import worldwide channel metadata snapshot"
+            git push origin HEAD:feat/worldwide-channel-index
+          fi
