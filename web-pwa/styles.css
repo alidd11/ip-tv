@@ -26,3 +26,10 @@ html, body, #app, main { width:100%; max-width:100%; overflow-x:clip; }
 .content > section { width:100%; max-width:100%; min-width:0; }
 .rail, .chip-row { min-width:0; max-width:100%; }
 .directory-section { min-width:0; }
+
+/* Only shipped navigation destinations are visible; no dead Guide/Saved tabs. */
+.tabbar{grid-template-columns:repeat(3,minmax(0,1fr))}
+#content,#directory{scroll-margin-top:calc(95px + env(safe-area-inset-top,0px))}
+#directory{position:relative}
+.sheet-card button:disabled{opacity:.45;cursor:not-allowed}
+@media(hover:hover){.tab:hover{background:#ffffff14}.channel-card:hover{border-color:#8a7cff9c}}

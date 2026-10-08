@@ -142,7 +142,8 @@ function openSheet(channel) {
     channel.categories.map(capitalize).join(" · "),
     source && source.requiresAuth ? "Subscription required" : source ? "Source available" : "Source not yet available",
   ].filter(Boolean).join("  •  ");
-  $("sheetAction").textContent = premium ? "Open provider" : "Watch live";
+  $("sheetAction").textContent = source ? (premium ? "Open provider" : "Watch live") : "Unavailable";
+  $("sheetAction").disabled = !source;
   $("sheetAction").onclick = () => openChannel(channel);
   $("sheet").classList.remove("hidden");
 }
@@ -162,7 +163,6 @@ function openChannel(channel) {
 
   if (source.playbackMode === "native" && source.type === "hls") {
     location.href = "./player.html?channel=" + encodeURIComponent(channel.id) +
-      "&source=" + encodeURIComponent(source.url) +
       "&name=" + encodeURIComponent(channel.name);
     return;
   }
@@ -175,7 +175,21 @@ function capitalize(value) {
 }
 
 document.querySelectorAll("[data-close-sheet]").forEach((node) => node.addEventListener("click", closeSheet));
-$("guideButton").onclick = () => alert("Guide parity is the next shared feature.");
+$("guideButton").onclick = () => openSection("explore");
+document.querySelectorAll(".tab[data-section]").forEach((button)=>{
+  button.onclick=()=>openSection(button.dataset.section);
+});
+function openSection(name) {
+  const target=name==="home"?document.body:
+    name==="live"?$("content"):$("directory");
+  target.scrollIntoView({behavior:"smooth",block:"start"});
+  document.querySelectorAll(".tab[data-section]").forEach(button=>{
+    const active=button.dataset.section===name;
+    button.classList.toggle("active",active);
+    if(active)button.setAttribute("aria-current","page");
+    else button.removeAttribute("aria-current");
+  });
+}
 $("searchButton").onclick = () => alert("Search parity is the next shared feature.");
 
 load().catch((error) => {
