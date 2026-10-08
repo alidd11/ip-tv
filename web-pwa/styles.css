@@ -124,3 +124,13 @@ html, body, #app, main { width:100%; max-width:100%; overflow-x:clip; }
   .hero h1 {font-size:38px;}
   .hero-actions button {font-size:12px;}
 }
+
+/* Desktop navigation moves to the header to avoid covering channel rails. */
+@media(min-width:760px) {
+  .topbar .icon-button {display:none;}
+  .tabbar {width:370px;max-width:none;left:auto;right:24px;top:8px;bottom:auto;
+    transform:none;height:53px;padding:4px;border-radius:17px;box-shadow:0 10px 36px #0005;}
+  .tab {display:flex;flex-direction:row;justify-content:center;gap:8px;}
+  .tab span {font-size:16px;}
+  .tab small {font-size:11px;font-weight:700;}
+}
