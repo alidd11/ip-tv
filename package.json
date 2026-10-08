@@ -12,6 +12,7 @@
     "catalog:worldwide:verify": "node scripts/verify-worldwide-catalog.mjs",
     "test": "node --test",
     "catalog": "node scripts/catalog-cli.mjs",
+    "validate:parity": "node scripts/validate-parity.mjs",
     "worldwide": "node scripts/worldwide-cli.mjs"
   }
 }

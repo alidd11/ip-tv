@@ -1,94 +1,70 @@
 # ip-tv
 
-Foundation for a remote-first TV/streaming product intended for Android TV / Fire TV-class hardware.
+Premium multi-platform live-TV product foundation for **iOS, Android mobile, Android TV / Fire TV and branded HDMI-stick hardware**.
 
-## Current phase: countries and channels
+## Product direction
 
-The repository is deliberately **data-first**. We are establishing stable country, channel and feed identities before adding the player UI or backend.
+This is one product with device-native interaction:
 
-### Included now
+- **iPhone / iPad:** touch-first SwiftUI + AVKit.
+- **Android phone / tablet:** touch-first Jetpack Compose + Media3.
+- **Android TV / Fire TV / HDMI stick:** remote-first Compose for TV + Media3.
+- **TV remote support:** D-pad/media keys plus HDMI-CEC passthrough where the television and final stick hardware support it.
 
-- 249-country catalogue
-- launch catalogues for United Kingdom, Turkey and United States
-- channel categories
-- separate channel/feed models
-- playback-source schema kept outside channel metadata
-- deterministic channel index generation
-- catalogue validation
-- metadata-only iptv-org import staging script
-- architecture and competitive research notes
+The visual identity and catalogue are shared; the UI is intentionally adapted instead of stretching a phone layout onto a television.
 
-## Structure
+## Current foundation
+
+- 249-country catalogue.
+- Curated GB/TR/US launch catalogues.
+- Premium UK packages including Sky Sports, Sky Cinema and TNT Sports.
+- Channel/feed/provider/package separation.
+- Provenance-gated playback-source registry.
+- Source audit/quarantine for unknown public-playlist candidates.
+- Shared Android catalogue/data module.
+- Android touch client scaffold.
+- Android TV/Fire TV remote client scaffold.
+- Native SwiftUI iOS client scaffold.
+- Catalogue and Android build CI.
+
+## Repository structure
 
 ```text
-config/
-  playback-sources.example.json
-data/
-  countries.json
-  categories.json
-  channels/
-    GB.json
-    TR.json
-    US.json
-    index.json
-  feeds/
-    GB.json
-    TR.json
-    US.json
-  imports/                 # generated metadata staging, gitignored
-docs/
-  ARCHITECTURE.md
-  RESEARCH.md
+client-data/          # shared Android catalogue/data layer
+mobile-android/       # touch-first Android client
+tv-app/               # Android TV / Fire TV / HDMI-stick client
+ios-app/              # SwiftUI / AVKit iPhone/iPad client
+config/               # verified playback/source policy data
+data/                 # canonical catalogue
+docs/                 # product, design and input architecture
 schemas/
-  country.schema.json
-  channel.schema.json
-  feed.schema.json
-  playback-source.schema.json
 scripts/
-  build-index.mjs
-  import-iptv-org.mjs
-  validate-catalog.mjs
+src/                   # catalogue tooling
+test/
 ```
 
-## Data model
+## Catalogue model
 
 ```text
 Country -> Channel -> Feed -> EPG mapping / Playback source
 ```
 
-A channel never contains a live stream URL. Delivery endpoints are deliberately separate so they can change without breaking favourites, search, history or EPG mappings.
+A channel never contains a live stream URL. Delivery endpoints are separate so a source can change without breaking favourites, search, history or guide identity.
 
-## Commands
+## Validation
 
 ```bash
 npm run check
-npm run catalog -- countries
-npm run catalog -- channels --country=GB
-npm run catalog -- search BBC --country=GB
 ```
 
-`npm run check` builds the deterministic channel index, validates catalogue relationships and runs the catalogue tests.
+The catalogue CI validates data consistency. A separate Android workflow compiles both the mobile and TV clients.
 
-To stage public **metadata only** from iptv-org:
+## Input model
 
-```bash
-npm run import:metadata -- --countries=GB,TR,US
-```
+Mobile is fully touch-enabled. TV is fully operable with D-pad/OK/Back/media/channel keys. See `docs/INPUT_MODEL.md` and `docs/REMOTE_CONTROL.md`.
 
-Imported files go under `data/imports/iptv-org/` for review and are not treated as canonical automatically. The importer does not fetch the iptv-org streams endpoint.
+## Design direction
 
-## Next
+The product is deliberately positioned as a premium living-room/mobile service: cinematic editorial hierarchy, fast navigation, strong focus/touch feedback, proper EPG, premium channel/package presentation and native playback surfaces.
 
-1. Expand and verify the launch channel catalogues.
-2. Add approved logos and EPG identifiers.
-3. Add source/provider health modelling and failover.
-4. Build the Android TV shell with D-pad-first country/channel browsing.
-5. Add guide, favourites, recently watched and search.
-
-## Source verification
-
-The catalogue now distinguishes channel access from playback provenance. Premium channels such as Sky Sports, TNT Sports and Sky Cinema are catalogued for search, guide and package UX, but they use official subscription-provider handoffs unless a broadcaster-authorized public media endpoint is independently verified.
-
-Approved sources live in `config/playback-sources.verified.json`. Candidate findings from public playlist repositories are reviewed in `data/source-audit.json`; rejected and unknown candidates never retain their stream URL. See `docs/SOURCE_POLICY.md`.
-
-Current seeded state: 249 countries, 71 channels, 71 feeds, 3 UK providers, 4 UK packages, and a provenance-gated source registry.
+See `docs/DESIGN_SYSTEM.md` and `docs/PLATFORM_ARCHITECTURE.md`.

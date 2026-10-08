@@ -1,0 +1,23 @@
+plugins {
+    id("com.android.library")
+}
+
+android {
+    namespace = "com.alidd11.iptv.core"
+    compileSdk = 36
+
+    defaultConfig {
+        minSdk = 23
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    sourceSets {
+        getByName("main") {
+            assets.srcDirs("../data", "../config")
+        }
+    }
+}
