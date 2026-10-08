@@ -1,0 +1,26 @@
+[
+  {
+    "id": "sky",
+    "name": "Sky",
+    "country": "GB",
+    "website": "https://www.sky.com/",
+    "accessModel": "subscription",
+    "notes": "Official provider for Sky Sports and Sky Cinema."
+  },
+  {
+    "id": "tnt-sports",
+    "name": "TNT Sports",
+    "country": "GB",
+    "website": "https://www.tntsports.co.uk/",
+    "accessModel": "subscription",
+    "notes": "TNT Sports streaming home in the UK is HBO Max as of 2026."
+  },
+  {
+    "id": "dazn",
+    "name": "DAZN",
+    "country": "GB",
+    "website": "https://www.dazn.com/en-GB/",
+    "accessModel": "subscription",
+    "notes": "Sports streaming provider; modelled as a provider rather than a linear channel."
+  }
+]

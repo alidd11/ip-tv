@@ -1,0 +1,127 @@
+[
+  {
+    "channelId": "us-bloomberg-tv",
+    "candidate": "Bloomberg TV EMEA feed",
+    "sourceRepository": "iptv-org/iptv",
+    "sourcePath": "streams/uk.m3u",
+    "status": "verified-official",
+    "urlStored": true,
+    "reason": "Media URL is on bloomberg.com and Bloomberg publishes an official live TV page.",
+    "evidenceUrls": [
+      "https://www.bloomberg.com/livestream"
+    ],
+    "reviewedAt": "2026-10-08"
+  },
+  {
+    "channelId": "tr-trt-1",
+    "candidate": "TRT 1 HLS",
+    "sourceRepository": "iptv-org/iptv",
+    "sourcePath": "streams/tr.m3u",
+    "status": "verified-official",
+    "urlStored": true,
+    "reason": "Media URL is on an official trt.com.tr subdomain.",
+    "evidenceUrls": [
+      "https://www.trt1.com.tr/"
+    ],
+    "reviewedAt": "2026-10-08"
+  },
+  {
+    "channelId": "tr-trt-haber",
+    "candidate": "TRT Haber HLS",
+    "sourceRepository": "iptv-org/iptv",
+    "sourcePath": "streams/tr.m3u",
+    "status": "verified-official",
+    "urlStored": true,
+    "reason": "Media URL is on an official trt.com.tr subdomain and TRT publishes a live page.",
+    "evidenceUrls": [
+      "https://www.trthaber.com/canli-yayin-izle.html"
+    ],
+    "reviewedAt": "2026-10-08"
+  },
+  {
+    "channelId": "gb-sky-news",
+    "candidate": "Sky News live",
+    "sourceRepository": "public web",
+    "sourcePath": null,
+    "status": "verified-official",
+    "urlStored": true,
+    "reason": "Sky News itself publishes a live-watch page and verified live YouTube broadcast.",
+    "evidenceUrls": [
+      "https://news.sky.com/watch-live",
+      "https://www.youtube.com/watch?v=xDWQ3LkccY8"
+    ],
+    "reviewedAt": "2026-10-08"
+  },
+  {
+    "channelId": "gb-bbc-one",
+    "candidate": "Third-party BBC One HLS entries",
+    "sourceRepository": "iptv-org/iptv",
+    "sourcePath": "streams/uk.m3u",
+    "status": "rejected-unverified",
+    "urlStored": false,
+    "reason": "Premium/broadcast feed was hosted on unrelated third-party IPs; no broadcaster authorization established.",
+    "evidenceUrls": [
+      "https://www.bbc.co.uk/iplayer"
+    ],
+    "reviewedAt": "2026-10-08"
+  },
+  {
+    "channelId": "gb-bbc-news",
+    "candidate": "Third-party BBC News entries",
+    "sourceRepository": "iptv-org/iptv",
+    "sourcePath": "streams/uk.m3u",
+    "status": "rejected-unverified",
+    "urlStored": false,
+    "reason": "Candidate stream provenance was not tied to BBC infrastructure or an official public player.",
+    "evidenceUrls": [
+      "https://www.bbc.co.uk/news"
+    ],
+    "reviewedAt": "2026-10-08"
+  },
+  {
+    "channelId": "tr-trt-spor",
+    "candidate": "Third-party TRT Spor HLS entry",
+    "sourceRepository": "iptv-org/iptv",
+    "sourcePath": "streams/tr.m3u",
+    "status": "rejected-unverified",
+    "urlStored": false,
+    "reason": "The candidate was not on TRT infrastructure; official TRT Spor web playback is geo-controlled instead.",
+    "evidenceUrls": [
+      "https://www.trtspor.com.tr/canli-yayin-izle/trt-spor"
+    ],
+    "reviewedAt": "2026-10-08"
+  },
+  {
+    "channelId": "tr-national-geographic",
+    "candidate": "National Geographic Türkiye candidate",
+    "sourceRepository": "iptv-org/iptv",
+    "sourcePath": "streams/tr.m3u",
+    "status": "rejected-unverified",
+    "urlStored": false,
+    "reason": "Paid-channel candidate lacked sufficient evidence that the exposed feed was intended for public redistribution.",
+    "evidenceUrls": [],
+    "reviewedAt": "2026-10-08"
+  },
+  {
+    "channelId": "tr-bein-movies",
+    "candidate": "beIN Movies / Box Office candidates",
+    "sourceRepository": "iptv-org/iptv",
+    "sourcePath": "streams/tr.m3u",
+    "status": "rejected-unverified",
+    "urlStored": false,
+    "reason": "Paid-channel candidates were on unrelated third-party infrastructure and were not retained.",
+    "evidenceUrls": [],
+    "reviewedAt": "2026-10-08"
+  },
+  {
+    "channelId": "tr-s-sport",
+    "candidate": "S Sport candidates",
+    "sourceRepository": "iptv-org/iptv",
+    "sourcePath": "streams/tr.m3u",
+    "status": "unknown-quarantined",
+    "urlStored": false,
+    "reason": "One candidate used a third-party host and another used a CDN without enough rights/provenance evidence. No active source added.",
+    "evidenceUrls": [],
+    "reviewedAt": "2026-10-08"
+  }
+]
