@@ -72,6 +72,8 @@ try {
   const desktop=await browser.newPage({viewport:{width:1440,height:900}});
   await desktop.goto(base,{waitUntil:"networkidle"});
   await desktop.waitForFunction(()=>document.querySelector("#directoryStatus")?.textContent?.includes("channel"));
+  const desktopNav = await desktop.locator(".tabbar").boundingBox();
+  assert.ok(desktopNav && desktopNav.y < 100, "Desktop nav must not obscure the content rails");
   await desktop.screenshot({path:"artifacts/pwa/desktop-home.png",fullPage:false});
   const sourceUrl=await page.evaluate(()=>{
     const url=new URL("./player.html?channel=gb-sky-news&name=Sky",location.href);
