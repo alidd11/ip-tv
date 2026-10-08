@@ -1,9 +1,17 @@
+import {filterDiscovery,visibleCount,directoryCountryOptions} from "./discovery.mjs";
 const state = {
   countries: [],
   channels: new Map(),
   sources: [],
   country: "GB",
   selected: null,
+  worldwideManifest: null,
+  worldwideCache: new Map(),
+  worldwideCountry: 'GB',
+  worldwideCategory: '',
+  worldwideQuery: '',
+  worldwideOffset: 0,
+  worldwideRequest: 0,
 };
 
 const $ = (id) => document.getElementById(id);
@@ -23,7 +31,10 @@ async function load() {
   }));
 
   state.sources = await json("../config/playback-sources.verified.json");
+  state.worldwideManifest = await json("../data/worldwide/manifest.json");
   render();
+  initialiseDiscovery();
+  await renderDirectory();
 
   if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("./sw.js").catch(console.error);
@@ -53,7 +64,10 @@ function renderCountries() {
     button.textContent = country.flag + " " + country.name;
     button.onclick = () => {
       state.country = country.code;
+      state.worldwideCountry = country.code;
       render();
+      $("directoryCountry").value = country.code;
+      renderDirectory();
     };
     return button;
   }));
@@ -169,3 +183,125 @@ load().catch((error) => {
   $("heroTitle").textContent = "Catalogue unavailable";
   $("heroMeta").textContent = "Reload when the connection is restored.";
 });
+
+
+function initialiseDiscovery() {
+  const entries=directoryCountryOptions(state.worldwideManifest);
+  const selector=$("directoryCountry");
+  selector.replaceChildren(...entries.map(country=>{
+    const opt=document.createElement("option");
+    opt.value=country.code;
+    opt.textContent=country.name+" · "+country.visible.toLocaleString();
+    return opt;
+  }));
+  selector.value=state.worldwideCountry;
+  $("globalCount").textContent=state.worldwideManifest.totals.visible.toLocaleString()+" listings";
+
+  selector.onchange=()=>{
+    state.worldwideCountry=selector.value;
+    state.worldwideCategory="";
+    $("directoryCategory").value="";
+    renderDirectory();
+  };
+  $("directorySearch").oninput=()=>{
+    state.worldwideQuery=$("directorySearch").value;
+    state.worldwideOffset=0;
+    renderDirectory();
+  };
+  $("directoryCategory").onchange=()=>{
+    state.worldwideCategory=$("directoryCategory").value;
+    state.worldwideOffset=0;
+    renderDirectory();
+  };
+  $("directoryMore").onclick=()=>{
+    state.worldwideOffset+=48;
+    renderDirectory({append:true});
+  };
+  $("searchButton").onclick=()=>{
+    $("directory").scrollIntoView({behavior:"smooth"});
+    $("directorySearch").focus();
+  };
+}
+async function worldwideChannels(country) {
+  if(state.worldwideCache.has(country))return state.worldwideCache.get(country);
+  const rows=await json("../data/worldwide/countries/"+country+".json");
+  state.worldwideCache.set(country,rows);
+  return rows;
+}
+async function renderDirectory({append=false}={}) {
+  const request=++state.worldwideRequest;
+  const country=state.worldwideCountry;
+  const query=state.worldwideQuery;
+  const category=state.worldwideCategory;
+  const offset=state.worldwideOffset;
+  $("directoryStatus").textContent="Loading channel directory…";
+  if(!append)$("directoryResults").replaceChildren();
+
+  try {
+    const rows=await worldwideChannels(country);
+    if(request!==state.worldwideRequest)return;
+
+    const categories=new Set(rows.filter(x=>!x.isClosed&&!x.isAdult).flatMap(x=>x.categories||[]));
+    const select=$("directoryCategory");
+    const previous=select.value;
+    select.replaceChildren(new Option("All categories",""),...[...categories].sort().map(c=>new Option(c[0].toUpperCase()+c.slice(1),c)));
+    select.value=previous&&categories.has(previous)?previous:"";
+    if(select.value!==category) state.worldwideCategory=select.value;
+
+    const options={query,category:state.worldwideCategory,offset,limit:48};
+    const total=visibleCount(rows,options);
+    const matches=filterDiscovery(rows,options);
+    const nodes=matches.map(directoryCard);
+    if(append)$("directoryResults").append(...nodes);
+    else $("directoryResults").replaceChildren(...nodes);
+
+    const name=state.worldwideManifest.countries.find(c=>c.code===country)?.name||country;
+    $("directoryStatus").textContent=total.toLocaleString()+" "+(total===1?"channel":"channels")+" in "+name+
+      (query?" matching “"+query+"”":"");
+    $("directoryMore").classList.toggle("hidden",offset+matches.length>=total||matches.length===0);
+    if(total===0)$("directoryResults").textContent="No matching channels in this country.";
+  } catch(error) {
+    if(request===state.worldwideRequest){
+      $("directoryStatus").textContent="Channel data unavailable. Please try another country or reload.";
+      $("directoryMore").classList.add("hidden");
+      console.error(error);
+    }
+  }
+}
+function directoryCard(record) {
+  const button=document.createElement("button");
+  button.className="directory-card";
+  const upper=document.createElement("span");
+  upper.className="directory-card-top";
+  upper.textContent=(record.network||record.country).toUpperCase();
+  const title=document.createElement("span");
+  title.className="directory-card-name";
+  title.textContent=record.name;
+  const detail=document.createElement("span");
+  detail.className="directory-card-meta";
+  detail.textContent=(record.categories||[]).slice(0,2).join(" · ")+" · "+
+    (record.feeds?.length||0)+" "+((record.feeds?.length||0)===1?"feed":"feeds");
+  button.append(upper,title,detail);
+  button.onclick=()=>openDirectorySheet(record);
+  return button;
+}
+function openDirectorySheet(record) {
+  $("sheetEyebrow").textContent="CHANNEL DIRECTORY";
+  $("sheetTitle").textContent=record.name;
+  $("sheetMeta").textContent=[
+    record.network,
+    "Country: "+record.country,
+    (record.categories||[]).join(" · "),
+    (record.feeds?.length||0)+" broadcast feed variants",
+    (record.guides?.length||0)+" guide references",
+    "Playback availability not verified"
+  ].filter(Boolean).join("  •  ");
+  const button=$("sheetAction");
+  button.textContent=record.website?"Visit broadcaster website":"No verified stream";
+  button.disabled=!record.website;
+  button.onclick=()=>{
+    if(record.website&&/^https:\/\//i.test(record.website))
+      window.open(record.website,"_blank","noopener,noreferrer");
+  };
+  $("sheet").classList.remove("hidden");
+}

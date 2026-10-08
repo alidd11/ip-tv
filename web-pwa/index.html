@@ -35,6 +35,27 @@
       </section>
       <section class="country-strip" aria-label="Countries"><div class="chip-row" id="countryRow"></div></section>
       <section class="content" id="content"></section>
+      <section class="directory-section" id="directory" aria-labelledby="directoryHeading">
+        <div class="directory-heading">
+          <div><div class="eyebrow">WORLDWIDE DIRECTORY</div><h2 id="directoryHeading">Explore every channel</h2>
+            <p>Browse the worldwide channel guide. Listings do not guarantee live playback.</p></div>
+          <span class="directory-total" id="globalCount"></span>
+        </div>
+        <div class="discovery-controls">
+          <label class="control-label">Country
+            <select id="directoryCountry" aria-label="Select country"></select>
+          </label>
+          <label class="control-label">Search channels
+            <input id="directorySearch" type="search" inputmode="search" autocomplete="off" placeholder="Channel or network" aria-label="Search channels" />
+          </label>
+          <label class="control-label">Category
+            <select id="directoryCategory" aria-label="Filter category"><option value="">All categories</option></select>
+          </label>
+        </div>
+        <div class="directory-status" id="directoryStatus" role="status" aria-live="polite"></div>
+        <div class="directory-grid" id="directoryResults"></div>
+        <button type="button" class="secondary-button directory-more hidden" id="directoryMore">Load more channels</button>
+      </section>
     </main>
     <nav class="tabbar" aria-label="Primary">
       <button class="tab active"><span>⌂</span><small>Home</small></button>
