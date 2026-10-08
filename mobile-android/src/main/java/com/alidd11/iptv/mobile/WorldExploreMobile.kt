@@ -19,12 +19,16 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.alidd11.iptv.core.WorldChannel
 import com.alidd11.iptv.core.WorldDirectory
+import com.alidd11.iptv.core.WorldBookmarks
 
 @Composable
 fun WorldExploreMobile(onClose:()->Unit) {
     val context=LocalContext.current
     val repo=remember {WorldDirectory(context)}
     val countries=remember {repo.countries()}
+    val bookmarks=remember {WorldBookmarks(context)}
+    var saved by remember {mutableStateOf(bookmarks.list())}
+    var savedOnly by remember {mutableStateOf(false)}
     var country by remember {mutableStateOf("GB")}
     var query by remember {mutableStateOf("")}
     var category by remember {mutableStateOf("")}
@@ -32,8 +36,17 @@ fun WorldExploreMobile(onClose:()->Unit) {
     var showCountries by remember {mutableStateOf(false)}
     var countryQuery by remember {mutableStateOf("")}
     var selected by remember {mutableStateOf<WorldChannel?>(null)}
-    val rows=remember(country,query,category) {repo.find(country,query,category)}
-    val categories=remember(country) {repo.channels(country).flatMap{it.categories}.distinct().sorted() }
+    val rows=remember(country,query,category,savedOnly,saved) {
+        if(!savedOnly)repo.find(country,query,category)
+        else saved.filter {
+            (query.isBlank() || it.name.contains(query,true) ||
+                it.network?.contains(query,true)==true) &&
+            (category.isBlank() || it.categories.contains(category))
+        }
+    }
+    val categories=remember(country,savedOnly,saved) {
+        (if(savedOnly)saved else repo.channels(country)).flatMap{it.categories}.distinct().sorted()
+    }
     val countryName=countries.firstOrNull{it.code==country}?.name?:country
 
     Column(Modifier.fillMaxSize().background(Color(0xFF07080D)).statusBarsPadding().navigationBarsPadding()) {
@@ -43,7 +56,18 @@ fun WorldExploreMobile(onClose:()->Unit) {
         }
         Text("WORLDWIDE CHANNEL DIRECTORY",Modifier.padding(horizontal=18.dp),
             fontSize=12.sp,color=Color(0xFF8A7CFF))
-        TextButton(onClick={showCountries=true},modifier=Modifier.padding(horizontal=10.dp)){
+        Row(
+            Modifier.fillMaxWidth().padding(horizontal=10.dp),
+            horizontalArrangement=Arrangement.spacedBy(8.dp)
+        ) {
+            TextButton(onClick={savedOnly=false;category="";limit=60}) {
+                Text("Explore",color=if(!savedOnly)Color.White else Color(0xFF9EA5B4))
+            }
+            TextButton(onClick={savedOnly=true;category="";limit=60}) {
+                Text("★ Saved ("+saved.size+")",color=if(savedOnly)Color(0xFFFFD16A) else Color(0xFF9EA5B4))
+            }
+        }
+        if(!savedOnly) TextButton(onClick={showCountries=true},modifier=Modifier.padding(horizontal=10.dp)){
             Text(countryName+"  ▾  ·  "+rows.size+" channels",color=Color.White)
         }
         OutlinedTextField(
@@ -59,14 +83,14 @@ fun WorldExploreMobile(onClose:()->Unit) {
                     label={Text(item.replaceFirstChar{it.uppercase()})})
             }
         }
-        Text(rows.size.toString()+" channels found · "+countries.size+" countries",
+        Text(rows.size.toString()+(if(savedOnly)" channels saved on this device" else " channels found · "+countries.size+" countries"),
             Modifier.padding(18.dp),color=Color(0xFF9EA5B4),fontSize=12.sp)
         LazyColumn(modifier=Modifier.weight(1f),contentPadding=PaddingValues(horizontal=18.dp),
             verticalArrangement=Arrangement.spacedBy(8.dp)){
             items(rows.take(limit),key={it.id}){channel->
                 Column(Modifier.fillMaxWidth().background(Color(0xFF161A25),RoundedCornerShape(16.dp))
                     .clickable{selected=channel}.padding(15.dp)){
-                    Text(channel.name,color=Color.White,fontWeight=FontWeight.SemiBold)
+                    Text((if(saved.any{it.id==channel.id})"★  " else "")+channel.name,color=Color.White,fontWeight=FontWeight.SemiBold)
                     Spacer(Modifier.height(5.dp))
                     Text(listOfNotNull(channel.network,channel.categories.firstOrNull(),
                         channel.feeds.toString()+" feeds").joinToString(" · "),
@@ -105,11 +129,19 @@ fun WorldExploreMobile(onClose:()->Unit) {
             title={Text(channel.name)},
             text={Text(channel.country+" · "+channel.feeds+" feeds · "+channel.guides+
                 " guide references\n\nDirectory listing only; playable source not verified.")},
-            confirmButton={TextButton(enabled=channel.website!=null,onClick={
-                channel.website?.let{url->context.startActivity(Intent(Intent.ACTION_VIEW,Uri.parse(url)))}
-                selected=null
-            }){Text("Visit website")}},
-            dismissButton={TextButton(onClick={selected=null}){Text("Close")}}
+            confirmButton={
+                TextButton(onClick={saved=bookmarks.toggle(channel)}) {
+                    Text(if(saved.any{it.id==channel.id})"★ Remove saved" else "☆ Save channel")
+                }
+            },
+            dismissButton={
+                Row {
+                    if(channel.website!=null) TextButton(onClick={
+                        context.startActivity(Intent(Intent.ACTION_VIEW,Uri.parse(channel.website)))
+                    }) {Text("Website")}
+                    TextButton(onClick={selected=null}){Text("Close")}
+                }
+            }
         )
     }
 }
