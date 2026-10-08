@@ -48,9 +48,14 @@ struct MobileHomeView: View {
                         .padding(.horizontal, 20)
                     }
 
-                    channelSection("Live now", channels: channels.filter { $0.access.model != "subscription" })
-                    channelSection("Premium sport", channels: channels.filter { $0.categories.contains("sports") })
-                    channelSection("Cinema", channels: channels.filter { $0.categories.contains("movies") })
+                    channelSection("Official viewing options", channels: channels.filter {
+                        let access = catalogue.source(for: $0)?.authorization
+                        return access == "verified-official" || access == "verified-public-authorized"
+                    })
+                    channelSection("Premium sports providers", channels: channels.filter {
+                        $0.categories.contains("sports") &&
+                        catalogue.source(for: $0)?.authorization == "subscription-provider"
+                    })
                 }
                 .padding(.bottom, 80)
             }
@@ -65,7 +70,7 @@ struct MobileHomeView: View {
     }
 
     private var heroChannel: TVChannel? {
-        channels.first(where: { $0.id == "gb-sky-sports-main-event" }) ?? channels.first
+        catalogue.featured(for: country)
     }
 
     private var hero: some View {
@@ -81,7 +86,8 @@ struct MobileHomeView: View {
             )
 
             VStack(alignment: .leading, spacing: 12) {
-                Text("PREMIUM LIVE TV")
+                Text(heroChannel.flatMap { catalogue.source(for: $0) }?.playbackMode == "native" ?
+                    "LIVE TV · OFFICIAL STREAM" : "CURATED CHANNELS")
                     .font(.caption.weight(.bold))
                     .tracking(1.8)
                     .foregroundStyle(accent)
@@ -98,7 +104,7 @@ struct MobileHomeView: View {
                     NavigationLink {
                         PlayerView(channel: channel, source: catalogue.source(for: channel))
                     } label: {
-                        Text(channel.access.model == "subscription" ? "Open provider" : "Watch live")
+                        Text(catalogue.sourceLabel(for: channel))
                             .font(.headline)
                             .foregroundStyle(.black)
                             .padding(.horizontal, 22)
@@ -159,7 +165,7 @@ private struct ChannelTile: View {
             )
 
             VStack(alignment: .leading, spacing: 8) {
-                Text(channel.access.model == "subscription" ? "PREMIUM" : "LIVE")
+                Text(channel.access.model == "subscription" ? "SUBSCRIPTION" : "VIEWING OPTION")
                     .font(.caption2.bold())
                     .foregroundStyle(channel.access.model == "subscription" ? .yellow : accent)
 

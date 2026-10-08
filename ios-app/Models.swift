@@ -38,6 +38,7 @@ struct PlaybackSource: Codable, Identifiable {
     let accessModel: String
     let requiresAuth: Bool
     let priority: Int
+    let enabled: Bool
 }
 
 @MainActor
@@ -65,9 +66,40 @@ final class CatalogueStore: ObservableObject {
 
     func source(for channel: TVChannel) -> PlaybackSource? {
         sources
-            .filter { $0.feedId == channel.id + "-main" }
+            .filter { $0.feedId == channel.id + "-main" && $0.enabled &&
+                $0.url.hasPrefix("https://") &&
+                ["verified-official", "verified-public-authorized", "subscription-provider"]
+                    .contains($0.authorization) }
             .sorted { $0.priority < $1.priority }
             .first
+    }
+
+    func featured(for country: String) -> TVChannel? {
+        channels(for: country).min { lhs, rhs in
+            let lhsRank = rank(source(for: lhs))
+            let rhsRank = rank(source(for: rhs))
+            return lhsRank == rhsRank ? lhs.sortOrder < rhs.sortOrder : lhsRank < rhsRank
+        }
+    }
+
+    func sourceLabel(for channel: TVChannel) -> String {
+        guard let value = source(for: channel) else { return "Explore channels" }
+        switch value.playbackMode {
+        case "native": return "Watch channel"
+        case "external": return "Watch on official site"
+        case "handoff": return "View subscription"
+        default: return "Explore channels"
+        }
+    }
+
+    private func rank(_ source: PlaybackSource?) -> Int {
+        guard let source else { return 9 }
+        switch source.playbackMode {
+        case "native" where source.type == "hls": return 0
+        case "external": return 1
+        case "handoff": return 2
+        default: return 8
+        }
     }
 
     private func decode<T: Decodable>(_ name: String, subdirectory: String) -> [T] {
